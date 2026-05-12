@@ -329,7 +329,40 @@ def main():
     collected.sort(key=lambda a: a["published_iso"], reverse=True)
     collected = collected[:30]
 
-    # ── MERGE with existing articles.json ──
+    # ── FETCH FULL CONTENT (only for newly fetched articles) ──
+    print(f"\nFetching full article content …")
+    for i, art in enumerate(collected):
+        print(f"  [{i+1}/{len(collected)}] {art['source']}: {art['title_en'][:60]}")
+        full = fetch_full_content(art["url"])
+        if full and len(full) > 200:
+            art["content_en"] = full[:8000]
+        else:
+            art["content_en"] = art["excerpt_en"]
+        time.sleep(0.5)
+
+    # ── TRANSLATE ──
+    print(f"\nTranslating {len(collected)} articles …")
+    titles   = [a["title_en"]          for a in collected]
+    excerpts = [a["excerpt_en"][:200]  for a in collected]
+
+    translated_titles   = google_translate(titles)
+    translated_excerpts = google_translate(excerpts)
+
+    for i, art in enumerate(collected):
+        art["title"]   = translated_titles[i]
+        art["excerpt"] = translated_excerpts[i]
+        print(f"  Translating content [{i+1}/{len(collected)}] …")
+        art["content"] = translate_and_format(art["content_en"])
+
+    print("Translation done.")
+
+    # ── CLEAN UP internal fields ──
+    for art in collected:
+        del art["title_en"]
+        del art["excerpt_en"]
+        del art["content_en"]
+
+    # ── MERGE with existing articles.json (after cleanup) ──
     out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
     existing = []
     if os.path.exists(out_path):
@@ -339,61 +372,22 @@ def main():
         except Exception:
             pass
 
-    # Index existing by id, overlay with new ones (new wins on conflict)
     merged = {a["id"]: a for a in existing}
-    new_ids = {a["id"] for a in collected}
-    # Only keep existing articles not in new batch (avoid re-translating)
     for a in collected:
-        merged[a["id"]] = a  # new article replaces old if same id
+        merged[a["id"]] = a  # new wins on same id
 
-    collected = list(merged.values())
-    collected.sort(key=lambda a: a["published_iso"], reverse=True)
-    collected = collected[:60]  # keep up to 60 total
-
-    # ── FETCH FULL CONTENT ──
-    print(f"\nFetching full article content …")
-    for i, art in enumerate(collected):
-        print(f"  [{i+1}/{len(collected)}] {art['source']}: {art['title_en'][:60]}")
-        full = fetch_full_content(art["url"])
-        if full and len(full) > 200:
-            art["content_en"] = full[:8000]  # cap at 8k chars
-        else:
-            art["content_en"] = art["excerpt_en"]
-        time.sleep(0.5)
-
-    # ── TRANSLATE ──
-    print(f"\nTranslating {len(collected)} articles …")
-    titles   = [a["title_en"]   for a in collected]
-    excerpts = [a["excerpt_en"][:200] for a in collected]
-
-    translated_titles   = google_translate(titles)
-    translated_excerpts = google_translate(excerpts)
-
-    for i, art in enumerate(collected):
-        art["title"]   = translated_titles[i]
-        art["excerpt"] = translated_excerpts[i]
-
-        print(f"  Translating content [{i+1}/{len(collected)}] …")
-        art["content"] = translate_and_format(art["content_en"])
-
-    print("Translation done.")
-
-    # ── CLEAN UP ──
-    for art in collected:
-        del art["title_en"]
-        del art["excerpt_en"]
-        del art["content_en"]
+    all_articles = sorted(merged.values(), key=lambda a: a["published_iso"], reverse=True)[:60]
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "count": len(collected),
-        "articles": collected,
+        "count": len(all_articles),
+        "articles": all_articles,
     }
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✓ Saved {len(collected)} articles to articles.json")
+    print(f"\n✓ Saved {len(all_articles)} articles to articles.json")
 
 if __name__ == "__main__":
     main()

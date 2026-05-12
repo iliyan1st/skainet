@@ -23,8 +23,6 @@ jobs:
         run: pip install feedparser requests
 
       - name: Fetch and translate articles
-        env:
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python scripts/fetch_articles.py
 
       - name: Commit articles.json

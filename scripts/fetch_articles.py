@@ -42,25 +42,30 @@ CATEGORY_RULES = [
     (["tutorial", "guide", "course", "learn", "how to", "prompt"], "НАУЧИ СЕ", "tag-learn"),
 ]
 
-# ── DEEPL FREE ────────────────────────────────────────────────────────────
-DEEPL_URL = "https://api-free.deepl.com/v2/translate"
+# ── GOOGLE TRANSLATE (free, no API key) ──────────────────────────────────
+GTRANS_URL = "https://translate.googleapis.com/translate_a/single"
 
-def deepl_translate(texts: list[str], api_key: str) -> list[str]:
-    """Translate a batch of texts to Bulgarian using DeepL Free API."""
+def google_translate(texts: list[str]) -> list[str]:
+    """Translate texts to Bulgarian using Google Translate free endpoint."""
     if not texts:
         return []
-    try:
-        resp = requests.post(
-            DEEPL_URL,
-            headers={"Authorization": f"DeepL-Auth-Key {api_key}"},
-            json={"text": texts, "target_lang": "BG", "source_lang": "EN"},
-            timeout=30,
-        )
-        resp.raise_for_status()
-        return [t["text"] for t in resp.json()["translations"]]
-    except Exception as e:
-        print(f"  DeepL error: {e}")
-        return texts  # return originals on failure
+    results = []
+    for text in texts:
+        try:
+            resp = requests.get(
+                GTRANS_URL,
+                params={"client": "gtx", "sl": "en", "tl": "bg", "dt": "t", "q": text},
+                timeout=15,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            translated = "".join(part[0] for part in data[0] if part[0])
+            results.append(translated)
+            time.sleep(0.3)  # avoid rate limiting
+        except Exception as e:
+            print(f"  Translate error: {e}")
+            results.append(text)
+    return results
 
 # ── HELPERS ────────────────────────────────────────────────────────────────
 def clean_html(text: str) -> str:
@@ -129,9 +134,7 @@ def make_id(title: str, source: str) -> str:
 
 # ── MAIN ──────────────────────────────────────────────────────────────────
 def main():
-    deepl_key = os.environ.get("DEEPL_API_KEY", "")
-    if not deepl_key:
-        print("WARNING: DEEPL_API_KEY not set – articles will be in English.")
+    deepl_key = None  # using Google Translate free endpoint instead
 
     collected = []
 
@@ -186,22 +189,19 @@ def main():
     # Keep top 30
     collected = collected[:30]
 
-    # ── TRANSLATE titles + excerpts in batch ──
-    if deepl_key and collected:
-        print(f"\nTranslating {len(collected)} articles with DeepL …")
-        titles  = [a["title_en"]  for a in collected]
-        excerpts = [a["excerpt_en"][:200] for a in collected]
+    # ── TRANSLATE titles + excerpts ──
+    if collected:
+        print(f"\nTranslating {len(collected)} articles with Google Translate …")
+        titles   = [a["title_en"]          for a in collected]
+        excerpts = [a["excerpt_en"][:200]  for a in collected]
 
-        translated_titles  = deepl_translate(titles, deepl_key)
-        time.sleep(1)
-        translated_excerpts = deepl_translate(excerpts, deepl_key)
+        translated_titles   = google_translate(titles)
+        translated_excerpts = google_translate(excerpts)
 
         for i, art in enumerate(collected):
             art["title"]   = translated_titles[i]
             art["excerpt"] = translated_excerpts[i]
         print("Translation done.")
-    else:
-        print("Skipping translation (no API key).")
 
     # ── Clean up internal fields ──
     for art in collected:

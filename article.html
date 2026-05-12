@@ -876,6 +876,9 @@ function renderHardcoded(art) {
 function renderRssArticle(a) {
   const main = document.getElementById('articleMain');
   document.title = `${a.title} – SKAINET`;
+  const bodyHtml = a.content && a.content.length > 50
+    ? a.content
+    : `<p style="font-size:17px;line-height:1.8;">${a.excerpt}</p>`;
   main.innerHTML = `
     <a href="index.html" class="back-btn">← Обратно към новините</a>
     <div class="breadcrumb">
@@ -895,16 +898,13 @@ function renderRssArticle(a) {
       </div>
     </div>
     <img class="article-hero-img" src="${a.image}" alt="${a.title}" onerror="this.src='https://picsum.photos/seed/${a.id}/1200/600'">
-    <div class="article-body">
-      <p style="font-size:17px;line-height:1.8;color:var(--text-secondary);">${a.excerpt}</p>
-      <div style="margin-top:32px;padding:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-        <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;">Пълният текст на статията е публикуван от <strong style="color:var(--text-primary)">${a.source}</strong></p>
-        <a href="${a.url}" target="_blank" rel="noopener"
-           style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-blue);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14px;transition:background 0.15s;"
-           onmouseover="this.style.background='var(--accent-blue-d)'" onmouseout="this.style.background='var(--accent-blue)'">
-          Прочети пълната статия в ${a.source} ↗
-        </a>
-      </div>
+    <div class="article-body">${bodyHtml}</div>
+    <div style="margin-top:32px;padding:20px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <span style="font-size:13px;color:var(--text-muted);">Оригинална статия от <strong style="color:var(--text-secondary)">${a.source}</strong></span>
+      <a href="${a.url}" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:6px;background:var(--accent-blue);color:#fff;padding:9px 18px;border-radius:7px;font-weight:700;font-size:13px;">
+        Виж оригинала ↗
+      </a>
     </div>
   `;
 }

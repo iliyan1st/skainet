@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKAINET – AI Технологии и Бъдещето</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── DARK THEME (default) ── */
+    :root {
+      --bg-primary:      #08091a;
+      --bg-card:         #111827;
+      --bg-header:       #060814;
+      --bg-footer:       #060814;
+      --bg-ticker:       #0a0d1e;
+      --bg-dropdown:     #0f172a;
+      --accent-blue:     #3b82f6;
+      --accent-blue-d:   #2563eb;
+      --accent-red:      #ef4444;
+      --accent-red-d:    #dc2626;
+      --cat-ai:          #3b82f6;
+      --cat-tech:        #8b5cf6;
+      --cat-tools:       #10b981;
+      --cat-analysis:    #f59e0b;
+      --cat-bg-color:    #0891b2;
+      --cat-learn:       #0ea5e9;
+      --text-primary:    #f1f5f9;
+      --text-secondary:  #cbd5e1;
+      --text-muted:      #64748b;
+      --border:          #1e293b;
+      --border-light:    #2d3f5e;
+      --gold:            #fbbf24;
+      --logo-color:      #ffffff;
+      --nav-hover-bg:    rgba(255,255,255,0.05);
+      --nav-hover-color: #ffffff;
+      --hover-row:       rgba(255,255,255,0.02);
+      --dropdown-link-hover: rgba(255,255,255,0.06);
+      --search-bg:       #0f172a;
+      --search-shadow:   0 24px 60px rgba(0,0,0,0.7);
+      --input-bg:        #08091a;
+    }
+
+    /* ── LIGHT THEME ── */
+    [data-theme="light"] {
+      --bg-primary:      #f8fafc;
+      --bg-card:         #ffffff;
+      --bg-header:       #ffffff;
+      --bg-footer:       #f1f5f9;
+      --bg-ticker:       #eef2ff;
+      --bg-dropdown:     #ffffff;
+      --text-primary:    #0f172a;
+      --text-secondary:  #334155;
+      --text-muted:      #94a3b8;
+      --border:          #e2e8f0;
+      --border-light:    #cbd5e1;
+      --logo-color:      #0f172a;
+      --nav-hover-bg:    rgba(0,0,0,0.04);
+      --nav-hover-color: #0f172a;
+      --hover-row:       rgba(0,0,0,0.03);
+      --dropdown-link-hover: rgba(0,0,0,0.04);
+      --search-bg:       #ffffff;
+      --search-shadow:   0 24px 60px rgba(0,0,0,0.18);
+      --input-bg:        #f8fafc;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { transition: background 0.25s, color 0.25s; }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    /* ───── HEADER ───── */
+    header {
+      background: var(--bg-header);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .header-inner { display: flex; align-items: center; height: 60px; gap: 28px; }
+
+    .logo { display: flex; flex-direction: column; line-height: 1; flex-shrink: 0; }
+    .logo-wordmark { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; color: var(--logo-color); }
+    .logo-wordmark .ai { color: var(--accent-blue); }
+    .logo-tagline { font-size: 9px; color: var(--text-muted); letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
+
+    nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+    .nav-item { position: relative; }
+
+    .nav-link {
+      display: flex; align-items: center; gap: 4px;
+      padding: 6px 10px; font-size: 13px; font-weight: 500;
+      color: var(--text-secondary); border-radius: 6px;
+      transition: color 0.15s, background 0.15s; white-space: nowrap; cursor: pointer;
+    }
+    .nav-link:hover { color: var(--nav-hover-color); background: var(--nav-hover-bg); }
+    .chevron { font-size: 9px; opacity: 0.6; }
+
+    .dropdown {
+      display: none; position: absolute; top: 100%; left: 0;
+      padding-top: 8px; z-index: 200;
+    }
+    .dropdown-inner {
+      background: var(--bg-dropdown);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px; min-width: 160px;
+      box-shadow: var(--search-shadow);
+      transition: background 0.25s;
+    }
+    .nav-item:hover .dropdown { display: block; }
+    .dropdown-inner a {
+      display: block; padding: 7px 12px; font-size: 13px;
+      color: var(--text-secondary); border-radius: 5px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .dropdown-inner a:hover { background: var(--dropdown-link-hover); color: var(--nav-hover-color); }
+
+    .header-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+    .icon-btn {
+      width: 32px; height: 32px; display: flex; align-items: center;
+      justify-content: center; border-radius: 6px; color: var(--text-muted);
+      font-size: 14px; transition: color 0.15s, background 0.15s;
+      cursor: pointer; border: none; background: transparent;
+    }
+    .icon-btn:hover { color: var(--nav-hover-color); background: var(--nav-hover-bg); }
+
+    .header-cta {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--accent-red); color: #fff;
+      padding: 7px 14px; border-radius: 6px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.6px; transition: background 0.15s; white-space: nowrap;
+    }
+    .header-cta:hover { background: var(--accent-red-d); }
+
+    /* ───── TICKER ───── */
+    .ticker {
+      background: var(--bg-ticker);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden; height: 36px; display: flex; align-items: center;
+      transition: background 0.25s;
+    }
+    .ticker-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--accent-red); padding: 0 16px; height: 100%;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.6px; white-space: nowrap; flex-shrink: 0;
+    }
+    .ticker-scroll {
+      flex: 1; overflow: hidden; height: 100%;
+      display: flex; align-items: center; padding-left: 12px;
+    }
+    .ticker-track {
+      display: flex; align-items: center;
+      animation: scroll-left 35s linear infinite; white-space: nowrap;
+    }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-size: 13px; color: var(--text-secondary); padding-right: 36px;
+    }
+    .ticker-dot { width: 4px; height: 4px; background: var(--accent-blue); border-radius: 50%; flex-shrink: 0; }
+    @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* ───── TAGS ───── */
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.4; }
+    .tag-ai       { background: var(--cat-ai);       color: #fff; }
+    .tag-tech     { background: var(--cat-tech);     color: #fff; }
+    .tag-tools    { background: var(--cat-tools);    color: #fff; }
+    .tag-analysis { background: var(--cat-analysis); color: #000; }
+    .tag-bg       { background: var(--cat-bg-color); color: #fff; }
+    .tag-learn    { background: var(--cat-learn);    color: #fff; }
+
+    /* ───── HERO ───── */
+    .hero-section { padding: 28px 0 0; }
+    .hero-layout { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+    .hero-left { display: grid; grid-template-columns: 1fr 320px; gap: 16px; align-items: start; }
+
+    .hero-card { position: relative; border-radius: 12px; overflow: hidden; display: block; aspect-ratio: 16/10; }
+    .hero-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .hero-card:hover img { transform: scale(1.03); }
+
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,7,20,0.97) 0%, rgba(5,7,20,0.55) 45%, rgba(5,7,20,0.05) 100%);
+    }
+    .hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; }
+    .hero-date { font-size: 12px; color: rgba(255,255,255,0.55); margin: 8px 0 10px; display: flex; align-items: center; gap: 4px; }
+    .hero-title { font-size: 26px; font-weight: 800; line-height: 1.22; color: #fff; margin-bottom: 12px; }
+    .hero-excerpt { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 22px; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1.5px solid rgba(255,255,255,0.35); color: #fff;
+      padding: 9px 18px; border-radius: 6px; font-size: 13px; font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+    .side-cards { display: flex; flex-direction: column; gap: 12px; }
+    .side-card {
+      display: grid; grid-template-columns: 100px 1fr;
+      background: var(--bg-card); border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.25s;
+    }
+    .side-card:hover { border-color: var(--border-light); transform: translateY(-1px); }
+    .side-card img { width: 100px; height: 82px; object-fit: cover; }
+    .side-card-body { padding: 10px 12px; }
+    .side-card-date { font-size: 11px; color: var(--text-muted); margin: 5px 0 4px; }
+    .side-card-title { font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--text-primary); transition: color 0.15s; }
+    .side-card:hover .side-card-title { color: var(--accent-blue); }
+
+    /* ───── SIDEBAR ───── */
+    .sidebar { display: flex; flex-direction: column; gap: 16px; }
+    .widget { background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; transition: background 0.25s, border-color 0.25s; }
+    .widget-head {
+      display: flex; align-items: center; gap: 7px;
+      padding: 13px 16px 11px; border-bottom: 1px solid var(--border);
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--text-secondary);
+    }
+    .widget-head .icon { font-size: 15px; }
+
+    .tool-body { padding: 14px 16px 16px; }
+    .tool-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .tool-logo { width: 44px; height: 44px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .tool-name { font-size: 16px; font-weight: 700; }
+    .tool-url { font-size: 11px; color: var(--text-muted); }
+    .tool-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px; }
+    .rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+    .rating-val { font-size: 12px; color: var(--text-muted); }
+
+    .btn-red { display: block; text-align: center; background: var(--accent-red); color: #fff; padding: 9px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; transition: background 0.15s; }
+    .btn-red:hover { background: var(--accent-red-d); }
+
+    .newsletter-body { padding: 14px 16px; }
+    .newsletter-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 8px; }
+
+    .input-field {
+      width: 100%; background: var(--input-bg); border: 1px solid var(--border-light);
+      border-radius: 6px; padding: 9px 12px; color: var(--text-primary);
+      font-size: 13px; font-family: inherit; outline: none; transition: border-color 0.15s, background 0.25s, color 0.25s;
+    }
+    .input-field:focus { border-color: var(--accent-blue); }
+    .input-field::placeholder { color: var(--text-muted); }
+
+    .btn-blue { background: var(--accent-blue); color: #fff; padding: 9px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; border: none; cursor: pointer; font-family: inherit; transition: background 0.15s; width: 100%; }
+    .btn-blue:hover { background: var(--accent-blue-d); }
+
+    .most-read-list { padding: 4px 0; }
+    .most-read-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .most-read-item:last-child { border-bottom: none; }
+    .most-read-item:hover { background: var(--hover-row); }
+    .mr-num { font-size: 20px; font-weight: 900; color: var(--accent-blue); line-height: 1; min-width: 20px; margin-top: 1px; }
+    .mr-title { font-size: 12px; font-weight: 500; line-height: 1.45; color: var(--text-primary); transition: color 0.15s; }
+    .most-read-item:hover .mr-title { color: var(--accent-blue); }
+    .mr-views { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+
+    /* ───── CONTENT SECTIONS ───── */
+    .content-area { padding: 32px 0; }
+    .section { margin-bottom: 36px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .section-title { font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; }
+    .see-all { font-size: 12px; font-weight: 600; color: var(--accent-blue); transition: color 0.15s; }
+    .see-all:hover { color: #60a5fa; }
+
+    .articles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .article-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.25s; display: block; }
+    .article-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+    .article-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+    .article-body { padding: 14px; }
+    .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+    .article-date { font-size: 11px; color: var(--text-muted); }
+    .article-title { font-size: 14px; font-weight: 700; line-height: 1.35; color: var(--text-primary); transition: color 0.15s; }
+    .article-card:hover .article-title { color: var(--accent-blue); }
+
+    /* ───── CATEGORIES ───── */
+    .categories-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+    .cat-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.25s; display: block; }
+    .cat-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+    .cat-icon-area { height: 88px; display: flex; align-items: center; justify-content: center; font-size: 38px; }
+    .cat-card-body { padding: 12px; }
+    .cat-card-name { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+    .cat-sublinks { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .cat-sublinks li a { font-size: 11px; color: var(--text-muted); transition: color 0.15s; }
+    .cat-sublinks li a:hover { color: var(--accent-blue); }
+    .cat-see-all { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent-blue); margin-top: 8px; }
+
+    /* ───── FOOTER ───── */
+    footer { background: var(--bg-footer); border-top: 1px solid var(--border); padding: 44px 0 24px; transition: background 0.25s, border-color 0.25s; }
+    .footer-grid { display: grid; grid-template-columns: 220px 1fr 1fr 220px; gap: 48px; margin-bottom: 36px; }
+    .footer-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 8px 0 16px; }
+    .social-row { display: flex; gap: 8px; }
+    .social-btn { width: 32px; height: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-muted); transition: border-color 0.15s, color 0.15s, background 0.25s; }
+    .social-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+    .footer-col-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-primary); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--accent-blue); }
+    .footer-newsletter { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+    .footer-bottom { padding-top: 20px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .footer-bottom-links { display: flex; gap: 16px; }
+    .footer-bottom-links a { font-size: 12px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: var(--text-secondary); }
+
+    /* ───── SEARCH OVERLAY ───── */
+    .search-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 80px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .search-overlay.open { opacity: 1; pointer-events: all; }
+
+    .search-modal {
+      background: var(--search-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 24px;
+      box-shadow: var(--search-shadow);
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: transform 0.2s, background 0.25s;
+    }
+    .search-overlay.open .search-modal { transform: translateY(0); }
+
+    .search-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px; border-bottom: 1px solid var(--border);
+    }
+    .search-icon-inner { font-size: 16px; color: var(--text-muted); flex-shrink: 0; }
+    .search-input {
+      flex: 1; background: transparent; border: none; outline: none;
+      font-size: 16px; font-family: inherit;
+      color: var(--text-primary);
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-close {
+      width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+      background: var(--hover-row); border: none; border-radius: 6px;
+      color: var(--text-muted); font-size: 14px; cursor: pointer; flex-shrink: 0;
+      transition: background 0.15s, color 0.15s;
+    }
+    .search-close:hover { background: var(--border); color: var(--text-primary); }
+
+    .search-results { max-height: 380px; overflow-y: auto; padding: 8px; }
+    .search-result-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 11px 12px; border-radius: 8px;
+      transition: background 0.15s; cursor: pointer;
+    }
+    .search-result-item:hover { background: var(--hover-row); }
+    .search-result-title { font-size: 14px; color: var(--text-primary); font-weight: 500; flex: 1; }
+    .search-result-item:hover .search-result-title { color: var(--accent-blue); }
+    .search-no-results { text-align: center; padding: 32px 16px; color: var(--text-muted); font-size: 14px; }
+    .search-hint { padding: 12px 16px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); display: flex; gap: 16px; }
+    .search-hint kbd { background: var(--border); padding: 2px 6px; border-radius: 4px; font-family: inherit; font-size: 11px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <div class="logo-wordmark">SK<span class="ai">AI</span>NET</div>
+        <div class="logo-tagline">AI ТЕХНОЛОГИИ / БЪДЕЩЕТО</div>
+      </a>
+
+      <nav>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">AI <span class="chevron">▾</span></a>
+          <div class="dropdown"><div class="dropdown-inner">
+            <a href="article.html?id=gpt4o">AI Новини</a>
+            <a href="article.html?id=claude3">AI Обяснено</a>
+            <a href="article.html?id=devs-2030">AI в индустрията</a>
+          </div></div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Технологии <span class="chevron">▾</span></a>
+          <div class="dropdown"><div class="dropdown-inner">
+            <a href="article.html?id=drones">Дронове</a>
+            <a href="article.html?id=robots">Роботи</a>
+            <a href="article.html?id=nvidia">Чипове и хардуер</a>
+            <a href="article.html?id=google-veo">Видео AI</a>
+          </div></div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Инструменти <span class="chevron">▾</span></a>
+          <div class="dropdown"><div class="dropdown-inner">
+            <a href="article.html?id=aitools">Продуктивност</a>
+            <a href="article.html?id=top10-ai-sites">Топ AI сайта</a>
+            <a href="article.html?id=midjourney-vs-dalle">Творчество</a>
+          </div></div>
+        </div>
+        <div class="nav-item">
+          <a href="article.html?id=compare" class="nav-link">Анализи</a>
+        </div>
+        <div class="nav-item">
+          <a href="article.html?id=startup" class="nav-link">AI в България</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Научи се <span class="chevron">▾</span></a>
+          <div class="dropdown"><div class="dropdown-inner">
+            <a href="article.html?id=chatgpt-guide">Ръководства</a>
+            <a href="article.html?id=prompt-guide">Prompt-ове</a>
+            <a href="article.html?id=top10-ai-sites">Курсове</a>
+          </div></div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">За нас</a>
+        </div>
+      </nav>
+
+      <div class="header-right">
+        <a href="https://www.facebook.com" target="_blank" class="icon-btn" title="Facebook">f</a>
+        <a href="https://www.youtube.com" target="_blank" class="icon-btn" title="YouTube">&#x25BA;</a>
+        <button class="icon-btn" id="themeToggle" title="Смени тема">&#x263E;</button>
+        <button class="icon-btn" id="searchBtn" title="Търсене" style="font-size:16px;">&#x1F50D;</button>
+        <a href="https://www.notion.so/product/ai" target="_blank" class="header-cta">&#x2605; AI TOOL НА СЕДМИЦАТА</a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker">
+  <div class="ticker-badge">&#x1F525; AI НОВИНА НА ДЕНЯ</div>
+  <div class="ticker-scroll">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-dot"></span>OpenAI представи новия модел GPT-4o с мултимодални възможности</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>NVIDIA разкри нов AI чип – Blackwell B200 задвижва следващото поколение AI</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Tesla пусна роботакси без шофьор в Тексас и Калифорния</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>ЕС прие EU AI Act – първият в света закон за регулация на изкуствения интелект</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Google DeepMind постигна пробив в синтеза на протеини с AlphaFold 3</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Anthropic набра $7.5 млрд. за разработка на по-безопасен AI</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>OpenAI представи новия модел GPT-4o с мултимодални възможности</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>NVIDIA разкри нов AI чип – Blackwell B200 задвижва следващото поколение AI</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Tesla пусна роботакси без шофьор в Тексас и Калифорния</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>ЕС прие EU AI Act – първият в света закон за регулация на изкуствения интелект</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Google DeepMind постигна пробив в синтеза на протеини с AlphaFold 3</div>
+      <div class="ticker-item"><span class="ticker-dot"></span>Anthropic набра $7.5 млрд. за разработка на по-безопасен AI</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero-section">
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-left">
+        <a href="article.html?id=gpt4o" class="hero-card">
+          <img src="https://picsum.photos/seed/aiface2025/900/560" alt="OpenAI GPT-4o">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="tag tag-ai">AI НОВИНИ</span>
+            <div class="hero-date">&#x23F1; 1 май 2025</div>
+            <h1 class="hero-title">OpenAI представи GPT-4o –<br>новото поколение AI модел</h1>
+            <p class="hero-excerpt">GPT-4o е по-бърз, по-умен и вече разбира изображения, аудио и текст едновременно. Нов стандарт за мултимодалност.</p>
+            <span class="btn-outline">ПРОЧЕТИ ПОВЕЧЕ →</span>
+          </div>
+        </a>
+
+        <div class="side-cards">
+          <a href="article.html?id=drones" class="side-card">
+            <img src="https://picsum.photos/seed/aidrone25/300/200" alt="AI Drone">
+            <div class="side-card-body">
+              <span class="tag tag-tech">ТЕХНОЛОГИИ</span>
+              <div class="side-card-date">30 април 2025</div>
+              <div class="side-card-title">Нови дронове с AI могат да спасяват животи автономно</div>
+            </div>
+          </a>
+          <a href="article.html?id=compare" class="side-card">
+            <img src="https://picsum.photos/seed/compare2025/300/200" alt="AI Compare">
+            <div class="side-card-body">
+              <span class="tag tag-analysis">АНАЛИЗИ</span>
+              <div class="side-card-date">29 април 2025</div>
+              <div class="side-card-title">ChatGPT vs Claude vs Gemini – кой е най-добрият през 2025?</div>
+            </div>
+          </a>
+          <a href="article.html?id=startup" class="side-card">
+            <img src="https://picsum.photos/seed/sofiacity25/300/200" alt="Bulgaria AI">
+            <div class="side-card-body">
+              <span class="tag tag-bg">AI В БЪЛГАРИЯ</span>
+              <div class="side-card-date">28 април 2025</div>
+              <div class="side-card-title">Български стартъп създаде AI решение за европейския пазар</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <div class="widget-head"><span class="icon">&#x1F3C6;</span> AI TOOL НА СЕДМИЦАТА</div>
+          <div class="tool-body">
+            <div class="tool-top">
+              <div class="tool-logo">&#x1F4DD;</div>
+              <div><div class="tool-name">Notion AI</div><div class="tool-url">notion.so</div></div>
+            </div>
+            <p class="tool-desc">AI асистент, който ти помага да пишеш, планираш и организираш всичко на едно място. Интегриран директно в твоя workspace.</p>
+            <div class="rating-row">
+              <span class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+              <span class="rating-val">Оценка 4.8 / 5</span>
+            </div>
+            <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener" class="btn-red">КЪМ ИНСТРУМЕНТА &#x2197;</a>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head">АБОНИРАЙ СЕ ЗА НОВИНИ</div>
+          <div class="newsletter-body">
+            <p class="newsletter-desc">Получавай най-важното от света на AI веднъж седмично.</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+              <input type="email" class="input-field" placeholder="Имейл адрес" required>
+              <button type="submit" class="btn-blue" id="subBtn">АБОНИРАЙ СЕ</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head" style="color:var(--accent-blue);">НАЙ-ЧЕТЕНИ</div>
+          <div class="most-read-list">
+            <a href="article.html?id=chatgpt-guide" class="most-read-item">
+              <span class="mr-num">1</span>
+              <div><div class="mr-title">Как да използваш ChatGPT ефективно (пълно ръководство)</div><div class="mr-views">&#x1F441; 12.4к четения</div></div>
+            </a>
+            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item">
+              <span class="mr-num">2</span>
+              <div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър за изображения?</div><div class="mr-views">&#x1F441; 9.8к четения</div></div>
+            </a>
+            <a href="article.html?id=top10-ai-sites" class="most-read-item">
+              <span class="mr-num">3</span>
+              <div><div class="mr-title">Топ 10 AI сайта, които ще ти спестят часове работа</div><div class="mr-views">&#x1F441; 8.1к четения</div></div>
+            </a>
+            <a href="article.html?id=ai-jobs" class="most-read-item">
+              <span class="mr-num">4</span>
+              <div><div class="mr-title">Как AI променя бъдещето на работните места до 2030</div><div class="mr-views">&#x1F441; 4.7к четения</div></div>
+            </a>
+            <a href="article.html?id=prompt-guide" class="most-read-item">
+              <span class="mr-num">5</span>
+              <div><div class="mr-title">Безплатни AI курсове, с които да започнеш още днес</div><div class="mr-views">&#x1F441; 3.3к четения</div></div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content-area">
+  <div class="container">
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Последни Новини</h2>
+        <a href="index.html" class="see-all">ВИЖ ВСИЧКИ →</a>
+      </div>
+      <div class="articles-grid" id="liveNewsGrid">
+        <a href="article.html?id=google-veo" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/googlevid25/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-ai">AI НОВИНИ</span><span class="article-date">1 май 2025</span></div>
+            <h3 class="article-title">Google представи Veo 2 – AI модел за генериране на видео в кинокачество</h3>
+          </div>
+        </a>
+        <a href="article.html?id=robots" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/robot2025/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-tech">ТЕХНОЛОГИИ</span><span class="article-date">1 май 2025</span></div>
+            <h3 class="article-title">Роботите вече се учат сами – Figure 02 демонстрира нов пробив в роботиката</h3>
+          </div>
+        </a>
+        <a href="article.html?id=aitools" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/aitools25/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-tools">ИНСТРУМЕНТИ</span><span class="article-date">30 април 2025</span></div>
+            <h3 class="article-title">5 безплатни AI инструмента за продуктивност, които трябва да пробваш</h3>
+          </div>
+        </a>
+        <a href="article.html?id=devs-2030" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/devfuture25/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-analysis">АНАЛИЗИ</span><span class="article-date">30 април 2025</span></div>
+            <h3 class="article-title">Ще замени ли AI програмистите до 2030 година? Данните говорят друго</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Може да си пропуснал</h2>
+        <a href="index.html" class="see-all">ВИЖ ВСИЧКИ →</a>
+      </div>
+      <div class="articles-grid" id="missedNewsGrid">
+        <a href="article.html?id=eu-ai-act" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/euaiact/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-bg">AI В БЪЛГАРИЯ</span><span class="article-date">27 април 2025</span></div>
+            <h3 class="article-title">Как EU AI Act ще промени работата на Bulgarian Tech компаниите</h3>
+          </div>
+        </a>
+        <a href="article.html?id=nvidia" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/nvidia25b/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-tech">ТЕХНОЛОГИИ</span><span class="article-date">26 април 2025</span></div>
+            <h3 class="article-title">NVIDIA Blackwell B200 – чипът, който задвижва цялото AI в света</h3>
+          </div>
+        </a>
+        <a href="article.html?id=claude3" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/claude3opu/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-ai">AI НОВИНИ</span><span class="article-date">25 април 2025</span></div>
+            <h3 class="article-title">Anthropic пусна Claude 3 Opus – най-умният AI модел към момента</h3>
+          </div>
+        </a>
+        <a href="article.html?id=prompt-guide" class="article-card">
+          <img class="article-img" src="https://picsum.photos/seed/promptguide/600/340" alt="">
+          <div class="article-body">
+            <div class="article-meta"><span class="tag tag-learn">НАУЧИ СЕ</span><span class="article-date">24 април 2025</span></div>
+            <h3 class="article-title">Пълно ръководство за prompt engineering – от начинаещ до напреднал</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header"><h2 class="section-title">Разгледай по Категории</h2></div>
+      <div class="categories-grid">
+        <a href="article.html?id=gpt4o" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#1e3a8a,#1d4ed8);">&#x1F916;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-ai);">AI</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=gpt4o">AI Новини</a></li><li><a href="article.html?id=claude3">AI Обяснено</a></li><li><a href="article.html?id=devs-2030">AI в индустрията</a></li></ul>
+            <a href="article.html?id=gpt4o" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+        <a href="article.html?id=robots" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#3b0764,#6d28d9);">&#x1F681;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-tech);">ТЕХНОЛОГИИ</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=drones">Дронове</a></li><li><a href="article.html?id=robots">Роботи</a></li><li><a href="article.html?id=nvidia">Чипове</a></li><li><a href="article.html?id=google-veo">Видео AI</a></li></ul>
+            <a href="article.html?id=robots" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+        <a href="article.html?id=aitools" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#064e3b,#065f46);">&#x1F9F0;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-tools);">ИНСТРУМЕНТИ</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=aitools">Продуктивност</a></li><li><a href="article.html?id=top10-ai-sites">Топ AI сайта</a></li><li><a href="article.html?id=midjourney-vs-dalle">Творчество</a></li></ul>
+            <a href="article.html?id=aitools" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+        <a href="article.html?id=compare" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#78350f,#b45309);">&#x1F4CA;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-analysis);">АНАЛИЗИ</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=compare">Сравнения</a></li><li><a href="article.html?id=ai-jobs">Прогнози</a></li><li><a href="article.html?id=devs-2030">Тенденции</a></li></ul>
+            <a href="article.html?id=compare" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+        <a href="article.html?id=startup" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#0c4a6e,#0369a1);">&#x1F1E7;&#x1F1EC;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-bg-color);">AI В БЪЛГАРИЯ</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=startup">Стартъпи</a></li><li><a href="article.html?id=eu-ai-act">Регулации</a></li></ul>
+            <a href="article.html?id=startup" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+        <a href="article.html?id=chatgpt-guide" class="cat-card">
+          <div class="cat-icon-area" style="background:linear-gradient(135deg,#082f49,#0284c7);">&#x1F393;</div>
+          <div class="cat-card-body">
+            <div class="cat-card-name" style="color:var(--cat-learn);">НАУЧИ СЕ</div>
+            <ul class="cat-sublinks"><li><a href="article.html?id=chatgpt-guide">Ръководства</a></li><li><a href="article.html?id=prompt-guide">Prompt-ове</a></li><li><a href="article.html?id=top10-ai-sites">Курсове</a></li></ul>
+            <a href="article.html?id=chatgpt-guide" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;margin-bottom:8px;">
+          <div style="font-size:22px;font-weight:900;color:var(--logo-color);">SK<span style="color:var(--accent-blue);">AI</span>NET</div>
+        </a>
+        <p class="footer-desc">Новини, анализи и инструменти за AI, технологии и бъдещето на България.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com" target="_blank" class="social-btn">f</a>
+          <a href="https://www.youtube.com" target="_blank" class="social-btn">&#x25BA;</a>
+          <a href="https://x.com" target="_blank" class="social-btn">𝕏</a>
+          <a href="https://linkedin.com" target="_blank" class="social-btn">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Категории</div>
+        <ul class="footer-links">
+          <li><a href="article.html?id=gpt4o">AI</a></li>
+          <li><a href="article.html?id=robots">Технологии</a></li>
+          <li><a href="article.html?id=aitools">Инструменти</a></li>
+          <li><a href="article.html?id=compare">Анализи</a></li>
+          <li><a href="article.html?id=startup">AI в България</a></li>
+          <li><a href="article.html?id=chatgpt-guide">Научи се</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Полезно</div>
+        <ul class="footer-links">
+          <li><a href="index.html">За нас</a></li>
+          <li><a href="index.html">Контакти</a></li>
+          <li><a href="https://www.notion.so/product/ai" target="_blank" rel="noopener">Notion AI &#x2197;</a></li>
+          <li><a href="index.html">Условия за ползване</a></li>
+          <li><a href="index.html">Политика за поверителност</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Абонирай се</div>
+        <p class="footer-desc" style="margin-top:0;margin-bottom:10px;">Получавай AI новини веднъж седмично.</p>
+        <div class="footer-newsletter">
+          <input type="email" class="input-field" placeholder="Имейл адрес">
+          <button class="btn-blue" onclick="this.textContent='✓ Готово!';this.style.background='#10b981'">АБОНИРАЙ СЕ</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 SKAINET. Всички права запазени.</span>
+      <div class="footer-bottom-links">
+        <a href="index.html">Поверителност</a>
+        <a href="index.html">Условия</a>
+        <a href="index.html">Реклама</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ SEARCH OVERLAY ═══ -->
+<div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true">
+  <div class="search-modal">
+    <div class="search-header">
+      <span class="search-icon-inner">&#x1F50D;</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Търси статии, теми, категории…" autocomplete="off">
+      <button class="search-close" id="searchClose">✕</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+    <div class="search-hint">
+      <span><kbd>ESC</kbd> затваря</span>
+      <span><kbd>Enter</kbd> отваря</kbd></span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── ARTICLES DATA for search ── */
+const SEARCH_ARTICLES = [
+  { id:'gpt4o',            title:'OpenAI представи GPT-4o – новото поколение AI модел',              cat:'AI НОВИНИ',    tag:'tag-ai' },
+  { id:'drones',           title:'Нови дронове с AI могат да спасяват животи автономно',             cat:'ТЕХНОЛОГИИ',   tag:'tag-tech' },
+  { id:'compare',          title:'ChatGPT vs Claude vs Gemini – кой е най-добрият AI асистент 2025', cat:'АНАЛИЗИ',      tag:'tag-analysis' },
+  { id:'startup',          title:'Български стартъп създаде AI решение за европейския пазар',         cat:'AI В БЪЛГАРИЯ',tag:'tag-bg' },
+  { id:'google-veo',       title:'Google представи Veo 2 – AI видео в кинокачество',                  cat:'AI НОВИНИ',    tag:'tag-ai' },
+  { id:'robots',           title:'Роботите вече се учат сами – Figure 02 пробив в роботиката',        cat:'ТЕХНОЛОГИИ',   tag:'tag-tech' },
+  { id:'aitools',          title:'5 безплатни AI инструмента за продуктивност',                       cat:'ИНСТРУМЕНТИ',  tag:'tag-tools' },
+  { id:'devs-2030',        title:'Ще замени ли AI програмистите до 2030? Данните говорят друго',      cat:'АНАЛИЗИ',      tag:'tag-analysis' },
+  { id:'eu-ai-act',        title:'Как EU AI Act ще промени Bulgarian Tech компаниите',                cat:'AI В БЪЛГАРИЯ',tag:'tag-bg' },
+  { id:'nvidia',           title:'NVIDIA Blackwell B200 – чипът задвижващ цялото AI',                 cat:'ТЕХНОЛОГИИ',   tag:'tag-tech' },
+  { id:'claude3',          title:'Anthropic пусна Claude 3 Opus – най-умният AI модел',               cat:'AI НОВИНИ',    tag:'tag-ai' },
+  { id:'prompt-guide',     title:'Пълно ръководство за prompt engineering',                           cat:'НАУЧИ СЕ',     tag:'tag-learn' },
+  { id:'chatgpt-guide',    title:'Как да използваш ChatGPT ефективно – пълно ръководство 2025',       cat:'НАУЧИ СЕ',     tag:'tag-learn' },
+  { id:'midjourney-vs-dalle',title:'Midjourney vs DALL-E 3 – кой е по-добър за изображения?',         cat:'АНАЛИЗИ',      tag:'tag-analysis' },
+  { id:'top10-ai-sites',   title:'Топ 10 AI сайта, които ще ти спестят часове работа',               cat:'НАУЧИ СЕ',     tag:'tag-learn' },
+  { id:'ai-jobs',          title:'Как AI променя бъдещето на работните места до 2030',               cat:'АНАЛИЗИ',      tag:'tag-analysis' },
+];
+
+/* ── SEARCH ── */
+const overlay     = document.getElementById('searchOverlay');
+const searchInput = document.getElementById('searchInput');
+const resultsEl   = document.getElementById('searchResults');
+
+function openSearch() {
+  overlay.classList.add('open');
+  searchInput.focus();
+}
+
+function closeSearch() {
+  overlay.classList.remove('open');
+  searchInput.value = '';
+  resultsEl.innerHTML = '';
+}
+
+document.getElementById('searchBtn').addEventListener('click', openSearch);
+document.getElementById('searchClose').addEventListener('click', closeSearch);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+
+searchInput.addEventListener('input', function () {
+  const q = this.value.trim().toLowerCase();
+  if (!q) { resultsEl.innerHTML = ''; return; }
+
+  const matches = SEARCH_ARTICLES.filter(a =>
+    a.title.toLowerCase().includes(q) ||
+    a.cat.toLowerCase().includes(q)
+  );
+
+  if (!matches.length) {
+    resultsEl.innerHTML = '<div class="search-no-results">Няма намерени резултати за „' + this.value + '"</div>';
+    return;
+  }
+
+  resultsEl.innerHTML = matches.map(a => `
+    <a href="article.html?id=${a.id}" class="search-result-item" onclick="closeSearch()">
+      <span class="tag ${a.tag}" style="flex-shrink:0;">${a.cat}</span>
+      <span class="search-result-title">${a.title}</span>
+    </a>
+  `).join('');
+});
+
+/* ── THEME TOGGLE ── */
+const toggle = document.getElementById('themeToggle');
+const html   = document.documentElement;
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  toggle.textContent = theme === 'dark' ? '☾' : '☀';
+  toggle.title = theme === 'dark' ? 'Светла тема' : 'Тъмна тема';
+  localStorage.setItem('skainet-theme', theme);
+}
+
+// Load saved theme on start
+applyTheme(localStorage.getItem('skainet-theme') || 'dark');
+
+toggle.addEventListener('click', () => {
+  applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+/* ── LIVE NEWS from articles.json ── */
+(async function loadLiveNews() {
+  try {
+    const res = await fetch('articles.json');
+    if (!res.ok) return;
+    const data = await res.json();
+    const arts = data.articles || [];
+    if (arts.length < 4) return;
+
+    function articleCard(a) {
+      return `
+        <a href="${a.url}" target="_blank" rel="noopener" class="article-card">
+          <img class="article-img" src="${a.image}" alt="" onerror="this.src='https://picsum.photos/seed/${a.id}/600/340'">
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="tag ${a.tag}">${a.category}</span>
+              <span class="article-date">${a.date}</span>
+              <span class="article-date" style="color:var(--text-muted);font-size:10px;">${a.source}</span>
+            </div>
+            <h3 class="article-title">${a.title}</h3>
+          </div>
+        </a>`;
+    }
+
+    const liveGrid   = document.getElementById('liveNewsGrid');
+    const missedGrid = document.getElementById('missedNewsGrid');
+    if (liveGrid)   liveGrid.innerHTML   = arts.slice(0, 4).map(articleCard).join('');
+    if (missedGrid) missedGrid.innerHTML = arts.slice(4, 8).map(articleCard).join('');
+  } catch (_) { /* keep static fallback */ }
+})();
+
+/* ── NEWSLETTER ── */
+function subscribeNewsletter(e) {
+  e.preventDefault();
+  const btn   = document.getElementById('subBtn');
+  const input = e.target.querySelector('input');
+  btn.textContent = '✓ Абонирахте се!';
+  btn.style.background = '#10b981';
+  input.value = '';
+  setTimeout(() => { btn.textContent = 'АБОНИРАЙ СЕ'; btn.style.background = ''; }, 3000);
+}
+</script>
+</body>
+</html>

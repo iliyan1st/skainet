@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKAINET – Статия</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary:      #08091a;
+      --bg-card:         #111827;
+      --bg-header:       #060814;
+      --bg-footer:       #060814;
+      --bg-dropdown:     #0f172a;
+      --accent-blue:     #3b82f6;
+      --accent-blue-d:   #2563eb;
+      --accent-red:      #ef4444;
+      --accent-red-d:    #dc2626;
+      --cat-ai:          #3b82f6;
+      --cat-tech:        #8b5cf6;
+      --cat-tools:       #10b981;
+      --cat-analysis:    #f59e0b;
+      --cat-bg-color:    #0891b2;
+      --cat-learn:       #0ea5e9;
+      --text-primary:    #f1f5f9;
+      --text-secondary:  #cbd5e1;
+      --text-muted:      #64748b;
+      --border:          #1e293b;
+      --border-light:    #2d3f5e;
+      --gold:            #fbbf24;
+      --logo-color:      #ffffff;
+      --nav-hover-bg:    rgba(255,255,255,0.05);
+      --nav-hover-color: #ffffff;
+      --hover-row:       rgba(255,255,255,0.02);
+      --dropdown-link-hover: rgba(255,255,255,0.06);
+      --input-bg:        #08091a;
+    }
+    [data-theme="light"] {
+      --bg-primary:      #f8fafc;
+      --bg-card:         #ffffff;
+      --bg-header:       #ffffff;
+      --bg-footer:       #f1f5f9;
+      --bg-dropdown:     #ffffff;
+      --text-primary:    #0f172a;
+      --text-secondary:  #334155;
+      --text-muted:      #94a3b8;
+      --border:          #e2e8f0;
+      --border-light:    #cbd5e1;
+      --logo-color:      #0f172a;
+      --nav-hover-bg:    rgba(0,0,0,0.04);
+      --nav-hover-color: #0f172a;
+      --hover-row:       rgba(0,0,0,0.03);
+      --dropdown-link-hover: rgba(0,0,0,0.04);
+      --input-bg:        #f8fafc;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { transition: background 0.25s, color 0.25s; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      transition: background 0.25s, color 0.25s;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    /* ───── HEADER ───── */
+    header {
+      background: var(--bg-header);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .header-inner { display: flex; align-items: center; height: 60px; gap: 28px; }
+    .logo { display: flex; flex-direction: column; line-height: 1; flex-shrink: 0; }
+    .logo-wordmark { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; color: var(--logo-color); }
+    .logo-wordmark .ai { color: var(--accent-blue); }
+    .logo-tagline { font-size: 9px; color: var(--text-muted); letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
+
+    nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+    .nav-item { position: relative; }
+    .nav-link {
+      display: flex; align-items: center; gap: 4px;
+      padding: 6px 10px; font-size: 13px; font-weight: 500;
+      color: var(--text-secondary); border-radius: 6px;
+      transition: color 0.15s, background 0.15s; white-space: nowrap;
+    }
+    .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+    .chevron { font-size: 9px; opacity: 0.6; }
+    .dropdown {
+      display: none; position: absolute; top: calc(100% + 6px); left: 0;
+      background: #0f172a; border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px; min-width: 160px; z-index: 200;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    }
+    .nav-item:hover .dropdown { display: block; }
+    .dropdown a { display: block; padding: 7px 12px; font-size: 13px; color: var(--text-secondary); border-radius: 5px; transition: background 0.15s, color 0.15s; }
+    .dropdown a:hover { background: rgba(255,255,255,0.06); color: #fff; }
+    .header-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .icon-btn { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; color: var(--text-muted); font-size: 14px; transition: color 0.15s, background 0.15s; cursor: pointer; border: none; background: transparent; }
+    .icon-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .header-cta { display: flex; align-items: center; gap: 6px; background: var(--accent-red); color: #fff; padding: 7px 14px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; transition: background 0.15s; white-space: nowrap; }
+    .header-cta:hover { background: var(--accent-red-d); }
+
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.4; }
+    .tag-ai       { background: var(--cat-ai);       color: #fff; }
+    .tag-tech     { background: var(--cat-tech);     color: #fff; }
+    .tag-tools    { background: var(--cat-tools);    color: #fff; }
+    .tag-analysis { background: var(--cat-analysis); color: #000; }
+    .tag-bg       { background: var(--cat-bg-color); color: #fff; }
+    .tag-learn    { background: var(--cat-learn);    color: #fff; }
+
+    /* ───── ARTICLE LAYOUT ───── */
+    .article-page { padding: 40px 0 60px; }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .breadcrumb a { color: var(--text-muted); transition: color 0.15s; }
+    .breadcrumb a:hover { color: var(--accent-blue); }
+    .breadcrumb-sep { font-size: 11px; }
+
+    /* Article hero */
+    .article-hero-img {
+      width: 100%; border-radius: 12px;
+      aspect-ratio: 16/8; object-fit: cover;
+      margin-bottom: 28px;
+    }
+
+    .article-header { margin-bottom: 24px; }
+    .article-header .tag { margin-bottom: 14px; }
+    .article-title {
+      font-size: 32px; font-weight: 900; line-height: 1.2;
+      color: #fff; margin-bottom: 16px;
+    }
+    .article-meta-row {
+      display: flex; align-items: center; gap: 16px;
+      font-size: 13px; color: var(--text-muted);
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-author { color: var(--text-secondary); font-weight: 500; }
+    .meta-dot { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; }
+
+    /* Article body */
+    .article-body {
+      font-size: 16px; line-height: 1.8; color: var(--text-secondary);
+    }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; color: var(--text-primary);
+      margin: 32px 0 16px;
+    }
+    .article-body h3 {
+      font-size: 18px; font-weight: 700; color: var(--text-primary);
+      margin: 24px 0 12px;
+    }
+    .article-body ul, .article-body ol {
+      padding-left: 24px; margin-bottom: 20px;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body blockquote {
+      border-left: 3px solid var(--accent-blue);
+      padding: 12px 20px;
+      background: rgba(59,130,246,0.06);
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    /* Tags row */
+    .article-tags {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      margin-top: 32px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .article-tags-label { font-size: 13px; color: var(--text-muted); }
+    .article-tag-pill {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 4px 12px; border-radius: 20px;
+      font-size: 12px; color: var(--text-secondary);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .article-tag-pill:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+    /* ───── SIDEBAR ───── */
+    .sidebar { display: flex; flex-direction: column; gap: 16px; }
+    .widget { background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+    .widget-head {
+      display: flex; align-items: center; gap: 7px;
+      padding: 13px 16px 11px; border-bottom: 1px solid var(--border);
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--text-secondary);
+    }
+    .widget-head .icon { font-size: 15px; }
+
+    .most-read-list { padding: 4px 0; }
+    .most-read-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 16px; border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .most-read-item:last-child { border-bottom: none; }
+    .most-read-item:hover { background: rgba(255,255,255,0.02); }
+    .mr-num { font-size: 20px; font-weight: 900; color: var(--accent-blue); line-height: 1; min-width: 20px; margin-top: 1px; }
+    .mr-title { font-size: 12px; font-weight: 500; line-height: 1.45; color: var(--text-primary); transition: color 0.15s; }
+    .most-read-item:hover .mr-title { color: var(--accent-blue); }
+    .mr-views { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+
+    .tool-body { padding: 14px 16px 16px; }
+    .tool-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .tool-logo { width: 44px; height: 44px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .tool-name { font-size: 16px; font-weight: 700; }
+    .tool-url { font-size: 11px; color: var(--text-muted); }
+    .tool-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px; }
+    .rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+    .rating-val { font-size: 12px; color: var(--text-muted); }
+    .btn-red { display: block; text-align: center; background: var(--accent-red); color: #fff; padding: 9px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; transition: background 0.15s; }
+    .btn-red:hover { background: var(--accent-red-d); }
+
+    .newsletter-body { padding: 14px 16px; }
+    .newsletter-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
+    .input-field { width: 100%; background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 6px; padding: 9px 12px; color: var(--text-primary); font-size: 13px; font-family: inherit; outline: none; transition: border-color 0.15s; }
+    .input-field:focus { border-color: var(--accent-blue); }
+    .input-field::placeholder { color: var(--text-muted); }
+    .btn-blue { background: var(--accent-blue); color: #fff; padding: 9px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; border: none; cursor: pointer; font-family: inherit; transition: background 0.15s; width: 100%; margin-top: 8px; }
+    .btn-blue:hover { background: var(--accent-blue-d); }
+
+    /* Related articles */
+    .related-section { margin-top: 48px; }
+    .related-title { font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+    .related-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; display: block; }
+    .related-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
+    .related-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+    .related-body { padding: 14px; }
+    .related-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .related-date { font-size: 11px; color: var(--text-muted); }
+    .related-title-text { font-size: 14px; font-weight: 700; line-height: 1.35; color: var(--text-primary); transition: color 0.15s; }
+    .related-card:hover .related-title-text { color: var(--accent-blue); }
+
+    /* Back button */
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--text-muted); font-size: 13px; font-weight: 500;
+      margin-bottom: 20px; transition: color 0.15s;
+    }
+    .back-btn:hover { color: var(--accent-blue); }
+
+    /* ───── FOOTER ───── */
+    footer { background: var(--bg-footer); border-top: 1px solid var(--border); padding: 44px 0 24px; transition: background 0.25s; }
+    .footer-grid { display: grid; grid-template-columns: 220px 1fr 1fr 220px; gap: 48px; margin-bottom: 36px; }
+    .footer-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 8px 0 16px; }
+    .social-row { display: flex; gap: 8px; }
+    .social-btn { width: 32px; height: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-muted); transition: border-color 0.15s, color 0.15s; }
+    .social-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+    .footer-col-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-primary); margin-bottom: 14px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--accent-blue); }
+    .footer-newsletter { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+    .footer-bottom { padding-top: 20px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    .footer-bottom-links { display: flex; gap: 16px; }
+    .footer-bottom-links a { font-size: 12px; color: var(--text-muted); transition: color 0.15s; }
+    .footer-bottom-links a:hover { color: var(--text-secondary); }
+
+    /* 404 */
+    .not-found { text-align: center; padding: 80px 20px; }
+    .not-found h2 { font-size: 28px; margin-bottom: 12px; }
+    .not-found p { color: var(--text-muted); margin-bottom: 24px; }
+    .btn-home { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-blue); color: #fff; padding: 10px 22px; border-radius: 8px; font-weight: 600; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-wordmark">SK<span class="ai">AI</span>NET</div>
+        <div class="logo-tagline">AI ТЕХНОЛОГИИ / БЪДЕЩЕТО</div>
+      </a>
+      <nav>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">AI <span class="chevron">▾</span></a>
+          <div class="dropdown">
+            <a href="index.html">AI Новини</a>
+            <a href="index.html">AI Обяснено</a>
+            <a href="index.html">AI в индустрията</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Технологии <span class="chevron">▾</span></a>
+          <div class="dropdown">
+            <a href="index.html">Дронове</a>
+            <a href="index.html">Роботи</a>
+            <a href="index.html">Чипове и хардуер</a>
+            <a href="index.html">Автомобили</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="index.html" class="nav-link">Инструменти <span class="chevron">▾</span></a>
+          <div class="dropdown">
+            <a href="index.html">Продуктивност</a>
+            <a href="index.html">Бизнес</a>
+            <a href="index.html">Творчество</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="index.html" class="nav-link">Анализи</a></div>
+        <div class="nav-item"><a href="index.html" class="nav-link">AI в България</a></div>
+        <div class="nav-item"><a href="index.html" class="nav-link">Научи се <span class="chevron">▾</span></a>
+          <div class="dropdown">
+            <a href="index.html">Ръководства</a>
+            <a href="index.html">Prompt-ове</a>
+            <a href="index.html">Курсове</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="index.html" class="nav-link">За нас</a></div>
+      </nav>
+      <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Смени тема">&#x263E;</button>
+        <a href="index.html" class="icon-btn" title="Търсене" style="font-size:16px;">&#x1F50D;</a>
+        <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener" class="header-cta">&#x2605; AI TOOL НА СЕДМИЦАТА</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE PAGE -->
+<div class="article-page">
+  <div class="container">
+    <div class="article-grid">
+      <main id="articleMain">
+        <div class="not-found">
+          <h2>Зареждане...</h2>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <div class="widget-head"><span class="icon">&#x1F3C6;</span> AI TOOL НА СЕДМИЦАТА</div>
+          <div class="tool-body">
+            <div class="tool-top">
+              <div class="tool-logo">&#x1F4DD;</div>
+              <div><div class="tool-name">Notion AI</div><div class="tool-url">notion.so</div></div>
+            </div>
+            <p class="tool-desc">AI асистент за писане, планиране и организиране на всичко на едно място.</p>
+            <div class="rating-row">
+              <span class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+              <span class="rating-val">4.8 / 5</span>
+            </div>
+            <a href="index.html" class="btn-red">КЪМ ИНСТРУМЕНТА &#x2197;</a>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head" style="color:var(--accent-blue);">НАЙ-ЧЕТЕНИ</div>
+          <div class="most-read-list">
+            <a href="article.html?id=chatgpt-guide" class="most-read-item">
+              <span class="mr-num">1</span>
+              <div><div class="mr-title">Как да използваш ChatGPT ефективно (пълно ръководство)</div><div class="mr-views">&#x1F441; 12.4к</div></div>
+            </a>
+            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item">
+              <span class="mr-num">2</span>
+              <div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър?</div><div class="mr-views">&#x1F441; 9.8к</div></div>
+            </a>
+            <a href="article.html?id=top10-ai-sites" class="most-read-item">
+              <span class="mr-num">3</span>
+              <div><div class="mr-title">Топ 10 AI сайта, които ще ти спестят часове</div><div class="mr-views">&#x1F441; 8.1к</div></div>
+            </a>
+            <a href="article.html?id=ai-jobs" class="most-read-item">
+              <span class="mr-num">4</span>
+              <div><div class="mr-title">Как AI променя бъдещето на работните места</div><div class="mr-views">&#x1F441; 4.7к</div></div>
+            </a>
+            <a href="article.html?id=prompt-guide" class="most-read-item">
+              <span class="mr-num">5</span>
+              <div><div class="mr-title">Безплатни AI курсове за начинаещи</div><div class="mr-views">&#x1F441; 3.3к</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head">АБОНИРАЙ СЕ</div>
+          <div class="newsletter-body">
+            <p class="newsletter-desc">Най-важното от AI веднъж седмично.</p>
+            <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Готово!';this.querySelector('button').style.background='#10b981'">
+              <input type="email" class="input-field" placeholder="Имейл адрес" required>
+              <button type="submit" class="btn-blue">АБОНИРАЙ СЕ</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;margin-bottom:8px;">
+          <div style="font-size:22px;font-weight:900;color:#fff;">SK<span style="color:var(--accent-blue);">AI</span>NET</div>
+        </a>
+        <p class="footer-desc">Новини, анализи и инструменти за AI, технологии и бъдещето.</p>
+        <div class="social-row">
+          <a href="index.html" class="social-btn">f</a>
+          <a href="index.html" class="social-btn">&#x25BA;</a>
+          <a href="index.html" class="social-btn">t</a>
+          <a href="index.html" class="social-btn">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Категории</div>
+        <ul class="footer-links">
+          <li><a href="index.html">AI</a></li>
+          <li><a href="index.html">Технологии</a></li>
+          <li><a href="index.html">Инструменти</a></li>
+          <li><a href="index.html">Анализи</a></li>
+          <li><a href="index.html">AI в България</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Полезно</div>
+        <ul class="footer-links">
+          <li><a href="index.html">За нас</a></li>
+          <li><a href="index.html">Контакти</a></li>
+          <li><a href="index.html">Условия за ползване</a></li>
+          <li><a href="index.html">Поверителност</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Новини по имейл</div>
+        <div class="footer-newsletter">
+          <input type="email" class="input-field" placeholder="Имейл адрес">
+          <button class="btn-blue">АБОНИРАЙ СЕ</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 SKAINET. Всички права запазени.</span>
+      <div class="footer-bottom-links">
+        <a href="index.html">Поверителност</a>
+        <a href="index.html">Условия</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const ARTICLES = {
+  'gpt4o': {
+    tag: 'tag-ai', tagLabel: 'AI НОВИНИ',
+    date: '1 май 2025', author: 'Редакция SKAINET',
+    title: 'OpenAI представи GPT-4o – новото поколение AI модел',
+    img: 'https://picsum.photos/seed/aiface2025/1200/600',
+    content: `
+      <p>OpenAI официално представи <strong>GPT-4o</strong> (произнася се „GPT-4 omni") – новия си флагмански модел, който поставя нов стандарт в мултимодалния изкуствен интелект. За разлика от предшествениците си, GPT-4o обработва текст, изображения и аудио едновременно и в реално време, без нужда от отделни модели за всеки тип входни данни.</p>
+      <p>Моделът е значително по-бърз от GPT-4 Turbo и се предлага безплатно за всички потребители на ChatGPT, като платените абонати имат приоритетен достъп и по-висок лимит на заявки. OpenAI твърди, че GPT-4o постига резултати на ниво GPT-4 Turbo при текстови задачи, но е значително по-добър при обработка на аудио и изображения.</p>
+      <h2>Какво е ново в GPT-4o?</h2>
+      <p>Най-впечатляващата новост е <strong>гласовото взаимодействие в реално време</strong>. Потребителите могат да водят естествен разговор с модела с латентност под 320 милисекунди – сравнимо с реален човешки разговор. Освен това GPT-4o може да „вижда" и анализира изображения, да решава математически уравнения написани на хартия, и да превежда реч в реално време.</p>
+      <blockquote>„GPT-4o е стъпка към по-естествено взаимодействие между хората и AI – без бариери, без забавяне, с пълно разбиране на контекста." – Сам Алтман, CEO на OpenAI</blockquote>
+      <h2>Достъпност и цени</h2>
+      <p>GPT-4o е достъпен безплатно в ChatGPT. Чрез API-то моделът струва $5 на милион входящи токени и $15 на милион изходящи токени – около половината от цената на GPT-4 Turbo. Разработчиците вече могат да го интегрират в своите приложения.</p>
+      <h3>Поддържани езици</h3>
+      <p>OpenAI е подобрила значително многоезичната поддръжка. GPT-4o показва по-добри резултати от предишните модели на 50+ езика, включително български. Компанията твърди, че е намалила разликата в качеството между английски и останалите езици.</p>
+      <p>Анализаторите от индустрията очакват GPT-4o да ускори приемането на AI в ежедневната употреба, особено в образованието, здравеопазването и бизнеса. Конкурентите Google и Anthropic вече реагираха с анонси за нови обновления на своите модели Gemini и Claude.</p>
+    `,
+    tags: ['OpenAI', 'GPT-4o', 'ChatGPT', 'Мултимодален AI', 'AI модели'],
+    related: ['compare', 'claude3', 'google-veo']
+  },
+
+  'drones': {
+    tag: 'tag-tech', tagLabel: 'ТЕХНОЛОГИИ',
+    date: '30 април 2025', author: 'Технологичен екип',
+    title: 'Нови дронове с AI могат да спасяват животи автономно',
+    img: 'https://picsum.photos/seed/aidrone25/1200/600',
+    content: `
+      <p>Нова генерация <strong>автономни дронове с вграден изкуствен интелект</strong> показва впечатляващи резултати в спасителни операции. Разработени от американската компания Skydio в партньорство с FEMA, новите дронове могат да претърсват бедствени зони, да идентифицират оцелели и да координират спасителни екипи без нужда от оператор.</p>
+      <p>По данни от тестовете в Калифорния, дроновете са успели да открият „оцелели" (манекени, поставени на скрити места) с 94% точност в сценарии с ограничена видимост – нощни условия, дим и тесни пространства. Времето за покриване на един квадратен километър е намалено от 4 часа (с традиционни методи) на под 20 минути.</p>
+      <h2>Как работи AI системата?</h2>
+      <p>Системата използва комбинация от <strong>компютърно зрение, термална камера и LiDAR сензори</strong>. AI моделът е обучен върху хиляди сценарии на бедствия и може да разпознае човешки топлинен подпис дори под завалини. При намиране на оцелял, дронът автоматично изпраща GPS координати на спасителния екип и остава над мястото като жив маркер.</p>
+      <blockquote>„Тези дронове не заменят спасителите – те са техните очи там, където не могат да стигнат веднага." – д-р Мария Чен, ръководител на проекта</blockquote>
+      <h2>Приложение в Европа</h2>
+      <p>Европейската агенция за авиационна безопасност (EASA) работи по регулации за автономни дронове в спасителни операции. България и Гърция вече провеждат пилотни програми за интегриране на AI дронове в гражданската защита, особено за горски пожари и земетресения.</p>
+      <p>Цената на един дрон е около $45,000 – значително по-малко от хеликоптер, и с многократно по-добра покривност при масови бедствия. Военните приложения на подобни технологии вече предизвикват международни дебати за етиката на автономните оръжия.</p>
+    `,
+    tags: ['Дронове', 'Спасителни операции', 'Автономни системи', 'Skydio', 'FEMA'],
+    related: ['robots', 'nvidia', 'gpt4o']
+  },
+
+  'compare': {
+    tag: 'tag-analysis', tagLabel: 'АНАЛИЗИ',
+    date: '29 април 2025', author: 'Анализи екип',
+    title: 'ChatGPT vs Claude vs Gemini – кой е най-добрият AI асистент през 2025?',
+    img: 'https://picsum.photos/seed/compare2025/1200/600',
+    content: `
+      <p>Пазарът на AI асистенти стана изключително конкурентен. <strong>ChatGPT</strong> на OpenAI, <strong>Claude</strong> на Anthropic и <strong>Gemini</strong> на Google са трите доминиращи платформи. Направихме обширно тестване на всеки от тях в реални сценарии – ето резултатите.</p>
+      <h2>Методология на тестването</h2>
+      <p>Тествахме моделите в 6 категории: писане на текст, програмиране, анализ на данни, творческо писане, многоезична поддръжка (включително български) и фактологична точност. Всеки тест беше извършен с едни и същи подсказки на GPT-4o, Claude 3 Opus и Gemini 1.5 Pro.</p>
+      <h3>ChatGPT (GPT-4o) – Балансираният избор</h3>
+      <p>GPT-4o се представи най-добре в <strong>програмирането и техническите задачи</strong>. Генерирането на код е прецизно, обяснението на грешки – ясно. Слабостта е в по-дългите текстови анализи, където понякога „халюцинира" факти. Безплатният достъп го прави привлекателен за начинаещи.</p>
+      <h3>Claude 3 Opus – Царят на дългия контекст</h3>
+      <p>Claude показа <strong>най-добри резултати при анализ на документи</strong> и творческо писане. Контекстният прозорец от 200K токени позволява анализ на цели книги наведнъж. Anthropic е инвестирала сериозно в „честността" на модела – Claude отказва да измисля факти и признава когато не знае нещо.</p>
+      <blockquote>„Claude е моделът, на когото се доверявам за сериозна работа. Не е най-бързият, но е най-точният." – технически анализатор от Silicon Valley</blockquote>
+      <h3>Gemini 1.5 Pro – Интегрираният Google подход</h3>
+      <p>Gemini печели при <strong>интеграция с Google услуги</strong> – търсене в реално време, Gmail, Docs, YouTube. За потребители дълбоко в екосистемата на Google, това е безспорното предимство. Качеството на генерирания текст на български е малко под конкурентите, но се подобрява бързо.</p>
+      <h2>Нашата препоръка</h2>
+      <p>Няма универсален победител – изборът зависи от нуждите ти. За код и технически задачи: ChatGPT. За анализ и дълги документи: Claude. За интеграция с Google и актуална информация: Gemini. Много напреднали потребители използват и трите според контекста.</p>
+    `,
+    tags: ['ChatGPT', 'Claude', 'Gemini', 'Сравнение', 'AI Асистенти'],
+    related: ['gpt4o', 'claude3', 'chatgpt-guide']
+  },
+
+  'startup': {
+    tag: 'tag-bg', tagLabel: 'AI В БЪЛГАРИЯ',
+    date: '28 април 2025', author: 'Боряна Иванова',
+    title: 'Български стартъп създаде AI решение за европейския пазар',
+    img: 'https://picsum.photos/seed/sofiacity25/1200/600',
+    content: `
+      <p>Софийският технологичен стартъп <strong>NovaMind.ai</strong> привлече €2.3 милиона seed финансиране от европейски фондове за разработка на AI платформа за автоматизация на HR процеси. Компанията, основана от бивши инженери на Telerik и VMware, вече обслужва 40 клиента в 8 европейски държави.</p>
+      <p>Платформата използва <strong>специализирани LLM модели</strong>, обучени върху европейско трудово законодателство, за автоматизиране на скрининга на кандидати, изготвяне на трудови договори и анализ на текучество на персонала. Компанията твърди, че намалява времето за наемане с 65% и разходите за HR с 40%.</p>
+      <h2>Защо България?</h2>
+      <p>„България е уникална позиция – имаме отличен технически талант на конкурентни цени, достъп до европейския пазар и нарастваща AI екосистема", казва Димитър Петров, CEO на NovaMind.ai. Компанията работи от Sofia Tech Park и планира да наеме 30 нови служители до края на 2025 г.</p>
+      <h3>EU AI Act съответствие</h3>
+      <p>Важно предимство на NovaMind е проактивното съответствие с <strong>EU AI Act</strong>. Платформата е категоризирана като „висок риск" AI система (засяга заетостта) и е изградена с вградена обяснимост на решенията – клиентите могат да видят защо AI е отхвърлил или одобрил даден кандидат.</p>
+      <blockquote>„Регулациите не са пречка – те са конкурентно предимство за компании, които се съобразяват с тях от самото начало." – Димитър Петров, CEO</blockquote>
+      <p>В България активно се развиват и други AI стартъпи: Payhawk (финтех AI), Chaos Group (3D рендеринг AI), и няколко компании за медицинска диагностика с AI. Министерството на иновациите работи по национална AI стратегия с хоризонт 2030.</p>
+    `,
+    tags: ['България', 'Стартъпи', 'HR AI', 'EU AI Act', 'NovaMind'],
+    related: ['eu-ai-act', 'compare', 'ai-jobs']
+  },
+
+  'google-veo': {
+    tag: 'tag-ai', tagLabel: 'AI НОВИНИ',
+    date: '1 май 2025', author: 'Редакция SKAINET',
+    title: 'Google представи Veo 2 – AI модел за генериране на видео в кинокачество',
+    img: 'https://picsum.photos/seed/googlevid25/1200/600',
+    content: `
+      <p>Google DeepMind официално пусна <strong>Veo 2</strong> – новото поколение AI видео генератор, способен да създава клипове с дължина до 2 минути в резолюция 4K. Моделът е достъпен в Google Labs и е насочен към кинематографи, рекламодатели и съдържание създатели.</p>
+      <p>Veo 2 демонстрира значително подобрение спрямо версия 1 – по-добра физическа точност (водата се движи реалистично, сенките са правилни), по-дълго времетраене на клиповете и поддръжка на кинематографски команди като „close-up shot", „dolly zoom" и „slow motion".</p>
+      <h2>Сравнение с конкуренцията</h2>
+      <p>Основните конкуренти на Veo 2 са <strong>Sora на OpenAI</strong> и <strong>Kling на Kuaishou</strong>. В директни сравнения Veo 2 показва по-добра физическа последователност, докато Sora е по-добър в следването на сложни промпти. Kling се отличава с най-дългото генериране – до 3 минути.</p>
+      <blockquote>„Видео генерацията е следващата граница на generative AI. Veo 2 поставя нов стандарт за качество." – Демис Хасабис, CEO на Google DeepMind</blockquote>
+      <h3>Достъпност и ограничения</h3>
+      <p>Veo 2 е достъпен чрез waitlist в YouTube Dream Screen и Google Labs. Генерирането на едноминутен клип отнема между 2 и 8 минути. Google е вградила <strong>SynthID watermark</strong> в генерираните видеа за идентификация на AI съдържание – стъпка, приветствана от журналисти и медийни организации.</p>
+      <p>Очаква се генеративното видео да трансформира рекламната индустрия – стотици специализирани агенции вече тестват инструментите за производство на реклами с AI. Ethical questions около deepfakes и дезинформация остават ключово предизвикателство.</p>
+    `,
+    tags: ['Google', 'Veo 2', 'AI Видео', 'DeepMind', 'Generative AI'],
+    related: ['gpt4o', 'compare', 'nvidia']
+  },
+
+  'robots': {
+    tag: 'tag-tech', tagLabel: 'ТЕХНОЛОГИИ',
+    date: '1 май 2025', author: 'Технологичен екип',
+    title: 'Роботите вече се учат сами – Figure 02 демонстрира нов пробив в роботиката',
+    img: 'https://picsum.photos/seed/robot2025/1200/600',
+    content: `
+      <p>Компанията Figure AI демонстрира <strong>Figure 02</strong> – хуманоиден робот, способен да учи нови задачи само от видео демонстрации, без ръчно програмиране. Роботът е показан как сгъва дрехи, зарежда съдомиялна машина и сортира предмети – след гледане само на 10-минутно видео демо от човек.</p>
+      <p>Технологията, наречена <strong>„video-conditioned learning"</strong>, е резултат от партньорство с OpenAI. Модела е обучен върху милиарди видеа от реален свят и може да „разбере" задача от гледна точка на крайния резултат, след което да изчисли оптималните движения сам.</p>
+      <h2>Отвъд лабораторията</h2>
+      <p>Figure AI вече е сключила партньорство с <strong>BMW</strong> за интеграция на роботи в производствените линии. В завода в Спартанбург, Южна Каролина, 10 прототипа Figure 01 вече изпълняват задачи по логистика. Компанията планира да достави 100 Figure 02 единици до края на 2025 г.</p>
+      <blockquote>„Хуманоидните роботи ще бъдат най-трансформиращата технология на нашето поколение – по-голям пазар от автомобилите." – Брет Адкок, CEO на Figure AI</blockquote>
+      <h3>Конкуренцията се засилва</h3>
+      <p>Tesla Optimus, Boston Dynamics Atlas и китайската Unitree Robotics също ускоряват разработките. Анализаторите от Goldman Sachs прогнозират, че до 2035 г. пазарът на хуманоидни роботи ще достигне $38 милиарда. Ключовото предизвикателство остава цената – един Figure 02 струва около $75,000.</p>
+    `,
+    tags: ['Роботика', 'Figure AI', 'Хуманоидни роботи', 'BMW', 'OpenAI'],
+    related: ['drones', 'nvidia', 'ai-jobs']
+  },
+
+  'aitools': {
+    tag: 'tag-tools', tagLabel: 'ИНСТРУМЕНТИ',
+    date: '30 април 2025', author: 'Редакция SKAINET',
+    title: '5 безплатни AI инструмента за продуктивност, които трябва да пробваш',
+    img: 'https://picsum.photos/seed/aitools25/1200/600',
+    content: `
+      <p>Пазарът на AI инструменти нараства експоненциално, но не всичко струва скъпо. Събрахме <strong>5-те най-добри безплатни AI инструмента</strong> за продуктивност, изпробвани от нашия екип в реална работна среда.</p>
+      <h2>1. Notion AI – Всичко в едно</h2>
+      <p>Notion AI е вграден директно в популярния workspace инструмент. Може да пише, обобщава, превежда и организира бележки. Безплатният план включва 20 AI заявки на месец. За 10$/месец получавате неограничен достъп. <strong>Идеален за:</strong> студенти, freelancers, малки екипи.</p>
+      <h2>2. Perplexity AI – AI търсачка</h2>
+      <p>Perplexity замества Google за изследователска работа. Дава отговори с цитирани източници в реално време. Безплатният план е достатъчен за ежедневна употреба. <strong>Идеален за:</strong> изследователи, журналисти, студенти.</p>
+      <h2>3. Otter.ai – Транскрипция на срещи</h2>
+      <p>Otter.ai записва и транскрибира срещи автоматично, прави резюмета и извлича action items. 600 минути безплатно на месец. Интегрира се с Zoom, Google Meet и Teams. <strong>Идеален за:</strong> мениджъри, консултанти, журналисти.</p>
+      <h2>4. Canva AI – Дизайн без умения</h2>
+      <p>Canva вгради мощни AI функции: Magic Design (генерира дизайн от текст), Magic Write (AI текстове) и Background Remover. Безплатният план покрива 95% от нуждите. <strong>Идеален за:</strong> маркетинг, социални медии, презентации.</p>
+      <h2>5. GitHub Copilot – AI за програмисти</h2>
+      <p>GitHub Copilot предлага безплатен план с 2,000 завършвания на код на месец. За студенти е напълно безплатен. Поддържа всички основни езици. <strong>Идеален за:</strong> разработчици на всички нива.</p>
+      <blockquote>„Не инструментите правят разликата – начинът, по който ги интегрираш в работния си процес, е ключов."</blockquote>
+      <p>Всички 5 инструмента са тествани от нашия екип в период от 3 месеца. Препоръчваме да започнете с Notion AI и Perplexity – те дават най-бързата видима промяна в продуктивността.</p>
+    `,
+    tags: ['AI Инструменти', 'Продуктивност', 'Notion', 'Perplexity', 'Безплатни'],
+    related: ['chatgpt-guide', 'prompt-guide', 'compare']
+  },
+
+  'devs-2030': {
+    tag: 'tag-analysis', tagLabel: 'АНАЛИЗИ',
+    date: '30 април 2025', author: 'Анализи екип',
+    title: 'Ще замени ли AI програмистите до 2030 година? Данните говорят друго',
+    img: 'https://picsum.photos/seed/devfuture25/1200/600',
+    content: `
+      <p>Всеки месец се появяват нови заглавия за AI, което ще „убие" програмирането като професия. Реалността е значително по-нюансирана. Анализирахме данни от 500 технологични компании и проведохме интервюта с 80 senior разработчици, за да разберем как AI реално влияе на работата им.</p>
+      <h2>Какво казват данните</h2>
+      <p>Проучване на Stack Overflow от 2025 г. показва, че <strong>78% от разработчиците</strong> вече използват AI инструменти ежедневно – предимно GitHub Copilot, ChatGPT и Cursor. Повечето съобщават за 20-40% ускорение при рутинни задачи като писане на boilerplate код, документация и unit тестове.</p>
+      <p>Обаче за <strong>архитектурни решения, debugging на сложни системи и разбиране на бизнес контекст</strong> – AI остава значително по-слаб от опитен програмист. Тези умения са именно тези, за които компаниите плащат premium заплати.</p>
+      <h2>Промяна в търсените умения</h2>
+      <p>Интересното е, че търсенето на senior разработчици <strong>нараства</strong>, не намалява. Причината: с AI инструментите, един добър разработчик може да свърши работата на трима. Следователно компаниите искат по-малко на брой, но по-добри хора. Junior позициите намаляват, което прави влизането в индустрията по-трудно.</p>
+      <blockquote>„AI не замества програмистите – то замества програмистите, които не използват AI." – Андрей Карпатий, бивш директор на AI в Tesla</blockquote>
+      <h3>Нови роли се появяват</h3>
+      <p>Едновременно с тревогите, се появяват напълно нови роли: AI Engineer, Prompt Engineer, ML Platform Engineer и AI Safety Researcher. Тези позиции се заплащат с 30-60% повече от традиционните developer роли.</p>
+      <p>Нашият извод: до 2030 г. програмирането ще се трансформира коренно, но няма да изчезне. Разработчиците, които активно интегрират AI в работата си, ще бъдат по-търсени и по-добре платени от всякога.</p>
+    `,
+    tags: ['Програмисти', 'Бъдеще на труда', 'GitHub Copilot', 'AI и работа', 'Анализ'],
+    related: ['ai-jobs', 'aitools', 'compare']
+  },
+
+  'eu-ai-act': {
+    tag: 'tag-bg', tagLabel: 'AI В БЪЛГАРИЯ',
+    date: '27 април 2025', author: 'Боряна Иванова',
+    title: 'Как EU AI Act ще промени работата на Bulgarian Tech компаниите',
+    img: 'https://picsum.photos/seed/euaiact/1200/600',
+    content: `
+      <p>EU AI Act влезе в сила на 1 август 2024 г. и компаниите имат между 6 и 36 месеца за съответствие в зависимост от категорията на риска. За <strong>Bulgarian Tech</strong> – един от най-бързо растящите сектори в страната – регулацията носи едновременно предизвикателства и нови бизнес възможности.</p>
+      <h2>Кои компании са засегнати?</h2>
+      <p>Всяка компания, която разработва или използва AI системи в ЕС, е обхваната от закона. Системите са разделени на 4 категории риск: <strong>Неприемлив риск</strong> (забранени – социален скоринг, манипулация), <strong>Висок риск</strong> (стриктни изисквания – наемане, кредитиране, медицина), <strong>Ограничен риск</strong> (изисквания за прозрачност) и <strong>Минимален риск</strong> (свободни).</p>
+      <h3>Практически стъпки за компаниите</h3>
+      <p>Пловдивският технологичен консултант Елена Стоянова обяснява: „Повечето Bulgarian Tech компании трябва да направят AI inventory – да опишат всички AI системи, които използват или разработват, и да ги категоризират по риск. Това не е тривиална задача за компании с 50+ AI инструмента."</p>
+      <blockquote>„EU AI Act е по-скоро рамка за доверие, отколкото пречка за иновации. Компаниите, които го приемат проактивно, ще спечелят клиенти, загрижени за compliance." – Иван Иванов, AI Legal Advisor</blockquote>
+      <h2>Глобите</h2>
+      <p>Санкциите са сериозни: до <strong>€35 милиона или 7% от световния оборот</strong> за нарушения в категорията „Неприемлив риск". За „Висок риск" нарушения: до €15 милиона или 3% от оборота. За малки компании и стартъпи са предвидени намалени глоби.</p>
+      <p>Министерството на иновациите и растежа работи с Bulgarian Startup Association за безплатни консултации за компаниите. Европейският AI Office в Брюксел публикува подробни насоки на 24 езика, включително български.</p>
+    `,
+    tags: ['EU AI Act', 'България', 'Регулации', 'Compliance', 'Bulgarian Tech'],
+    related: ['startup', 'devs-2030', 'ai-jobs']
+  },
+
+  'nvidia': {
+    tag: 'tag-tech', tagLabel: 'ТЕХНОЛОГИИ',
+    date: '26 април 2025', author: 'Технологичен екип',
+    title: 'NVIDIA Blackwell B200 – чипът, който задвижва цялото AI в света',
+    img: 'https://picsum.photos/seed/nvidia25b/1200/600',
+    content: `
+      <p>NVIDIA официално пусна в производство <strong>Blackwell B200</strong> – GPU чипа, описван като „най-мощният в историята на компанията". Системата NVL72, съдържаща 72 B200 чипа, предоставя 1.4 exaFLOP производителност за AI inference – 30 пъти повече от предишния флагман H100.</p>
+      <p>Всеки B200 чип съдържа <strong>208 милиарда транзистора</strong>, произведени по TSMC 4NP процес. Чипът поддържа нов NVLink 5 интерфейс с 1.8 TB/s bandwidth между GPU-тата – критично за мащабни AI тренировки.</p>
+      <h2>Кой купува Blackwell?</h2>
+      <p>Microsoft Azure, Google Cloud, Amazon AWS и Oracle вече са поръчали системи на стойност над $11 милиарда. OpenAI, xAI на Илон Мъск и Anthropic също са в листата на чакащите. Времето за доставка е 6-12 месеца, а цената на един NVL72 rack е около $3 милиона.</p>
+      <blockquote>„Blackwell е AI Industrial Revolution в кутия. Всичко, което сте виждали досега, беше загрявка." – Дженсън Хуанг, CEO на NVIDIA</blockquote>
+      <h3>Конкуренцията се активизира</h3>
+      <p>AMD отговори с MI300X, Intel с Gaudi 3. Google TPU v5 и Amazon Trainium 2 са custom чипове, специализирани за конкретни workload-и. Въпреки конкуренцията, NVIDIA поддържа над 85% пазарен дял в AI training чиповете.</p>
+      <p>За България и региона, Blackwell е особено важен чрез облачните доставчици – Bulgarian AI компании вече имат достъп до тези мощности чрез AWS и Azure без нужда от собствен hardware.</p>
+    `,
+    tags: ['NVIDIA', 'Blackwell', 'GPU', 'AI Hardware', 'Чипове'],
+    related: ['gpt4o', 'robots', 'google-veo']
+  },
+
+  'claude3': {
+    tag: 'tag-ai', tagLabel: 'AI НОВИНИ',
+    date: '25 април 2025', author: 'Редакция SKAINET',
+    title: 'Anthropic пусна Claude 3 Opus – най-умният AI модел към момента',
+    img: 'https://picsum.photos/seed/claude3opu/1200/600',
+    content: `
+      <p>Anthropic официално пусна <strong>Claude 3 Opus</strong> – новия си флагмански модел, който надминава GPT-4 в повечето академични бенчмаркове. Моделът постига 86.8% на MMLU теста (срещу 86.4% на GPT-4), и показва особено силни резултати в математика, програмиране и многостъпково разсъждение.</p>
+      <p>Семейството Claude 3 включва три модела: <strong>Haiku</strong> (бърз и евтин), <strong>Sonnet</strong> (балансиран) и <strong>Opus</strong> (най-умен). Всичките три поддържат зрение – анализ на изображения, графики и документи.</p>
+      <h2>Безопасност като конкурентно предимство</h2>
+      <p>Anthropic е известна с акцента си върху AI безопасността. Claude 3 е обучен с <strong>Constitutional AI</strong> методология – моделът е „научен" да следва набор от принципи и да отказва вредни заявки по по-нюансиран начин от конкурентите. Тестовете показват по-малко „false refusals" (отказ на безвредни заявки) спрямо Claude 2.</p>
+      <blockquote>„Целта ни не е само да направим AI по-умен – а да го направим по-умен И по-безопасен едновременно." – Дарио Амодей, CEO на Anthropic</blockquote>
+      <h3>Цени и достъпност</h3>
+      <p>Claude 3 Haiku е достъпен в безплатния план на Claude.ai. Sonnet и Opus изискват Pro абонамент ($20/месец). Чрез API: Opus струва $15/M входящи токена и $75/M изходящи. Контекстният прозорец от 200K токена е стандарт за всичките три модела.</p>
+      <p>В сравнение с GPT-4o, Claude 3 Opus превъзхожда при дълги документи и академично разсъждение, но е по-бавен и по-скъп. За ежедневна употреба Claude 3 Sonnet предлага най-добрия баланс цена/качество.</p>
+    `,
+    tags: ['Anthropic', 'Claude 3', 'AI Безопасност', 'LLM', 'Модели'],
+    related: ['gpt4o', 'compare', 'google-veo']
+  },
+
+  'prompt-guide': {
+    tag: 'tag-learn', tagLabel: 'НАУЧИ СЕ',
+    date: '24 април 2025', author: 'Образователен екип',
+    title: 'Пълно ръководство за prompt engineering – от начинаещ до напреднал',
+    img: 'https://picsum.photos/seed/promptguide/1200/600',
+    content: `
+      <p><strong>Prompt engineering</strong> е изкуството да комуникираш ефективно с AI модели. Добре написан промпт може да е разликата между посредствен и изключителен резултат. Ето всичко, което трябва да знаеш.</p>
+      <h2>Основи за начинаещи</h2>
+      <p>Ключовото правило: <strong>бъди конкретен</strong>. „Напиши имейл" е лош промпт. „Напиши формален имейл до потенциален клиент за 150 думи, представящ нашата HR SaaS платформа, с призив за 30-минутна демо среща" – това е добър промпт.</p>
+      <p>Основни елементи на ефективен промпт: <strong>Роля</strong> (Ти си опитен copywriter), <strong>Задача</strong> (напиши...), <strong>Контекст</strong> (за аудитория от...), <strong>Формат</strong> (в 3 параграфа с bullet points) и <strong>Ограничения</strong> (без жаргон, до 200 думи).</p>
+      <h2>Напреднали техники</h2>
+      <h3>Chain-of-Thought (CoT)</h3>
+      <p>Добавянето на „Мисли стъпка по стъпка" преди сложни задачи значително подобрява точността при математика и логически проблеми. AI моделите работят по-добре, когато „разсъждават" на глас.</p>
+      <h3>Few-Shot Learning</h3>
+      <p>Дай 2-3 примера за желания формат преди реалната задача. Моделът ще разбере шаблона и ще го приложи. Особено полезно за генериране на структурирани данни или специфичен тон.</h3>
+      <h3>System Prompts</h3>
+      <p>При работа с API, system prompt-ът задава „персонализацията" на модела за цялата сесия. Инвестирай времето си в добре написан system prompt и спестявай инструкции при всяка заявка.</p>
+      <blockquote>„Prompt engineering не е само технически умение – то е ново форма на грамотност за AI ерата." – Андрей Карпатий</blockquote>
+      <p>Препоръчваме да практикуваш с реални задачи от работата си. Водете записки за промпти, които работят добре – изгради собствена библиотека. Delve AI и PromptBase са добри ресурси за вдъхновение.</p>
+    `,
+    tags: ['Prompt Engineering', 'ChatGPT', 'AI Ръководство', 'Обучение', 'Техники'],
+    related: ['chatgpt-guide', 'aitools', 'compare']
+  },
+
+  'chatgpt-guide': {
+    tag: 'tag-learn', tagLabel: 'НАУЧИ СЕ',
+    date: '20 април 2025', author: 'Образователен екип',
+    title: 'Как да използваш ChatGPT ефективно – пълно ръководство 2025',
+    img: 'https://picsum.photos/seed/chatgptguide/1200/600',
+    content: `
+      <p>ChatGPT е най-широко използваният AI инструмент в света с над 180 милиона активни потребители. Но повечето хора използват само 20% от възможностите му. Ето как да извлечеш максимума.</p>
+      <h2>Настройки, за да знаеш</h2>
+      <p><strong>Custom Instructions</strong> са твоят скрит инструмент. В настройките можеш да зададеш кой си ти (разработчик, маркетинг специалист, студент) и какъв тип отговори предпочиташ (кратко, с примери, без излишни обяснения). ChatGPT ще прилага тези инструкции автоматично.</p>
+      <p><strong>GPT Store</strong> предлага хиляди специализирани GPT-та – от анализатор на финансови документи до Python ментор и рецептен асистент. Много от тях са безплатни дори за базовия план.</p>
+      <h2>Продуктивни workflow-и</h2>
+      <h3>За писане</h3>
+      <p>Използвай ChatGPT като „thinking partner", не като ghost writer. Обсъди идеите си, помоли за структура, получи feedback. Крайният текст трябва да е твой – AI дава скеле, ти запълваш с реален опит и глас.</p>
+      <h3>За код</h3>
+      <p>ChatGPT е отличен за: обяснение на непознат код, намиране на bug-ове, писане на тестове, рефакториране. Копирай грешката директно и попитай „Защо се получава това и как да го оправя?"</p>
+      <blockquote>„ChatGPT е като да имаш колега, с когото можеш да обсъдиш всичко по всяко време. Ключът е да го третираш като мислещ партньор, не като оракул."</blockquote>
+      <h2>Ограничения, за да знаеш</h2>
+      <p>ChatGPT „халюцинира" – измисля факти с увереност. Никога не вярвай сляпо на цитати, статистики или конкретни данни без проверка. Използвай Perplexity AI когато имаш нужда от верифицирана информация с източници.</p>
+    `,
+    tags: ['ChatGPT', 'Ръководство', 'Продуктивност', 'OpenAI', 'AI Обучение'],
+    related: ['prompt-guide', 'aitools', 'compare']
+  },
+
+  'midjourney-vs-dalle': {
+    tag: 'tag-analysis', tagLabel: 'АНАЛИЗИ',
+    date: '18 април 2025', author: 'Анализи екип',
+    title: 'Midjourney vs DALL-E 3 – кой е по-добър за генериране на изображения?',
+    img: 'https://picsum.photos/seed/mjvsdalle/1200/600',
+    content: `
+      <p>Генерирането на изображения с AI се превърна в ежедневен инструмент за дизайнери, маркетолози и съдържание създатели. Но кой инструмент да изберем – <strong>Midjourney</strong> или <strong>DALL-E 3</strong>? Тествахме двата в 100+ сценария.</p>
+      <h2>Качество на изображенията</h2>
+      <p>Midjourney превъзхожда при <strong>художествени и естетически изображения</strong>. Резултатите имат характерна визуална идентичност – наситени цветове, кинематографска дълбочина, почти „живописен" вид. За концептуален арт и маркетингови материали Midjourney е безспорен лидер.</p>
+      <p>DALL-E 3 е по-добър при <strong>точно следване на текстови инструкции</strong>. Поставен директно в ChatGPT, можеш да водиш диалог: „направи фона по-тъмен", „добави логото горе вдясно". Midjourney изисква по-технически промпти.</p>
+      <h2>Цени</h2>
+      <p>Midjourney: $10/месец (200 изображения) или $30/месец (неограничено). DALL-E 3: включен в ChatGPT Plus ($20/месец) с 50 изображения дневно. За чист image генератор, Midjourney е по-изгоден.</p>
+      <blockquote>„Midjourney е за художника, DALL-E е за маркетолога – всеки е перфектен инструмент за различни нужди."</blockquote>
+      <p>Нашата препоръка: ако основно работиш с ChatGPT, DALL-E 3 е удобното решение. Ако изображенията са ключова част от работата ти, Midjourney си заслужава отделния абонамент.</p>
+    `,
+    tags: ['Midjourney', 'DALL-E', 'AI Изображения', 'Сравнение', 'Design'],
+    related: ['aitools', 'chatgpt-guide', 'compare']
+  },
+
+  'top10-ai-sites': {
+    tag: 'tag-learn', tagLabel: 'НАУЧИ СЕ',
+    date: '15 април 2025', author: 'Редакция SKAINET',
+    title: 'Топ 10 AI сайта, които ще ти спестят часове работа',
+    img: 'https://picsum.photos/seed/top10ai/1200/600',
+    content: `
+      <p>Пазарът на AI инструменти е огромен – над 10,000 нови AI продукта са пуснати само за 2024 г. Ние сме тествали стотици. Ето 10-те, които реално спестяват часове на нашия екип.</p>
+      <ol>
+        <li><strong>Perplexity.ai</strong> – AI търсачка с цитирани източници. Замества Google за изследователска работа.</li>
+        <li><strong>Gamma.app</strong> – Презентации от текст за 60 секунди. Качеството е изненадващо високо.</li>
+        <li><strong>Otter.ai</strong> – Транскрибира и обобщава срещи автоматично.</li>
+        <li><strong>Descript</strong> – Редактиране на видео като редактиране на текст. Революционен за подкасти.</li>
+        <li><strong>Loom AI</strong> – Записва и автоматично генерира резюме на видео-обяснения.</li>
+        <li><strong>Fireflies.ai</strong> – Участва в срещите ти и прави подробни бележки с action items.</li>
+        <li><strong>Superhuman</strong> – AI имейл клиент, кaрва те 2x по-бърз с имейли.</li>
+        <li><strong>Mem.ai</strong> – AI бележник, който автоматично свързва и организира информацията.</li>
+        <li><strong>Beautiful.ai</strong> – Слайдове, които сами се форматират при добавяне на съдържание.</li>
+        <li><strong>Runway ML</strong> – Видео редактиране с AI, включително ротоскопиране и background removal.</li>
+      </ol>
+      <p>Всички имат безплатен plan. Препоръчваме да изберете 2-3 и да ги интегрирате дълбоко в работния процес, вместо да опитвате всички повърхностно.</p>
+    `,
+    tags: ['AI Инструменти', 'Продуктивност', 'Препоръки', 'Топ листа'],
+    related: ['aitools', 'chatgpt-guide', 'prompt-guide']
+  },
+
+  'ai-jobs': {
+    tag: 'tag-analysis', tagLabel: 'АНАЛИЗИ',
+    date: '12 април 2025', author: 'Анализи екип',
+    title: 'Как AI променя бъдещето на работните места до 2030',
+    img: 'https://picsum.photos/seed/aijobs2030/1200/600',
+    content: `
+      <p>Докладът на McKinsey от 2025 г. прогнозира, че до 2030 г. AI и автоматизацията ще трансформират <strong>60-70% от работните позиции</strong> в развитите икономики. Но „трансформация" не означава задължително „заместване" – данните са по-сложни.</p>
+      <h2>Кои сектори са най-засегнати?</h2>
+      <p>Най-голям риск от автоматизация: <strong>счетоводство, въвеждане на данни, базова клиентска поддръжка, транспорт</strong> (при масово внедряване на autonomous vehicles) и рутинни административни задачи. Тези роли не изчезват наведнъж, но се свиват бавно.</p>
+      <p>Най-устойчиви на автоматизация: <strong>здравни грижи, образование, изкуство и занаяти, ръководни позиции, социална работа</strong>. Емпатията, физическата ловкост в непредвидими среди и сложното социално взаимодействие остават трудни за AI.</p>
+      <h2>Нови работни места</h2>
+      <p>World Economic Forum прогнозира създаването на 97 милиона нови роли до 2025 г., свързани с AI. Най-търсени: AI специалисти, data анализатори, разработчици на зелена енергия и специалисти по хибридни work environments.</p>
+      <blockquote>„Не е въпрос дали ще бъдеш заменен от AI – въпросът е дали ще бъдеш заменен от човек, който използва AI." – Клаус Шваб, WEF</blockquote>
+      <h3>Ситуацията в България</h3>
+      <p>България е в уникална позиция – силен IT сектор (7% от БВП), но и голям дял от работещите в производство и услуги с висок автоматизационен риск. Националната програма за преквалификация към дигитални умения обхваща 50,000 работещи годишно – капацитет, далеч недостатъчен за мащаба на предизвикателството.</p>
+    `,
+    tags: ['AI и Работа', 'Бъдеще', 'McKinsey', 'Автоматизация', 'България'],
+    related: ['devs-2030', 'eu-ai-act', 'startup']
+  }
+};
+
+function getTagClass(tagLabel) {
+  const map = {
+    'AI НОВИНИ':    'tag-ai',
+    'ТЕХНОЛОГИИ':   'tag-tech',
+    'ИНСТРУМЕНТИ':  'tag-tools',
+    'АНАЛИЗИ':      'tag-analysis',
+    'AI В БЪЛГАРИЯ':'tag-bg',
+    'НАУЧИ СЕ':     'tag-learn'
+  };
+  return map[tagLabel] || 'tag-ai';
+}
+
+function renderRelated(ids) {
+  const cards = ids.slice(0,3).map(id => {
+    const a = ARTICLES[id];
+    if (!a) return '';
+    return `
+      <a href="article.html?id=${id}" class="related-card">
+        <img class="related-img" src="${a.img.replace('1200/600','600/340')}" alt="">
+        <div class="related-body">
+          <div class="related-meta">
+            <span class="tag ${a.tag}">${a.tagLabel}</span>
+            <span class="related-date">${a.date}</span>
+          </div>
+          <div class="related-title-text">${a.title}</div>
+        </div>
+      </a>`;
+  }).join('');
+  return cards;
+}
+
+function load() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const art = id && ARTICLES[id];
+  const main = document.getElementById('articleMain');
+
+  if (!art) {
+    main.innerHTML = `
+      <div class="not-found">
+        <h2>Статията не е намерена</h2>
+        <p>Може би е преместена или изтрита.</p>
+        <a href="index.html" class="btn-home">← Към началната страница</a>
+      </div>`;
+    return;
+  }
+
+  document.title = `${art.title} – SKAINET`;
+
+  main.innerHTML = `
+    <a href="index.html" class="back-btn">← Обратно към новините</a>
+    <div class="breadcrumb">
+      <a href="index.html">Начало</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>${art.tagLabel}</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>${art.title.slice(0,40)}…</span>
+    </div>
+    <div class="article-header">
+      <span class="tag ${art.tag}">${art.tagLabel}</span>
+      <h1 class="article-title">${art.title}</h1>
+      <div class="article-meta-row">
+        <span class="article-author">&#x1F464; ${art.author}</span>
+        <span class="meta-dot"></span>
+        <span>&#x1F4C5; ${art.date}</span>
+        <span class="meta-dot"></span>
+        <span>&#x23F1; 4 мин. четене</span>
+      </div>
+    </div>
+    <img class="article-hero-img" src="${art.img}" alt="${art.title}">
+    <div class="article-body">${art.content}</div>
+    <div class="article-tags">
+      <span class="article-tags-label">Тагове:</span>
+      ${art.tags.map(t => `<a href="index.html" class="article-tag-pill">${t}</a>`).join('')}
+    </div>
+    ${art.related ? `
+    <div class="related-section">
+      <div class="related-title">Свързани статии</div>
+      <div class="related-grid">${renderRelated(art.related)}</div>
+    </div>` : ''}
+  `;
+}
+
+load();
+
+/* ── THEME TOGGLE ── */
+const toggle = document.getElementById('themeToggle');
+const html   = document.documentElement;
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  toggle.textContent = theme === 'dark' ? '☾' : '☀';
+  toggle.title = theme === 'dark' ? 'Светла тема' : 'Тъмна тема';
+  localStorage.setItem('skainet-theme', theme);
+}
+
+applyTheme(localStorage.getItem('skainet-theme') || 'dark');
+toggle.addEventListener('click', () => {
+  applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+</script>
+
+</body>
+</html>

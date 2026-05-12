@@ -914,42 +914,51 @@ toggle.addEventListener('click', () => {
         </a>`;
     }
 
-    // Hero: article 0 = main, 1-3 = side cards
+    // ── Hero: article 0 = main card, 1-3 = side cards ──
     const heroMain = document.getElementById('heroMainCard');
     const heroSide = document.getElementById('heroSideCards');
-    if (heroMain && arts[0]) heroMain.outerHTML = heroCard(arts[0]);
+
+    if (heroMain && arts[0]) {
+      const a = arts[0];
+      heroMain.href = `article.html?id=${a.id}`;
+      const img = heroMain.querySelector('img');
+      if (img) { img.src = a.image; img.alt = a.title; }
+      const tag = heroMain.querySelector('.tag');
+      if (tag) { tag.className = `tag ${a.tag}`; tag.textContent = a.category; }
+      const dateEl = heroMain.querySelector('.hero-date');
+      if (dateEl) dateEl.innerHTML = `&#x23F1; ${a.date} &nbsp;·&nbsp; ${a.source}`;
+      const titleEl = heroMain.querySelector('.hero-title');
+      if (titleEl) titleEl.textContent = a.title;
+      const excerptEl = heroMain.querySelector('.hero-excerpt');
+      if (excerptEl) excerptEl.textContent = a.excerpt;
+    }
+
     if (heroSide) {
       const sides = arts.slice(1, 4);
       if (sides.length) heroSide.innerHTML = sides.map(sideCard).join('');
     }
 
-    // Grids: 4-7 = Последни Новини, 8-11 = Може да си пропуснал
+    // ── Grids: filled from articles after hero ──
+    // Slice adaptively so there's never an empty gap
     const liveGrid   = document.getElementById('liveNewsGrid');
     const missedGrid = document.getElementById('missedNewsGrid');
 
     const liveArts   = arts.slice(4, 8);
     const missedArts = arts.slice(8, 12);
 
-    if (liveGrid) {
-      if (liveArts.length) {
-        liveGrid.innerHTML = liveArts.map(articleCard).join('');
-        // fix grid columns if fewer than 4
-        if (liveArts.length < 4)
-          liveGrid.style.gridTemplateColumns = `repeat(${liveArts.length}, 1fr)`;
+    function fillGrid(grid, articles) {
+      if (!grid) return;
+      if (articles.length) {
+        grid.innerHTML = articles.map(articleCard).join('');
+        if (articles.length < 4)
+          grid.style.gridTemplateColumns = `repeat(${articles.length}, 1fr)`;
       } else {
-        liveGrid.closest('.section').style.display = 'none';
+        grid.closest('.section').style.display = 'none';
       }
     }
 
-    if (missedGrid) {
-      if (missedArts.length) {
-        missedGrid.innerHTML = missedArts.map(articleCard).join('');
-        if (missedArts.length < 4)
-          missedGrid.style.gridTemplateColumns = `repeat(${missedArts.length}, 1fr)`;
-      } else {
-        missedGrid.closest('.section').style.display = 'none';
-      }
-    }
+    fillGrid(liveGrid,   liveArts);
+    fillGrid(missedGrid, missedArts);
   } catch (_) { /* keep static fallback */ }
 })();
 

@@ -22,16 +22,15 @@ jobs:
       - name: Install dependencies
         run: pip install feedparser requests trafilatura
 
-      - name: Fetch and translate articles
-        run: python scripts/fetch_articles.py
-
-      - name: Commit articles.json
+      - name: Fetch, translate and commit articles
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin master
+          git reset --hard origin/master
+          python scripts/fetch_articles.py
           git add articles.json
           git diff --cached --quiet || git commit -m "chore: update articles.json [skip ci]"
-          git pull --rebase origin master
           git push
 
       - name: Deploy to Vercel

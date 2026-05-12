@@ -126,28 +126,74 @@ def google_translate(texts: list[str]) -> list[str]:
             results.append(text)
     return results
 
-def translate_long_text(text: str, chunk_size: int = 1200) -> str:
-    """Split long text into chunks, translate each, and rejoin."""
-    if not text:
-        return text
-    sentences = re.split(r'(?<=[.!?])\s+', text)
-    chunks, current = [], ""
-    for s in sentences:
-        if len(current) + len(s) + 1 < chunk_size:
-            current = (current + " " + s).strip()
-        else:
-            if current:
-                chunks.append(current)
-            current = s
-    if current:
-        chunks.append(current)
-    translated = google_translate(chunks)
-    return " ".join(translated)
 
-def text_to_html(text: str) -> str:
-    """Convert plain text paragraphs to HTML <p> tags."""
-    paragraphs = [p.strip() for p in re.split(r'\n{2,}', text) if p.strip()]
-    return "".join(f"<p>{p}</p>" for p in paragraphs)
+def md_block_to_html(orig_line: str, translated: str) -> str:
+    """Convert one translated block to HTML using the original for type detection."""
+    t = translated.strip()
+    if not t:
+        return ""
+    if orig_line.startswith("### "):
+        return f"<h3>{re.sub(r'^#+\\s*', '', t)}</h3>"
+    if orig_line.startswith("## ") or orig_line.startswith("# "):
+        return f"<h2>{re.sub(r'^#+\\s*', '', t)}</h2>"
+    if orig_line.startswith("- ") or orig_line.startswith("* "):
+        t = re.sub(r'^\s*[-*]\s*', '', t)
+        t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+        return f"<li>{t}</li>"
+    if orig_line.startswith("> "):
+        t = re.sub(r'^>\s*', '', t)
+        return f"<blockquote>{t}</blockquote>"
+    t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'\*(.+?)\*', r'<em>\1</em>', t)
+    return f"<p>{t}</p>"
+
+def translate_and_format(text: str) -> str:
+    """Translate article text and return rich HTML preserving structure."""
+    if not text:
+        return ""
+    blocks = [b for b in re.split(r'\n{2,}', text) if b.strip()]
+    if not blocks:
+        return ""
+
+    # Group consecutive blocks into batches ≤1000 chars for translation
+    batches, current, current_len = [], [], 0
+    for b in blocks:
+        if current_len + len(b) > 1000 and current:
+            batches.append(current)
+            current, current_len = [b], len(b)
+        else:
+            current.append(b)
+            current_len += len(b)
+    if current:
+        batches.append(current)
+
+    translated_blocks = []
+    for batch in batches:
+        combined = "\n\n".join(batch)
+        result = google_translate([combined])[0]
+        parts = re.split(r'\n{2,}', result)
+        # Pad/trim to match original count
+        while len(parts) < len(batch):
+            parts.append("")
+        translated_blocks.extend(parts[:len(batch)])
+
+    html_parts = []
+    in_list = False
+    for orig, trans in zip(blocks, translated_blocks):
+        tag = md_block_to_html(orig.strip(), trans)
+        is_li = tag.startswith("<li>")
+        if is_li and not in_list:
+            html_parts.append("<ul>")
+            in_list = True
+        elif not is_li and in_list:
+            html_parts.append("</ul>")
+            in_list = False
+        if tag:
+            html_parts.append(tag)
+    if in_list:
+        html_parts.append("</ul>")
+
+    return "".join(html_parts)
 
 # ── HELPERS ──────────────────────────────────────────────────────────────────
 def clean_html(text: str) -> str:
@@ -210,14 +256,19 @@ def make_id(title: str, source: str) -> str:
     return hashlib.md5(f"{source}-{title}".encode()).hexdigest()[:12]
 
 def fetch_full_content(url: str) -> str | None:
-    """Fetch and extract full article text using trafilatura."""
+    """Fetch and extract full article text using trafilatura with formatting."""
     if not HAS_TRAFILATURA:
         return None
     try:
         downloaded = trafilatura.fetch_url(url)
         if not downloaded:
             return None
-        text = trafilatura.extract(downloaded, include_comments=False, include_tables=False)
+        text = trafilatura.extract(
+            downloaded,
+            include_comments=False,
+            include_tables=False,
+            include_formatting=True,
+        )
         return text
     except Exception as e:
         print(f"  Content fetch error: {e}")
@@ -323,8 +374,7 @@ def main():
         art["excerpt"] = translated_excerpts[i]
 
         print(f"  Translating content [{i+1}/{len(collected)}] …")
-        translated_content = translate_long_text(art["content_en"])
-        art["content"] = text_to_html(translated_content)
+        art["content"] = translate_and_format(art["content_en"])
 
     print("Translation done.")
 

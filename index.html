@@ -218,7 +218,7 @@
       border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.25s;
     }
     .side-card:hover { border-color: var(--border-light); transform: translateY(-1px); }
-    .side-card img { width: 100px; height: 82px; object-fit: cover; }
+    .side-card img { display: block; width: 100px; min-width: 100px; height: 82px; object-fit: cover; background: var(--bg-card); }
     .side-card-body { padding: 10px 12px; }
     .side-card-date { font-size: 11px; color: var(--text-muted); margin: 5px 0 4px; }
     .side-card-title { font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--text-primary); transition: color 0.15s; }
@@ -284,7 +284,7 @@
     .articles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .article-card { background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.25s; display: block; }
     .article-card:hover { border-color: var(--border-light); transform: translateY(-2px); }
-    .article-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+    .article-img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: var(--bg-card); }
     .article-body { padding: 14px; }
     .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
     .article-date { font-size: 11px; color: var(--text-muted); }

@@ -278,6 +278,27 @@ def main():
     collected.sort(key=lambda a: a["published_iso"], reverse=True)
     collected = collected[:30]
 
+    # ── MERGE with existing articles.json ──
+    out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
+    existing = []
+    if os.path.exists(out_path):
+        try:
+            with open(out_path, encoding="utf-8") as f:
+                existing = json.load(f).get("articles", [])
+        except Exception:
+            pass
+
+    # Index existing by id, overlay with new ones (new wins on conflict)
+    merged = {a["id"]: a for a in existing}
+    new_ids = {a["id"] for a in collected}
+    # Only keep existing articles not in new batch (avoid re-translating)
+    for a in collected:
+        merged[a["id"]] = a  # new article replaces old if same id
+
+    collected = list(merged.values())
+    collected.sort(key=lambda a: a["published_iso"], reverse=True)
+    collected = collected[:60]  # keep up to 60 total
+
     # ── FETCH FULL CONTENT ──
     print(f"\nFetching full article content …")
     for i, art in enumerate(collected):
@@ -319,7 +340,6 @@ def main():
         "articles": collected,
     }
 
-    out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 

@@ -23,30 +23,79 @@ except ImportError:
 
 # ── RSS FEEDS ────────────────────────────────────────────────────────────────
 FEEDS = [
-    {"url": "https://huggingface.co/blog/feed.xml",                        "source": "HuggingFace"},
-    {"url": "https://venturebeat.com/category/ai/feed/",                   "source": "VentureBeat"},
+    {"url": "https://huggingface.co/blog/feed.xml",                         "source": "HuggingFace"},
+    {"url": "https://venturebeat.com/category/ai/feed/",                    "source": "VentureBeat"},
     {"url": "https://techcrunch.com/category/artificial-intelligence/feed/","source": "TechCrunch"},
-    {"url": "https://www.artificialintelligence-news.com/feed/",           "source": "AI News"},
-    {"url": "https://www.technologyreview.com/feed/",                      "source": "MIT Tech Review"},
-    {"url": "https://blog.google/technology/ai/rss/",                      "source": "Google AI"},
+    {"url": "https://www.artificialintelligence-news.com/feed/",            "source": "AI News"},
+    {"url": "https://www.technologyreview.com/feed/",                       "source": "MIT Tech Review"},
+    {"url": "https://blog.google/technology/ai/rss/",                       "source": "Google AI"},
+    {"url": "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml", "source": "The Verge"},
+    {"url": "https://feeds.arstechnica.com/arstechnica/technology-lab",     "source": "Ars Technica"},
 ]
 
-# ── KEYWORDS ─────────────────────────────────────────────────────────────────
+# ── POSITIVE KEYWORDS — must match at least one ───────────────────────────────
+# Focus: new features/releases of AI models/platforms, robots, drones
 KEYWORDS = [
-    "model", "gpt", "claude", "gemini", "llm", "ai ", " ai", "neural",
-    "machine learning", "deep learning", "chatgpt", "openai", "anthropic",
-    "google deepmind", "mistral", "release", "launch", "benchmark",
-    "multimodal", "agent", "automation", "robot", "chip", "nvidia",
-    "language model", "generative", "transformer", "diffusion",
+    # Model & platform launches / updates
+    "releases", "release", "launches", "launch", "announces", "announced",
+    "unveils", "unveiled", "introduces", "introduced", "debuts", "new model",
+    "new version", "update", "upgrade", "feature", "capability", "now can",
+    # Specific AI models
+    "gpt-", "gpt4", "gpt5", "claude", "gemini", "llama", "mistral", "grok",
+    "dall-e", "midjourney", "stable diffusion", "sora", "veo", "flux",
+    "deepseek", "qwen", "phi-", "copilot", "perplexity",
+    # AI capabilities & tech
+    "multimodal", "vision", "reasoning", "agent", "benchmark", "llm",
+    "language model", "generative ai", "transformer", "diffusion model",
+    "voice mode", "image generation", "video generation", "code generation",
+    "fine-tuning", "open source", "open-source", "api", "inference",
+    "context window", "tokens", "training", "chatgpt",
+    # Robots & drones
+    "robot", "humanoid", "drone", "autonomous vehicle", "self-driving",
+    "boston dynamics", "figure robot", "tesla optimus", "1x robot",
+    "agility robotics", "spot robot", "quadruped",
+    # AI hardware
+    "nvidia blackwell", "h100", "b200", "gb200", "tpu", "ai chip",
+    "neural processing", "inference chip",
+    # Research & discoveries
+    "breakthrough", "researchers", "new study", "paper", "arxiv",
+    "scientists", "discovery", "achieve", "achieves", "outperforms",
+    "state of the art", "state-of-the-art", "sota",
+    # Comparisons & evaluations
+    "vs ", "versus", "compared to", "better than", "beats", "ranking",
+    "leaderboard", "evaluation", "performance", "score",
+    # New tools & features
+    "now available", "just released", "new tool", "new feature",
+    "rolls out", "rolled out", "integrates", "adds ", "plugin",
+    "extension", "assistant", "copilot",
+]
+
+# ── NEGATIVE KEYWORDS — exclude if title+summary contain these ────────────────
+# Filters out business, legal, financial, political news
+NEGATIVE_KEYWORDS = [
+    "lawsuit", "sues", "sued", "court", "judge", "verdict", "testimony",
+    "testifies", "trial", "legal battle", "settlement",
+    "ipo", "acquisition", "acquires", "acquired", "merger", "buys ",
+    "layoff", "laid off", "job cut", "employees fired",
+    "gdpr", "compliance", "congress", "senate", "parliament", "legislation",
+    "quarterly earnings", "revenue", "profit ", "stock price", "shares fell",
+    "venture capital", "series a", "series b", "series c", "valuation at",
+    "secondary platform", "investors against",
 ]
 
 # ── CATEGORY DETECTION ───────────────────────────────────────────────────────
 CATEGORY_RULES = [
-    (["robot", "drone", "chip", "nvidia", "hardware", "tesla", "self-driving", "autonomous", "quantum"], "ТЕХНОЛОГИИ", "tag-tech"),
-    (["tool", "app", "productivity", "free", "plugin", "workflow", "software"], "ИНСТРУМЕНТИ", "tag-tools"),
-    (["study", "analysis", "report", "research", "survey", "compare", "versus", "vs "], "АНАЛИЗИ", "tag-analysis"),
-    (["startup", "funding", "europe", "regulation", "policy", "gdpr", "eu ai"], "AI В БЪЛГАРИЯ", "tag-bg"),
-    (["tutorial", "guide", "course", "learn", "how to", "prompt"], "НАУЧИ СЕ", "tag-learn"),
+    (["robot", "humanoid", "drone", "boston dynamics", "figure", "optimus",
+      "agility", "quadruped", "autonomous vehicle", "self-driving"], "РОБОТИ & ДРОНОВЕ", "tag-tech"),
+    (["chip", "nvidia", "blackwell", "h100", "gpu", "tpu", "hardware",
+      "inference chip", "neural processing"], "AI ХАРДУЕР", "tag-tech"),
+    (["benchmark", "compare", "versus", "vs ", "test", "evaluation",
+      "ranks", "beats", "outperforms"], "АНАЛИЗИ", "tag-analysis"),
+    (["open source", "open-source", "api", "fine-tuning", "developer",
+      "code generation", "github", "hugging face"], "ЗА РАЗРАБОТЧИЦИ", "tag-tools"),
+    (["tutorial", "guide", "how to", "prompt", "learn", "course"], "НАУЧИ СЕ", "tag-learn"),
+    (["image generation", "video generation", "dall-e", "midjourney",
+      "stable diffusion", "sora", "veo", "flux", "music generation"], "ГЕНЕРАТИВНО AI", "tag-tools"),
 ]
 
 # ── GOOGLE TRANSLATE (free, no API key) ──────────────────────────────────────
@@ -107,7 +156,11 @@ def clean_html(text: str) -> str:
 
 def is_relevant(title: str, summary: str) -> bool:
     combined = (title + " " + summary).lower()
-    return any(kw in combined for kw in KEYWORDS)
+    if not any(kw in combined for kw in KEYWORDS):
+        return False
+    if any(kw in combined for kw in NEGATIVE_KEYWORDS):
+        return False
+    return True
 
 def detect_category(title: str, summary: str):
     combined = (title + " " + summary).lower()
@@ -184,7 +237,7 @@ def main():
 
         count = 0
         for entry in feed.entries:
-            if count >= 5:
+            if count >= 8:
                 break
 
             title   = clean_html(entry.get("title", ""))

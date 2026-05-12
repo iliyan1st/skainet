@@ -836,24 +836,9 @@ function renderRelated(ids) {
   return cards;
 }
 
-function load() {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
-  const art = id && ARTICLES[id];
+function renderHardcoded(art) {
   const main = document.getElementById('articleMain');
-
-  if (!art) {
-    main.innerHTML = `
-      <div class="not-found">
-        <h2>Статията не е намерена</h2>
-        <p>Може би е преместена или изтрита.</p>
-        <a href="index.html" class="btn-home">← Към началната страница</a>
-      </div>`;
-    return;
-  }
-
   document.title = `${art.title} – SKAINET`;
-
   main.innerHTML = `
     <a href="index.html" class="back-btn">← Обратно към новините</a>
     <div class="breadcrumb">
@@ -886,6 +871,75 @@ function load() {
       <div class="related-grid">${renderRelated(art.related)}</div>
     </div>` : ''}
   `;
+}
+
+function renderRssArticle(a) {
+  const main = document.getElementById('articleMain');
+  document.title = `${a.title} – SKAINET`;
+  main.innerHTML = `
+    <a href="index.html" class="back-btn">← Обратно към новините</a>
+    <div class="breadcrumb">
+      <a href="index.html">Начало</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>${a.category}</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>${a.title.slice(0,40)}…</span>
+    </div>
+    <div class="article-header">
+      <span class="tag ${a.tag}">${a.category}</span>
+      <h1 class="article-title">${a.title}</h1>
+      <div class="article-meta-row">
+        <span class="article-author">&#x1F310; ${a.source}</span>
+        <span class="meta-dot"></span>
+        <span>&#x1F4C5; ${a.date}</span>
+      </div>
+    </div>
+    <img class="article-hero-img" src="${a.image}" alt="${a.title}" onerror="this.src='https://picsum.photos/seed/${a.id}/1200/600'">
+    <div class="article-body">
+      <p style="font-size:17px;line-height:1.8;color:var(--text-secondary);">${a.excerpt}</p>
+      <div style="margin-top:32px;padding:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;">Пълният текст на статията е публикуван от <strong style="color:var(--text-primary)">${a.source}</strong></p>
+        <a href="${a.url}" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-blue);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14px;transition:background 0.15s;"
+           onmouseover="this.style.background='var(--accent-blue-d)'" onmouseout="this.style.background='var(--accent-blue)'">
+          Прочети пълната статия в ${a.source} ↗
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+async function load() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const main = document.getElementById('articleMain');
+
+  if (!id) {
+    main.innerHTML = `<div class="not-found"><h2>Статията не е намерена</h2><a href="index.html" class="btn-home">← Начало</a></div>`;
+    return;
+  }
+
+  if (ARTICLES[id]) {
+    renderHardcoded(ARTICLES[id]);
+    return;
+  }
+
+  // Try to find in live articles.json
+  try {
+    const res = await fetch('articles.json');
+    if (res.ok) {
+      const data = await res.json();
+      const found = (data.articles || []).find(a => a.id === id);
+      if (found) { renderRssArticle(found); return; }
+    }
+  } catch (_) {}
+
+  main.innerHTML = `
+    <div class="not-found">
+      <h2>Статията не е намерена</h2>
+      <p>Може би е преместена или изтрита.</p>
+      <a href="index.html" class="btn-home">← Към началната страница</a>
+    </div>`;
 }
 
 load();

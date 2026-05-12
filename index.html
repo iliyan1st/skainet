@@ -873,7 +873,7 @@ toggle.addEventListener('click', () => {
 
     function articleCard(a) {
       return `
-        <a href="${a.url}" target="_blank" rel="noopener" class="article-card">
+        <a href="article.html?id=${a.id}" class="article-card">
           <img class="article-img" src="${a.image}" alt="" onerror="this.src='https://picsum.photos/seed/${a.id}/600/340'">
           <div class="article-body">
             <div class="article-meta">

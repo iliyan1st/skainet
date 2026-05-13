@@ -289,6 +289,17 @@ def fetch_full_content(url: str) -> str | None:
 
 # ── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
+    # Load existing articles first so we can skip already-seen ones
+    out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
+    existing = []
+    if os.path.exists(out_path):
+        try:
+            with open(out_path, encoding="utf-8") as f:
+                existing = json.load(f).get("articles", [])
+        except Exception:
+            pass
+    existing_ids = {a["id"] for a in existing}
+
     collected = []
 
     for feed_cfg in FEEDS:
@@ -300,10 +311,7 @@ def main():
             continue
 
         count = 0
-        for entry in feed.entries:
-            if count >= 8:
-                break
-
+        for entry in feed.entries[:25]:  # scan up to 25 entries to find new ones
             title   = clean_html(entry.get("title", ""))
             summary = clean_html(entry.get("summary", entry.get("description", "")))[:400]
             link    = entry.get("link", "")
@@ -313,17 +321,20 @@ def main():
             if not is_relevant(title, summary):
                 continue
 
+            art_id = make_id(title, feed_cfg["source"])
+            if art_id in existing_ids:
+                continue  # already translated and stored — skip
+
             iso_date, bg_date = parse_date(entry)
             category, tag = detect_category(title, summary)
             image  = article_image(entry, title)
-            art_id = make_id(title, feed_cfg["source"])
 
             collected.append({
                 "id":            art_id,
                 "slug":          make_slug(title),
                 "title_en":      title,
                 "excerpt_en":    summary,
-                "content_en":    None,   # filled below
+                "content_en":    None,
                 "title":         title,
                 "excerpt":       summary,
                 "content":       "",
@@ -336,8 +347,10 @@ def main():
                 "image":         image,
             })
             count += 1
+            if count >= 10:  # max 10 new articles per source per run
+                break
 
-        print(f"  → {count} relevant articles")
+        print(f"  → {count} new articles")
         time.sleep(0.5)
 
     collected.sort(key=lambda a: a["published_iso"], reverse=True)
@@ -377,15 +390,6 @@ def main():
         del art["content_en"]
 
     # ── MERGE with existing articles.json (after cleanup) ──
-    out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
-    existing = []
-    if os.path.exists(out_path):
-        try:
-            with open(out_path, encoding="utf-8") as f:
-                existing = json.load(f).get("articles", [])
-        except Exception:
-            pass
-
     merged = {a["id"]: a for a in existing}
     for a in collected:
         merged[a["id"]] = a  # new wins on same id

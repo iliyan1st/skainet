@@ -6,6 +6,7 @@
   <title>SKAINET – AI Технологии и Бъдещето</title>
   <meta name="description" content="SKAINET – водещ български портал за AI новини, изкуствен интелект, технологии и бъдещето. Актуални статии за ChatGPT, Claude, Gemini, роботи и AI иновации.">
   <meta name="keywords" content="изкуствен интелект, AI новини, ChatGPT, Claude, Gemini, машинно обучение, технологии, роботи, AI инструменти, България">
+  <meta name="google-site-verification" content="7kz_KzScigJArSbBQQ7A7hwZREinDP07_bFV9A2VZ94">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="SKAINET">
   <link rel="canonical" href="https://skainet-vert.vercel.app/">
@@ -231,7 +232,7 @@
 
     /* ───── HERO ───── */
     .hero-section { padding: 28px 0 0; }
-    .hero-layout { display: grid; grid-template-columns: 1fr minmax(240px, 300px); gap: 20px; align-items: start; }
+    .hero-layout { display: block; }
     .hero-left { display: grid; grid-template-columns: 1fr minmax(240px, 320px); gap: 16px; align-items: stretch; }
 
     .hero-card { position: relative; border-radius: 12px; overflow: hidden; display: block; min-height: 340px; }
@@ -270,7 +271,9 @@
     .side-card:hover .side-card-title { color: var(--accent-blue); }
 
     /* ───── SIDEBAR ───── */
-    .sidebar { display: flex; flex-direction: column; gap: 16px; }
+    .hero-section .sidebar { display: none; }
+    .sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .sidebar-section { margin-bottom: 36px; }
     .widget { background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); overflow: hidden; transition: background 0.25s, border-color 0.25s; }
     .widget-head {
       display: flex; align-items: center; gap: 7px;
@@ -602,6 +605,15 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content-area">
+  <div class="container">
+
+    <div class="sidebar-section">
       <aside class="sidebar">
         <div class="widget">
           <div class="widget-head"><span class="icon">&#x1F3C6;</span> AI TOOL НА СЕДМИЦАТА</div>
@@ -610,15 +622,11 @@
               <div class="tool-logo">&#x1F4DD;</div>
               <div><div class="tool-name">Notion AI</div><div class="tool-url">notion.so</div></div>
             </div>
-            <p class="tool-desc">AI асистент, който ти помага да пишеш, планираш и организираш всичко на едно място. Интегриран директно в твоя workspace.</p>
-            <div class="rating-row">
-              <span class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
-              <span class="rating-val">Оценка 4.8 / 5</span>
-            </div>
+            <p class="tool-desc">AI асистент за писане, планиране и организация. Интегриран директно в твоя workspace.</p>
+            <div class="rating-row"><span class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><span class="rating-val">4.8 / 5</span></div>
             <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener" class="btn-red">КЪМ ИНСТРУМЕНТА &#x2197;</a>
           </div>
         </div>
-
         <div class="widget">
           <div class="widget-head">АБОНИРАЙ СЕ ЗА НОВИНИ</div>
           <div class="newsletter-body">
@@ -629,40 +637,16 @@
             </form>
           </div>
         </div>
-
         <div class="widget">
           <div class="widget-head" style="color:var(--accent-blue);">НАЙ-ЧЕТЕНИ</div>
           <div class="most-read-list">
-            <a href="article.html?id=chatgpt-guide" class="most-read-item">
-              <span class="mr-num">1</span>
-              <div><div class="mr-title">Как да използваш ChatGPT ефективно (пълно ръководство)</div><div class="mr-views">&#x1F441; 12.4к четения</div></div>
-            </a>
-            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item">
-              <span class="mr-num">2</span>
-              <div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър за изображения?</div><div class="mr-views">&#x1F441; 9.8к четения</div></div>
-            </a>
-            <a href="article.html?id=top10-ai-sites" class="most-read-item">
-              <span class="mr-num">3</span>
-              <div><div class="mr-title">Топ 10 AI сайта, които ще ти спестят часове работа</div><div class="mr-views">&#x1F441; 8.1к четения</div></div>
-            </a>
-            <a href="article.html?id=ai-jobs" class="most-read-item">
-              <span class="mr-num">4</span>
-              <div><div class="mr-title">Как AI променя бъдещето на работните места до 2030</div><div class="mr-views">&#x1F441; 4.7к четения</div></div>
-            </a>
-            <a href="article.html?id=prompt-guide" class="most-read-item">
-              <span class="mr-num">5</span>
-              <div><div class="mr-title">Безплатни AI курсове, с които да започнеш още днес</div><div class="mr-views">&#x1F441; 3.3к четения</div></div>
-            </a>
+            <a href="article.html?id=chatgpt-guide" class="most-read-item"><span class="mr-num">1</span><div><div class="mr-title">Как да използваш ChatGPT ефективно</div><div class="mr-views">&#x1F441; 12.4к</div></div></a>
+            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item"><span class="mr-num">2</span><div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър?</div><div class="mr-views">&#x1F441; 9.8к</div></div></a>
+            <a href="article.html?id=top10-ai-sites" class="most-read-item"><span class="mr-num">3</span><div><div class="mr-title">Топ 10 AI сайта за продуктивност</div><div class="mr-views">&#x1F441; 8.1к</div></div></a>
           </div>
         </div>
       </aside>
     </div>
-  </div>
-</div>
-
-<!-- ═══ CONTENT ═══ -->
-<div class="content-area">
-  <div class="container">
 
     <div class="section">
       <div class="section-header">

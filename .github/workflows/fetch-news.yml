@@ -29,8 +29,8 @@ jobs:
           git fetch origin master
           git reset --hard origin/master
           python scripts/fetch_articles.py
-          git add articles.json
-          git diff --cached --quiet || git commit -m "chore: update articles.json [skip ci]"
+          git add articles.json sitemap.xml
+          git diff --cached --quiet || git commit -m "chore: update articles + sitemap [skip ci]"
           git push
 
       - name: Deploy to Vercel

@@ -851,7 +851,7 @@ function renderRelated(ids) {
   return cards;
 }
 
-function updateSEO(title, desc, image, url) {
+function updateSEO(title, desc, image, url, datePublished) {
   const base = 'https://skainet-vert.vercel.app';
   const fullUrl = url.startsWith('http') ? url : base + url;
   const cleanDesc = desc.replace(/<[^>]+>/g, '').slice(0, 160);
@@ -870,7 +870,7 @@ function updateSEO(title, desc, image, url) {
   const ld = document.createElement('script');
   ld.type = 'application/ld+json';
   ld.id = 'jsonLdArticle';
-  ld.textContent = JSON.stringify({
+  const ldObj = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     "headline": title,
@@ -883,7 +883,12 @@ function updateSEO(title, desc, image, url) {
       "name": "SKAINET",
       "url": base
     }
-  });
+  };
+  if (datePublished) {
+    ldObj.datePublished = datePublished;
+    ldObj.dateModified = datePublished;
+  }
+  ld.textContent = JSON.stringify(ldObj);
   document.head.appendChild(ld);
 }
 
@@ -926,7 +931,7 @@ function renderHardcoded(art) {
 
 function renderRssArticle(a) {
   const main = document.getElementById('articleMain');
-  updateSEO(a.title, a.excerpt || '', a.image, `/article/${a.slug || a.id}`);
+  updateSEO(a.title, a.excerpt || '', a.image, `/article/${a.slug || a.id}`, a.published_iso);
   const bodyHtml = a.content && a.content.length > 50
     ? a.content
     : `<p style="font-size:17px;line-height:1.8;">${a.excerpt}</p>`;
@@ -980,7 +985,7 @@ async function load() {
     const res = await fetch('articles.json');
     if (res.ok) {
       const data = await res.json();
-      const found = (data.articles || []).find(a => a.id === id);
+      const found = (data.articles || []).find(a => a.id === id || a.slug === id);
       if (found) { renderRssArticle(found); return; }
     }
   } catch (_) {}

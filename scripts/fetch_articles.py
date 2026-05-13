@@ -300,7 +300,7 @@ def main():
             pass
     from datetime import timedelta
     existing_ids = {a["id"] for a in existing}
-    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=48)
+    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=3)
 
     collected = []
 

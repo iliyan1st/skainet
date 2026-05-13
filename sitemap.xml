@@ -229,6 +229,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/google-made-agentic-ai-governance-a-product-enterprises-stil</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/granite-41-llms-how-theyre-built</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -289,38 +295,74 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/how-to-use-transformersjs-in-a-chrome-extension</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/were-launching-two-specialized-tpus-for-the-agentic-era</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skainet-vert.vercel.app/article/339200c3a70d</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://skainet-vert.vercel.app/article/qimma-a-quality-first-arabic-llm-leaderboard</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skainet-vert.vercel.app/article/842d4a594c5a</loc>
-    <lastmod>2026-01-19</lastmod>
+    <loc>https://skainet-vert.vercel.app/article/new-ways-to-create-personalized-images-in-the-gemini-app</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skainet-vert.vercel.app/article/9cedcac229ef</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://skainet-vert.vercel.app/article/ecom-rlve-adaptive-verifiable-environments-for-e-commerce-co</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skainet-vert.vercel.app/article/1785cc774c10</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://skainet-vert.vercel.app/article/training-and-finetuning-multimodal-embedding-reranker-models</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skainet-vert.vercel.app/article/9c690a63fd6b</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://skainet-vert.vercel.app/article/gemini-31-flash-tts-the-next-generation-of-expressive-ai-spe</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/inside-vakra-reasoning-tool-use-and-failure-modes-of-agents</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/multimodal-embedding-reranker-models-with-sentence-transform</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/new-ways-to-balance-cost-and-reliability-in-the-gemini-api</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/welcome-gemma-4-frontier-multimodal-intelligence-on-device</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/granite-40-3b-vision-compact-multimodal-intelligence-for-ent</loc>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

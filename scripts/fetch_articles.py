@@ -298,7 +298,9 @@ def main():
                 existing = json.load(f).get("articles", [])
         except Exception:
             pass
+    from datetime import timedelta
     existing_ids = {a["id"] for a in existing}
+    cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=48)
 
     collected = []
 
@@ -326,6 +328,13 @@ def main():
                 continue  # already translated and stored — skip
 
             iso_date, bg_date = parse_date(entry)
+            # Skip articles older than 48 hours
+            try:
+                pub_dt = datetime.fromisoformat(iso_date.replace("Z", "+00:00")).replace(tzinfo=None)
+                if pub_dt < cutoff:
+                    continue
+            except Exception:
+                pass
             category, tag = detect_category(title, summary)
             image  = article_image(entry, title)
 

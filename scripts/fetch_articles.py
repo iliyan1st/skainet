@@ -255,6 +255,19 @@ def article_image(entry, title: str) -> str:
 def make_id(title: str, source: str) -> str:
     return hashlib.md5(f"{source}-{title}".encode()).hexdigest()[:12]
 
+def make_slug(title: str) -> str:
+    """Create a URL-friendly slug from a title."""
+    slug = title.lower()
+    slug = re.sub(r'[àáâãäå]', 'a', slug)
+    slug = re.sub(r'[èéêë]', 'e', slug)
+    slug = re.sub(r'[ìíîï]', 'i', slug)
+    slug = re.sub(r'[òóôõö]', 'o', slug)
+    slug = re.sub(r'[ùúûü]', 'u', slug)
+    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
+    slug = re.sub(r'\s+', '-', slug.strip())
+    slug = re.sub(r'-+', '-', slug)
+    return slug[:60].rstrip('-')
+
 def fetch_full_content(url: str) -> str | None:
     """Fetch and extract full article text using trafilatura with formatting."""
     if not HAS_TRAFILATURA:
@@ -307,6 +320,7 @@ def main():
 
             collected.append({
                 "id":            art_id,
+                "slug":          make_slug(title),
                 "title_en":      title,
                 "excerpt_en":    summary,
                 "content_en":    None,   # filled below
@@ -388,6 +402,31 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\n✓ Saved {len(all_articles)} articles to articles.json")
+
+    # ── GENERATE SITEMAP ──
+    base_url = "https://skainet-vert.vercel.app"
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    url_entries = [f"""  <url>
+    <loc>{base_url}/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>"""]
+    for art in all_articles:
+        slug = art.get('slug') or art['id']
+        url_entries.append(f"""  <url>
+    <loc>{base_url}/article/{slug}</loc>
+    <lastmod>{art['published_iso'][:10]}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    sitemap += "\n".join(url_entries)
+    sitemap += "\n</urlset>\n"
+    sitemap_path = os.path.join(os.path.dirname(__file__), "..", "sitemap.xml")
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(sitemap)
+    print(f"✓ Generated sitemap.xml with {len(all_articles) + 1} URLs")
 
 if __name__ == "__main__":
     main()

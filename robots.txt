@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skainet-vert.vercel.app/sitemap.xml

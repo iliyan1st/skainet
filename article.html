@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKAINET – Статия</title>
+  <meta name="description" content="SKAINET – AI новини и технологии на български.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="SKAINET">
+  <link rel="canonical" href="https://skainet-vert.vercel.app/article.html" id="canonicalTag">
+  <meta property="og:site_name" content="SKAINET">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SKAINET – Статия" id="ogTitle">
+  <meta property="og:description" content="" id="ogDesc">
+  <meta property="og:url" content="https://skainet-vert.vercel.app/article.html" id="ogUrl">
+  <meta property="og:image" content="https://skainet-vert.vercel.app/og-cover.jpg" id="ogImage">
+  <meta property="og:locale" content="bg_BG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SKAINET – Статия" id="twTitle">
+  <meta name="twitter:description" content="" id="twDesc">
+  <meta name="twitter:image" content="https://skainet-vert.vercel.app/og-cover.jpg" id="twImage">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -836,9 +851,45 @@ function renderRelated(ids) {
   return cards;
 }
 
+function updateSEO(title, desc, image, url) {
+  const base = 'https://skainet-vert.vercel.app';
+  const fullUrl = url.startsWith('http') ? url : base + url;
+  const cleanDesc = desc.replace(/<[^>]+>/g, '').slice(0, 160);
+  document.title = `${title} – SKAINET`;
+  document.querySelector('meta[name="description"]').setAttribute('content', cleanDesc);
+  document.getElementById('canonicalTag').setAttribute('href', fullUrl);
+  document.getElementById('ogTitle').setAttribute('content', `${title} – SKAINET`);
+  document.getElementById('ogDesc').setAttribute('content', cleanDesc);
+  document.getElementById('ogUrl').setAttribute('content', fullUrl);
+  document.getElementById('ogImage').setAttribute('content', image);
+  document.getElementById('twTitle').setAttribute('content', `${title} – SKAINET`);
+  document.getElementById('twDesc').setAttribute('content', cleanDesc);
+  document.getElementById('twImage').setAttribute('content', image);
+  const existing = document.getElementById('jsonLdArticle');
+  if (existing) existing.remove();
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.id = 'jsonLdArticle';
+  ld.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": title,
+    "description": cleanDesc,
+    "image": image,
+    "url": fullUrl,
+    "inLanguage": "bg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SKAINET",
+      "url": base
+    }
+  });
+  document.head.appendChild(ld);
+}
+
 function renderHardcoded(art) {
   const main = document.getElementById('articleMain');
-  document.title = `${art.title} – SKAINET`;
+  updateSEO(art.title, art.content || art.excerpt || '', art.img, `/article.html?id=${art.id || ''}`);
   main.innerHTML = `
     <a href="index.html" class="back-btn">← Обратно към новините</a>
     <div class="breadcrumb">
@@ -875,7 +926,7 @@ function renderHardcoded(art) {
 
 function renderRssArticle(a) {
   const main = document.getElementById('articleMain');
-  document.title = `${a.title} – SKAINET`;
+  updateSEO(a.title, a.excerpt || '', a.image, `/article/${a.slug || a.id}`);
   const bodyHtml = a.content && a.content.length > 50
     ? a.content
     : `<p style="font-size:17px;line-height:1.8;">${a.excerpt}</p>`;

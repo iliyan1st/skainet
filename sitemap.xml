@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/apples-siri-revamp-could-include-auto-deleting-chats</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/research-repository-arxiv-will-ban-authors-for-a-year-if-the</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -357,12 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/introducing-nvidia-nemotron-3-nano-omni-long-context-multimo</loc>
     <lastmod>2026-04-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/open-source-package-with-1-million-monthly-downloads-stole-u</loc>
-    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

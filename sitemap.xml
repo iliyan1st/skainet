@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-20</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -357,12 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/7dcfeff9d494</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/building-blocks-for-foundation-model-training-and-inference</loc>
-    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

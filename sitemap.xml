@@ -7,6 +7,24 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/stability-ai-releases-a-new-audio-model-that-can-create-six</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/nanoclaw-creator-turns-down-20m-buyout-offer-raises-12m-seed</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/figma-adds-an-ai-assistant-to-its-collaborative-canvas</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/alibaba-is-designing-ai-chips-around-agents-and-that-changes</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -344,24 +362,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/jbs-dev-on-imperfect-data-and-the-ai-last-mile-from-model-ca</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/hugging-face-hosted-malicious-software-masquerading-as-opena</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/the-download-a-nobel-winner-on-ai-and-the-case-for-fixing-ev</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/ai-voice-startup-vapi-hits-500m-valuation-after-winning-amaz</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

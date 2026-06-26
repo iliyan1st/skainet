@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-limits-gpt-56-rollout-after-government-request-says-r</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/why-everyone-from-openai-to-spacex-is-building-their-own-chi</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/heat-waves-mess-with-your-brain-scientists-are-trying-to-fig</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -351,18 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/as-anthropic-suspends-access-to-new-models-india-debates-its</loc>
     <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/olmo-eval-an-evaluation-workbench-for-the-model-development</loc>
-    <lastmod>2026-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/coinbase-for-agents-automating-portfolio-trading-with-ai</loc>
-    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

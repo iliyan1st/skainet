@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skainet-vert.vercel.app/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/trump-admin-releases-anthropic-mythos-to-be-used-by-more-tha</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/openai-limits-gpt-56-rollout-after-government-request-says-r</loc>
@@ -357,12 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/metas-new-ai-mode-on-facebook-pulls-from-public-info-across</loc>
     <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/as-anthropic-suspends-access-to-new-models-india-debates-its</loc>
-    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

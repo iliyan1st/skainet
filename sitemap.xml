@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/claude-cowork-expands-to-mobile-and-web</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -356,12 +362,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/general-intuitions-23b-bet-that-video-games-can-train-ai-age</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/which-tokens-does-a-hybrid-model-predict-better</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

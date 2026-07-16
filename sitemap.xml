@@ -7,6 +7,36 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/the-ai-context-gap-enterprise-ai-organizations-have-a-trust</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/the-agent-evaluation-gap-enterprise-ai-organizations-have-a</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/nvidia-nemotron-3-embed-ranks-1-overall-on-rteb-advancing-ag</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/googles-ai-mode-now-lets-you-link-and-interact-with-select-a</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/create-edit-and-star-in-videos-with-two-google-vids-updates</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/yes-you-can-now-order-doordash-from-the-command-line</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -333,36 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet</loc>
     <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/claude-cowork-expands-to-mobile-and-web</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/savis-app-aims-to-protect-consumers-from-realistic-ai-scams</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/lerobot-v060-imagine-evaluate-improve</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/you-can-now-customize-siris-pace-and-expressivity-in-the-lat</loc>
-    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

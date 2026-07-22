@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/3-google-updates-from-galaxy-unpacked-2026</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/the-download-nasas-new-space-telescope-and-openais-autonomou</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/glow-emerges-from-stealth-at-12b-valuation-to-challenge-endp</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -351,18 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/ai-agent-crawlers-now-need-permission-heres-how-to-get-it</loc>
     <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/openai-bets-on-families-as-chatgpt-goes-deeper-into-househol</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/meta-removes-controversial-ai-feature-on-instagram-after-bac</loc>
-    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

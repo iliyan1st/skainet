@@ -7,6 +7,24 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/anthropic-set-ai-agents-loose-on-the-same-task-they-started</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/building-a-practical-path-to-post-quantum-cryptography</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/record-train-and-deploy-from-one-place-with-strands-agents-l</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/microsoft-kills-off-unsuccessful-ai-features-while-merging-i</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -344,24 +362,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/claude-published-malicious-code-to-the-internet-and-attacked</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/google-nixes-its-earth-ai-feature-one-day-after-launch-amid</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/siri-ai-could-come-with-a-paywall-for-power-users</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/smallestai-raises-13m-to-build-ultra-fast-voice-ai-that-soun</loc>
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

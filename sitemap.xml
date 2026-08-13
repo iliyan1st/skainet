@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/microsoft-kills-off-unsuccessful-ai-features-while-merging-i</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/whats-behind-this-summers-heat-and-why-2027-could-be-worse</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -357,12 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/smallestai-raises-13m-to-build-ultra-fast-voice-ai-that-soun</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the</loc>
-    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-13T15:00:16.229983+00:00",
+  "generated_at": "2026-08-13T16:58:19.361093+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "55f0e94193b8",
+      "slug": "microsoft-kills-off-unsuccessful-ai-features-while-merging-i",
+      "title": "Microsoft унищожава неуспешните AI функции, докато обединява отделните си приложения Copilot",
+      "excerpt": "Microsoft опростява Copilot, като комбинира своите потребителски и бизнес приложения и премахва генерираните от AI подкасти, групови чатове, задълбочени изследвания и характера на Mico.",
+      "content": "<p>Two years ago, Microsoft described AI as a “generational shift” in technology that it wanted to lead. Today, the company is merging its Copilot-branded consumer and business apps, and ditching a number of unsuccessful AI features.</p><p>As initially reported by GeekWire and detailed in Microsoft’s support documentation, the tech giant will combine the functionality of its consumer-facing Copilot app and the more business-oriented Microsoft 365 Copilot app.</p><p>The move is both an acknowledgement that personal and professional uses of AI often overlap, and that Microsoft’s prior strategy was too complicated to make Copilot a viable competitor to the likes of ChatGPT, Claude, and Gemini.</p><p>It also follows a broader consolidation in the AI app space that has seen Claude merging Cowork into Chat; OpenAI merging its agentic feature Operator into ChatGPT; and Google adding specialized capabilities to its Gemini app, like the combination of deep research and web browsing.</p><p>Според Microsoft потребителите ще загубят достъп до групови чатове, генерирани от изкуствен интелект подкасти в Copilot, експериментални функции на Copilot Labs и Deep Research до 18 август 2026 г. За професионалните потребители, които плащат, Researcher ще предложи заместител поне на последния.</p><p>Компанията също така ще се откаже от своя шантав анимационен герой за Copilot, наречен Mico, плаващо петно, което изглежда като версия на Clippy с AI. Други функции може временно да изчезнат по време на прехода, предупреждава Microsoft, и файловете, генерирани от самостоятелното приложение Copilot, ще бъдат мигрирани към OneDrive.</p><p>Въпреки че компанията казва, че целта е да направи Copilot „по-просто, по-сплотено изживяване“, това също е признание, че Copilot е изгубил пътя си. През юли The Information съобщи, че изпълнителният вицепрезидент на Microsoft Джейкъб Андреу, който ръководи Copilot, каза във вътрешна бележка, че приложението трябва да спечели „правото на съществуване“ в живота на своите клиенти, което изисква преминаване от функции, които не работят.</p>",
+      "url": "https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "13 авг 2026",
+      "published_iso": "2026-08-13T15:30:52+00:00",
+      "image": "https://picsum.photos/seed/ebf96f0be8/600/340"
+    },
     {
       "id": "7b0ee42f39dc",
       "slug": "whats-behind-this-summers-heat-and-why-2027-could-be-worse",
@@ -827,20 +841,6 @@
       "date": "31 юли 2026",
       "published_iso": "2026-07-31T14:47:11+00:00",
       "image": "https://picsum.photos/seed/de03c774be/600/340"
-    },
-    {
-      "id": "f945bc64264b",
-      "slug": "google-says-it-fixed-more-chrome-bugs-in-june-than-over-the",
-      "title": "Google казва, че е поправил повече грешки в Chrome през юни, отколкото през последните две години, благодарение на AI",
-      "excerpt": "Както предупредиха експерти през последните две години, някои компании – като Microsoft и сега Google – откриват и коригират експоненциален брой грешки в своите продукти, благодарение на използването на LLMs и",
-      "content": "<p>С помощта на своите вътрешни инструменти за изкуствен интелект Google казва, че е коригирал повече пропуски в сигурността на своя браузър Chrome през последния месец, отколкото през последните две години взети заедно.</p><p>Технологичният гигант обяви в четвъртък, че е поправил огромни 1072 грешки в сигурността в последните две версии на Chrome, и двете пуснати през юни. Това е повече от броя на грешките, коригирани в предишните 23 версии, пуснати през последните две години, които възлизат на общо 1036 корекции.</p><p>Още от появата на LLM, експертите по киберсигурност предупреждават, че системите, захранвани с AI, ще откриват все повече и експоненциално огромно количество грешки, принуждавайки защитниците също да използват AI, за да изпреварят злонамерените хакери.</p><p>Тази прогноза започва да се сбъдва и е подкрепена от реални данни.</p><p>Диаграма, публикувана от Google, която компанията разкри като част от бяла книга за усилията на компанията да използва AI за намиране на недостатъци и поправянето им по-бързо, показва експоненциалното увеличение. За контекст, Chrome 126 беше пуснат през юни 2024 г., докато последните две версии на Chrome, Chrome 149 и 150, бяха пуснати миналия месец. Google нарича всяка версия „крайъгълен камък“.</p><p>Дъг Търнър, инженерен директор на Chrome, каза пред TechCrunch в изявление, че LLM са „фундаментално променили икономиката на киберсигурността, трансформирайки откриването на уязвимости в автоматизирана операция в индустриален мащаб“.</p><p>„Като прилагаме модели като Gemini, ние коригираме превантивно уязвимостите, изпреварваме нашите противници и правим Chrome по-безопасен с всяка актуализация“, каза Търнър.</p><p>Google не е единствената компания, която вижда тази тенденция.</p><p>По-рано този месец Microsoft обяви, че е коригирала рекордните 570 пропуска в сигурността в своите продуктови линии като част от месечния си кръг от планирани корекции – разговорно известно като „Вторник на корекцията“. Microsoft цитира собственото си използване на AI, за да обясни внезапния скок в корекциите на грешки.</p><p>Междувременно Apple не изглежда да регистрира същото експоненциално увеличение. Според независимо преброяване на бъгове, коригирани от в нейните продукти, Apple е коригирала 482 бъга през 2026 г., което е приблизително на път да се изравни или надмине броя на коригираните бъгове от миналата година, а също така е приблизително равно на броя на бъговете, които Apple е коригирала през 2015 г.</p><p>TechCrunch се обърна към Apple за коментар, но не получи отговор.</p>",
-      "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "30 юли 2026",
-      "published_iso": "2026-07-30T18:57:58+00:00",
-      "image": "https://picsum.photos/seed/3e6c206e57/600/340"
     }
   ]
 }

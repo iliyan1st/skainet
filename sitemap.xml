@@ -7,6 +7,24 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/stripe-agrees-to-buy-openrouter-as-ai-model-routing-expands</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-i</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/agentic-ai-in-government-just-hit-the-hard-part-deciding-wha</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/a-third-of-chatgpt-ads-appear-in-irrelevant-conversations</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -344,24 +362,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/build-low-latency-multilingual-voice-agents-open-weights-ful</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-pers</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/ai-for-science-needs-reasoning-not-just-data</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

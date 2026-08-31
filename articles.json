@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-31T17:27:12.376504+00:00",
+  "generated_at": "2026-08-31T22:38:13.322094+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "127c1c841d61",
+      "slug": "the-pentagon-now-has-its-own-version-of-chatgpt-and-grok",
+      "title": "The Pentagon now has its own version of ChatGPT and Grok",
+      "excerpt": "Versions of OpenAI's ChatGPT and SpaceXAI's Grok will join Google's Gemini on the Pentagon's central portal for AI tools.",
+      "content": "<p>The Pentagon has launched versions of OpenAI’s ChatGPT and xAI’s Grok, giving 3 million civilian and military personnel access to generative AI tools that have been tailored to “warfighter needs.”</p><p>ChatGPT Mil and Grok for Government — custom versions of the popular consumer generative AI tools — are now part of GenAI.mil, a centralized, secure portal launched last year.</p><p>GenAI.mil, which offered Google Gemini when it first launched, is designed to give Department of Defense employees access to commercial frontier AI models without sending sensitive government data through ordinary consumer channels. In particular, the official military version is exempt from the data collection that is difficult to avoid in consumer tech products.</p><p>And according to the Department of Defense, the generative AI portal has proven popular. GenAI.mil has already onboarded more than 1.7 million unique users out of the department’s 3 million personnel, according to the department.</p><p>These latest additions are part of the Pentagon’s broader effort to use AI tools to accelerate work and give the Department of Defense an edge without sacrificing security. They also highlight the absence of Anthropic’s Claude model and the Pentagon’s effort to work with other companies following its dispute with the frontier lab. Anthropic was labeled a supply-chain risk by the Trump administration — a designation that it is currently fighting in court — after it refused to give the Pentagon unrestricted use of its AI tools and instead insisted on certain safety guardrails.</p><p>ChatGPT Mil, which came out of the company’s OpenAI for Government program, will offer an experience familiar to commercial ChatGPT users. The tool will focus on chat, files, projects, and custom GPTs, according to the Defense Department. The tool will also support document-heavy, routine unclassified work such as administrative tasks, logistics, planning, and policy. Other features will be added over time.</p><p>The Pentagon positioned Grok’s capabilities and potential uses in much broader and more militaristic terms.</p><p>“Starshield AI’s Grok for Government will provide the warfighter with immediate productivity gains, stronger knowledge continuity and more secure and efficient collaboration,” according to the Defense Department’s press release. (SpaceX’s Starshield AI is a secure satellite network that uses the company’s existing Starlink tech.)</p><p>The department added that Grok would allow its military “to execute missions faster and with greater precision across numerous operational contexts, ranging from market research analysis for acquisition professionals to supply-chain management for logisticians.”</p><p>The Pentagon has struck deals with a number of other tech companies in a bid to boost its AI capabilities, including Amazon Web Services, Microsoft, Nvidia, and Reflection AI.</p>",
+      "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "31 авг 2026",
+      "published_iso": "2026-08-31T20:13:45+00:00",
+      "image": "https://picsum.photos/seed/d2f93f799c/600/340"
+    },
     {
       "id": "9f10596745e5",
       "slug": "an-anthropic-researcher-just-gave-us-a-peek-at-self-improvin",
@@ -827,20 +841,6 @@
       "date": "20 авг 2026",
       "published_iso": "2026-08-20T13:00:35+00:00",
       "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/xai-grok-1152x648.jpg"
-    },
-    {
-      "id": "884efb656b48",
-      "slug": "meta-ais-new-mac-app-wants-you-to-talk-to-your-apps",
-      "title": "Новото приложение за Mac на Meta AI иска да говорите с вашите приложения",
-      "excerpt": "Meta каза, че неговият модел Muse Spark захранва функцията за диктовка.",
-      "content": "<p>Meta днес обяви ново приложение за Mac за Meta AI с вградена диктовка за цялата система. Приложението може също така да разгледа текущия екран и да отговори на вашите въпроси въз основа на контекста, използвайки своя модел Muse Spark.</p><p>Компанията каза, че функцията за диктовка работи във всички приложения, точно както други инструменти като Wispr Flow, Superwhisper и Monologue. Миналия месец Google също актуализира своето приложение Gemini за Mac, за да активира функция за диктовка в цялата система.</p><p>Версията на приложението Mac е част от актуализация на Meta AI за собственици на бизнес. Компанията каза, че търговците могат да свържат своите Instagram и Facebook акаунти, Meta рекламни кампании и Google Workspace (Gmail, Docs, Sheets и Slides) акаунти към Meta AI и да получават информация, като задават запитвания към AI асистента.</p><p>Meta AI може да предостави на потребителите информация за ефективността на кампанията и показателите за ангажираност на аудиторията, за да разберат кои публикации са работили добре. Добавя се, че потребителите могат също така да получат достъп до информация за конкурентите въз основа на публично достъпни данни.</p><p>С новата интеграция на Meta AI с бизнес инструменти, AI асистентът може да създава предложения, чернови на документи и електронни таблици.</p><p>Meta все повече се фокусира върху предоставянето на своите AI инструменти за бизнеса за автоматизирана поддръжка на клиенти и запитвания в своите приложения, включително WhatsApp и Instagram. По време на обаждането за приходите на компанията през второто тримесечие на 2026 г., главният изпълнителен директор Марк Зукърбърг каза, че има голяма възможност да се продават агенти на бизнеса и да се автоматизира работата от тяхно име.</p>",
-      "url": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "20 авг 2026",
-      "published_iso": "2026-08-20T12:11:57+00:00",
-      "image": "https://picsum.photos/seed/6baa11bdc5/600/340"
     }
   ]
 }

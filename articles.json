@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-02T14:10:51.985511+00:00",
+  "generated_at": "2026-09-02T19:16:49.752855+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "786b118e01d7",
+      "slug": "us-government-sides-with-openai-on-issue-of-training-llms-on",
+      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
+      "excerpt": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\" t",
+      "content": "<p>In a lawsuit that The New York Times filed against OpenAI, the Trump administration has contributed a 20-page brief in defense of the ChatGPT maker’s unlicensed use of copyrighted material to train its LLMs.</p><p>“The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally… As such, it is critical for the United States to ‘retain global leadership in artificial intelligence,’” the brief reads, referencing an executive order that President Donald Trump signed last year.</p><p>The LLMs powering chatbots like ChatGPT, Claude, and Gemini are trained on incomprehensibly massive databases of published works, including copyrighted books, articles, and other media that AI companies feed into these databases without permission. Many publishers, including The New York Times in this case, have sought to argue that it is illegal for AI companies like OpenAI to train AI models on their copyrighted material.</p><p>This question — can you use copyrighted material to train an AI? — isn’t black and white, hence the extensive legal debate around the subject. These conversations often center on fair use, a carve out of copyright law that makes exceptions for certain scenarios when it can be ruled legal to use someone else’s copyrighted work without permission. In this case, the fair use debate addresses whether AI companies’ use of copyrighted work is “transformative” enough for a judge to rule it legal.</p><p>“Constraining LLM development under a misunderstanding of fair use doctrine would thwart such creative and scientific progress while hindering American prosperity and economic mobility,” the brief says.</p><p>So far, cases about AI training and copyright infringement have largely been favorable to AI companies. Last year, Judge William Alsup ordered Anthropic to pay a $1.5 billion copyright settlement to a group of writers whose works were used to train the company’s AI models; but Anthropic wasn’t dinged for its AI training. Rather, the company was fined for using illegal shadow libraries to pirate the books it used for training.</p><p>“Like any reader aspiring to be a writer, Anthropic’s LLMs trained upon works not to race ahead and replicate or supplant them — but to turn a hard corner and create something different,” Judge Alsup wrote, comparing the LLM’s training to a human reading a book.</p><p>This new Trump administration brief is not a ruling, as the case is being tried in the U.S. District Court for the Southern District of New York, and the authors of the brief do not have jurisdiction. However, this intervention by the Trump administration could still carry weight.</p>",
+      "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "2 сеп 2026",
+      "published_iso": "2026-09-02T17:09:06+00:00",
+      "image": "https://picsum.photos/seed/de1017c09b/600/340"
+    },
     {
       "id": "95c4331a89d5",
       "slug": "benchmirt-what-are-llm-benchmarks-actually-measuring",
@@ -827,20 +841,6 @@
       "date": "20 авг 2026",
       "published_iso": "2026-08-20T22:36:37+00:00",
       "image": "https://picsum.photos/seed/6917868781/600/340"
-    },
-    {
-      "id": "28bfda39cca2",
-      "slug": "chatgpt-can-now-send-texts-for-you-with-new-apple-messages-p",
-      "title": "ChatGPT вече може да изпраща текстови съобщения вместо вас с новия плъгин за съобщения на Apple",
-      "excerpt": "Някога искали ли сте някой друг да изпраща текстови съобщения вместо вас? ChatGPT се предлага като автоматизиран текстописец чрез нова интеграция на Apple Messages.",
-      "content": "<p>Ако някога сте искали да споделите всичките си дигитални разговори с OpenAI, имаме добри новини за вас: лабораторията за изкуствен интелект току-що пусна плъгин за съобщения на Apple за ChatGPT, позволявайки на заинтересованите потребители да свържат своята входяща кутия за съобщения с чатбота.</p><p>Ползите от това, твърди OpenAI, са многобройни. Потребителите могат да използват плъгина, за да сортират, анализират или редактират своите съобщения директно от ChatGPT. Плъгинът работи и с Codex и ChatGPT Work, така че потребителите могат да го използват професионално, не само лично.</p><p>Кратка рекламна реклама на новия плъгин показва потребител, който моли чатбота да предложи последващи съобщения на техните контакти въз основа на съобщенията, получени предишния ден.</p><p>Можете също така да поискате от ChatGPT да изтрие съобщения вместо вас, да начертае и изпрати съобщения от ваше име или да потърси информация, заровена дълбоко в историята на вашите съобщения.</p><p>Както при повечето неща, свързани с AI, тази нова функция повдига някои въпроси относно поверителността. OpenAI каза на Bloomberg, че плъгинът работи локално на машината на потребителя и че „не създава индекс на всички нечии съобщения“. И все пак спецификите на това какво означава това не са ясни веднага. TechCrunch се свърза с OpenAI за повече информация.</p><p>Когато става въпрос за изпращане на съобщения, OpenAI насърчава потребителите да следят какво прави ChatGPT и обезсърчава включването на постоянно одобрение, като предупреждава, че това „премахва последния ви шанс да прегледате съобщение, преди ChatGPT да го изпрати като вас“, пише компанията.</p>",
-      "url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "20 авг 2026",
-      "published_iso": "2026-08-20T22:09:51+00:00",
-      "image": "https://picsum.photos/seed/a1b326d71b/600/340"
     }
   ]
 }

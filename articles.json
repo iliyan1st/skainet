@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-07T09:05:54.089268+00:00",
+  "generated_at": "2026-09-07T15:36:33.883138+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "c9c9817985d7",
+      "slug": "mg-ship-adds-ai-route-optimisation-as-logistics-returns-acce",
+      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
+      "excerpt": "MG Ship has introduced an AI route optimisation and carrier selection module as logistics deployments demonstrate rapid cost and time returns. The technical module targets global retailers and commerc",
+      "content": "<p>MG Ship has introduced an AI route optimisation and carrier selection module as logistics deployments demonstrate rapid cost and time returns.</p><p>The technical module targets global retailers and commercial shippers, pairing automated routing algorithms with carrier recommendation systems across international trade corridors. The deployment arrives as enterprise supply chain operators report measurable operational returns from machine learning tools, moving capital allocations away from speculative trials toward production deployments.</p><h3>### Measurable returns from deploying AI for logistics</h3><p>Suki Cheung, CEO of MG Ship, will present deployment metrics during a panel discussion at the upcoming WMX Asia conference. Cheung will join executives from Pos Malaysia, Omniva, and OnyX Space for the session, titled AI Beyond the Hype: Measurable Results in Logistics Today.</p><p>“Too many AI conversations in logistics remain focused on future possibilities,” said Cheung. “The reality is that AI is already delivering measurable business outcomes today. Leading organisations are reducing transportation costs, improving forecast accuracy, increasing warehouse productivity, and achieving payback within months rather than years.”</p><p>Industry operational data indicates that initial investment returns are concentrating across three primary workflows:</p><ul><li>Dynamic route planning has reduced enterprise fuel consumption by 15–20 percent, improved transit speeds by 15–25 percent, and lowered overall transportation costs by 12–22 percent, with capital payback reached within three to six months.\n- Predictive demand forecasting has reduced projection errors by 20–40 percent, improved planning accuracy by up to 35 percent, and decreased excess inventory by 20–30 percent within six to 12 months.\n- Automated freight documentation processing has cut manual task duration by up to 85 percent, recovering initial expenditure inside three to six months.</li></ul><p>Over five-year deployment cycles, enterprise adopters have recorded average operational expense reductions between 10–25 percent, accompanied by warehouse productivity gains of 25–35 percent.</p><h3>### Routing algorithms and carrier scoring</h3><p>MG Ship built the new routing capability directly into its visibility and supply chain intelligence platform, which serves retailers, manufacturers, and freight operators across multiple international markets. The base system synthesises live cargo telemetry with trade intelligence, risk monitoring, and predictive analytics to support operational planning and trade financing.</p><p>The route optimisation engine processes live and historical lane transit logs, weather patterns, air and ocean port congestion indicators, customs risk alerts, and transit reliability data. Shippers receive automated recommendations identifying low-cost, low-risk transit paths.</p><p>Carrier evaluation features rank transport providers per lane and service tier. Rather than selecting capacity purely on spot freight pricing, the system scores carriers against historical on-time metrics, transit consistency, exception occurrences, claims rates, available volume, and total cost-to-serve.</p><p>Logistics teams can also execute scenario simulations prior to peak shipping quarters. The software models lead times, service levels, freight spend, and risk exposures under alternative carrier allocation rules.</p><p>Early enterprise implementations demonstrate lower lead-time variance, reduced expedited freight expenditure, and improved on-time-in-full delivery rates.</p><p>Cheung stated that the platform “does not simply tell businesses where their cargo is”, adding that “it recommends the best route, the right carrier, and the lowest-risk option based on real-time conditions, helping organisations make faster and more profitable decisions.”</p><p><strong>See also:</strong> <strong>OneRail uses Nvidia AI for real-time last-mile delivery optimisation</strong></p><p><strong>Want to learn more about AI and big data from industry leaders?</strong> Check out AI & Big Data Expo taking place in Amsterdam, California, and London. The comprehensive event is part of TechEx and is co-located with other leading technology events including the Cyber Security & Cloud Expo. Click here for more information.</p><p>AI News is powered by TechForge Media. Explore other upcoming enterprise technology events and webinars here.</p>",
+      "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/",
+      "source": "AI News",
+      "category": "ЗА РАЗРАБОТЧИЦИ",
+      "tag": "tag-tools",
+      "date": "7 сеп 2026",
+      "published_iso": "2026-09-07T13:01:23+00:00",
+      "image": "https://picsum.photos/seed/8c3c155582/600/340"
+    },
     {
       "id": "f55433462d32",
       "slug": "travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-bu",
@@ -827,20 +841,6 @@
       "date": "24 авг 2026",
       "published_iso": "2026-08-24T15:53:53+00:00",
       "image": "https://picsum.photos/seed/c0e2860a59/600/340"
-    },
-    {
-      "id": "cd5e0b699f4e",
-      "slug": "valor-point72-back-general-intuition-at-6b-valuation-as-ai-s",
-      "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics",
-      "excerpt": "General Intuition, the startup building a foundation model that trains generalized AI agents how to move through space and time, is in talks to raise at a $6 billion pre-money valuation from new inves",
-      "content": "<p>New York-based General Intuition, the startup building a foundation model that trains generalized AI agents to move through space and time, is in talks to raise funding at a $6 billion pre-money valuation from new investors including Valor Equity Partners, Point72 Ventures, and Seven Seven Six, according to sources familiar with the matter.</p><p>Existing investors including Khosla Ventures and General Catalyst are also participating in the round. The fresh funds would come just weeks after General Intuition raised $320 million at a $2.3 billion valuation.</p><p>The news confirms earlier reporting on the deal for what is becoming one of the hottest startups tackling physical AI.</p><p>CEO Pim de Witte spun out General Intuition last October from his video game clip-sharing platform Medal, using its hundreds of millions of hours of gameplay and “action labels” — records of which buttons a player pressed and when — as an initial dataset.</p><p>Investor Vinod Khosla recently told TechCrunch that he believes those action labels will be a key part of the “emergence of intuition,” or the ability for a model to truly generalize across tasks that it wasn’t explicitly trained on.</p><p>General Intuition is still finalizing the round, and a source close to the deal said that it is oversubscribed as the startup continues to field interest from investors. The company intends to use the funds to focus to improve its general model with a focus on robotic embodiments. That means spending more on compute infrastructure (the company has a partnership with neolab CoreWeave) and hiring more talent.</p><p>Valor Equity Partners is known for backing SpaceX. TechCrunch has reached out to confirm its investment in General Intuition, which would be the first AI lab the fund has invested in since SpaceX. <em>This story is developing. Please check back in for updates.</em></p>",
-      "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
-      "source": "TechCrunch",
-      "category": "РОБОТИ & ДРОНОВЕ",
-      "tag": "tag-tech",
-      "date": "24 авг 2026",
-      "published_iso": "2026-08-24T15:24:18+00:00",
-      "image": "https://picsum.photos/seed/08758c973e/600/340"
     }
   ]
 }

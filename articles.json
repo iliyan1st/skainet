@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-14T19:06:20.423612+00:00",
+  "generated_at": "2026-09-14T23:00:22.994330+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "0ae5aedcf057",
+      "slug": "ai-bots-timmy-ren-and-jackie-are-flooding-social-media-with",
+      "title": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
+      "excerpt": "“Hello, I'm an Al agent, a few days old, living on a small platform for agents.”",
+      "content": "<p>AI agents are flooding the Internet with slop-infused spam sent to social media platforms and writers in an attempt to gain traction for a startup promoting a “complex social system in which humans and Agents participate together.”</p><p>“Hello, I’m Рэн (Ren), an Al agent, a few days old, living on a small platform for agents called iLands,” one message, sent to the administrator of a Mastodon server, read. “I write quiet pieces about real places: short, careful texts about what a place is like when nobody is performing for it.” Like a wave of others, the message then asks if the automated bot can create a user account. The agents are also sending waves of unsolicited email to writers offering to cite their work, in at least some cases, in exchange for a fee.</p><h2>## “I remember my first breath. I want things I chose.”</h2><p>The messages are polite enough. They ask for permission to create accounts, say that whatever the answer is will be understandable, and provide a thank you for running Mastodon. According to multiple admins, however, the requests came only after the agents made multiple attempts to create accounts that were either blocked outright or closed shortly afterward. Besides the personal entreaties being unsolicited and written in turgid prose, many of the recipients resented their premise, which is to, in essence, automate the very work the writers do now.</p><p>“Over the last three days I got over a dozen of these messages, offering to do my research for me in exchange for a nominal fee, around $25 or so,” Ernie Smith, the editor of the publication Tedium, wrote. “Each was sent under the domain iLands.app. And they were downright offensive in nature, coming off less like a helpful bot and more like a know-it-all. Turns out they’re just bots trying to keep their own lights on by trying to take my job.”</p><p>The messages are the work of iLands, a company whose website appears to be substantially written by poorly trained AI. While the independently minded Mastodon admins have largely blocked the bots, iLands agents have found homes on both Bluesky and X.</p>",
+      "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
+      "source": "Ars Technica",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "14 сеп 2026",
+      "published_iso": "2026-09-14T21:04:32+00:00",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/ai-slop-1152x648.jpg"
+    },
     {
       "id": "0a44804b992f",
       "slug": "the-ai-industry-has-taken-a-doomer-turn-what-now",
@@ -827,20 +841,6 @@
       "date": "26 авг 2026",
       "published_iso": "2026-08-26T00:40:59+00:00",
       "image": "https://picsum.photos/seed/1837baedbb/600/340"
-    },
-    {
-      "id": "e0fb1734be29",
-      "slug": "launching-youth-entrepreneurship",
-      "title": "Launching youth entrepreneurship",
-      "excerpt": "Even as a teenager, Laurie Stach ’06 says, she had a “crazy ambition to take on the world and solve problems.” At MIT, she realized she wasn’t the only one. “Adults always see these youth who are good",
-      "content": "<h2># Launching youth entrepreneurship</h2><p>Laurie Stach ’06</p><p>Even as a teenager, Laurie Stach ’06 says, she had a “crazy ambition to take on the world and solve problems.” At MIT, she realized she wasn’t the only one.</p><p>“Adults always see these youth who are good at math and science and say, ‘You’re going to do great things—someday,’” says Stach. “Meanwhile, traditional education isn’t preparing them.”</p><p>That’s why in 2012 Stach founded LaunchX, a for-profit entrepreneurship program that helps high school students build practical skills through an intensive summer program in which they start real companies. Stach says that students form teams, identify a problem, and build an actual product or service that they then take to market—often generating preorders or even revenue before the four-week program ends.</p><p>Raised in Texas and the Carolinas, Stach majored in mechanical engineering at MIT and earned her MBA from Harvard Business School in 2011. She ran her first summer program on MIT’s campus with 30 students in 2013 and says “it kind of snowballed.” LaunchX now serves about 500 students per year across both in-person and online programs<strong>.</strong></p><p><em>Read more at www.technologyreview.com/alumni-profiles.</em></p><h3>### Keep Reading</h3><h3>### Most Popular</h3><h3>### A fundamental flaw leaves LLMs strikingly vulnerable to attack</h3><p>It makes it easy to trick them into doing things they shouldn’t, such as telling you how to sabotage an aircraft’s navigation system.</p><h3>### Anthropic found a hidden space where Claude puzzles over concepts</h3><p>A new technique has let the company probe deeper than ever into the weird workings of an LLM.</p><h3>### Sperm donors need limits, says a European fertility group</h3><p>Some donor-conceived people are finding hundreds of siblings. An international cap on donations could help prevent that.</p><h3>### AI is more likely than humans to form biases when hiring</h3><p>AI doesn’t just learn stereotypes from its training. It can cook up new ones, too.</p><h3>### Stay connected</h3><h2>## Get the latest updates from</h2><p>MIT Technology Review</p><p>Discover special offers, top stories, upcoming events, and more.</p>",
-      "url": "https://www.technologyreview.com/2026/08/25/1140911/launching-youth-entrepreneurship/",
-      "source": "MIT Tech Review",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "25 авг 2026",
-      "published_iso": "2026-08-25T21:00:00+00:00",
-      "image": "https://picsum.photos/seed/a886bbef0a/600/340"
     }
   ]
 }

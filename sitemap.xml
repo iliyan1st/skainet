@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/vals-backed-by-andreessen-horowitz-is-looking-to-become-the</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/anthropic-is-operating-a-lab-that-conducts-biology-experimen</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -351,18 +363,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/neomme-an-efficient-multimodal-native-and-multilingual-encod</loc>
     <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nv</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/openais-new-reasoning-technique-alarms-ai-safety-experts</loc>
-    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

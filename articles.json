@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-21T19:08:06.386467+00:00",
+  "generated_at": "2026-09-21T23:04:25.606795+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "ed13874ffe83",
+      "slug": "muse-metas-extraordinarily-privileged-ai-assistant-has-a-ser",
+      "title": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
+      "excerpt": "A simple ClickFix attack is only one way to completely hijack the new agent.",
+      "content": "<p>Meta founder and CEO Mark Zuckerberg has gone to great lengths to hype the security of its new AI assistant Muse, claiming it is “built from the ground up for privacy and security.” A zero-day vulnerability that gives locally run apps and terminal commands complete control of the agent raises serious doubts. Further raising questions, Amazon on Sunday began blocking Muse from its site.</p><p>Meta introduced Muse a few weeks ago. The assistant “books appointments, fills out forms and handles customer service,” “proactively takes tasks off your plate,” and can “make purchases, generate images, create documents, and connect with your favorite apps and services.” The macOS app (curiously, there’s no Windows version) also works with a user’s WhatsApp, email, calendar, and social media accounts. When a task requires a tool that doesn’t exist, Muse creates one on the fly.</p><h2>## Meta doth hype Muse security too much</h2><p>Of course, for Muse to do any of these things, users must first give it access to their accounts. This includes authenticating the assistant to each service and, because the app runs on macOS, giving it permissions to a broad range of operating system-restricted device resources like writing files to disk, accessing the mic and camera, and monitoring location and calendars. Apple has spent years developing these defenses to prevent installed apps or commands entered into the terminal from accessing these resources, clearly because the company considers them a security threat. Muse completely undoes these default measures.</p><p>The zero-day allows any app or terminal command to gain access to the token that authenticates users to their Muse account. Meta developers designed the assistant so that any locally installed app or executed code, regardless of the macOS permissions it has, can change a long list of undocumented settings. Most of them are fairly innocuous, such as controlling dark mode. One setting, however, is anything but innocuous. It allows processes to change the endpoint where transcription occurs. Normally, it’s a server address operated by Meta. Attackers can exploit this flaw by changing the location to their own endpoint. Once that happens, the attackers have the token that gives complete control over the Muse account.</p>",
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
+      "source": "Ars Technica",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "21 сеп 2026",
+      "published_iso": "2026-09-21T22:24:38+00:00",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ai-agent-hacking-1152x648.jpg"
+    },
     {
       "id": "9a7b1c9716b0",
       "slug": "metas-ai-agent-has-been-blocked-from-using-amazoncom",
@@ -827,20 +841,6 @@
       "date": "4 сеп 2026",
       "published_iso": "2026-09-04T12:10:00+00:00",
       "image": "https://picsum.photos/seed/c448943536/600/340"
-    },
-    {
-      "id": "2f1e85ec694b",
-      "slug": "confused-about-which-vpn-is-right-us-senator-asks-the-nsa-fo",
-      "title": "Confused about which VPN is right, US senator asks the NSA for guidance",
-      "excerpt": "Open source, commercial, single-hop, multi-hop, mixnet? The array of options is dizzying.",
-      "content": "<p>A prominent US senator is asking the National Security Agency to provide guidance to the general public on best practices for using virtual private networks to secure their communications from spying by foreign adversaries.</p><p>VPNs funnel all of a user’s Internet traffic through an encrypted connection to a remote server. The design provides strong assurances that no one between the user and the server can read the encrypted contents. VPNs also allow users to hide their IP addresses from the destination servers they communicate with. While US agencies have previously recommended use of VPNs, none have given recommendations on which ones provide adequate protection.</p><h2>## It’s all in the nuances</h2><p>There are a host of limitations that can undo many of the protections users may think their VPN provides them. For instance, the encrypted tunnel often terminates once a single server decrypts the traffic and sends it on to its final destination. That means the decrypted traffic or the sending and destination IP addresses may be available for snooping by rogue employees or attackers who hack the server. VPNs also don’t encrypt certain types of metadata, such as time stamps, allowing nation-states to build profiles that can be useful in intelligence gathering.</p><p>With so many nuances, the existing recommendations to use a VPN don’t provide enough information for people to make informed decisions. Sen. Ron Wyden (D-Ore.) is asking the NSA to provide specific recommendations.</p><p>“Americans facing advanced foreign threats—including government personnel, defense contractors, journalists, and human rights defenders—deserve clear, honest advice about how best to protect their communications from surveillance by foreign adversaries,” Wyden wrote in a letter sent Wednesday to Gen. Joshua Rudd, the director of the NSA. “To that end, I request that you update NSA’s existing public guidance on VPN configurations to address this issue.”</p><p>Specific questions touch on some fairly technical details, including the general architecture of a VPN service. They include the adequacy of single-hop VPNs, which, as noted earlier, use a single server to decrypt traffic sent by the user and send it to its destination. It also asks about multi-hop architectures, in which the traffic is funneled through two or more servers, allowing the first to see only the IP address of the sender and the terminating server to see only the destination address. The letter also inquires about the use of random delays and cryptographic padding to thwart attacks that detect timing patterns or the size of messages. Wyden further asks about the adequacy of specific services such as Apple Private Relay, Nym, and Tor.</p>",
-      "url": "https://arstechnica.com/security/2026/09/us-senator-calls-on-the-nsa-to-give-guidance-for-use-of-vpns/",
-      "source": "Ars Technica",
-      "category": "ЗА РАЗРАБОТЧИЦИ",
-      "tag": "tag-tools",
-      "date": "3 сеп 2026",
-      "published_iso": "2026-09-03T19:52:06+00:00",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2024/05/vpn-tunnel-1000x648.jpg"
     }
   ]
 }

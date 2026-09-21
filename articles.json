@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-21T12:20:30.640702+00:00",
+  "generated_at": "2026-09-21T19:08:06.386467+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "9a7b1c9716b0",
+      "slug": "metas-ai-agent-has-been-blocked-from-using-amazoncom",
+      "title": "Meta’s AI agent has been blocked from using Amazon.com",
+      "excerpt": "Muse isn't welcome as a shopper anymore.",
+      "content": "<p>Sunday night, users of Meta’s AI assistant Muse started getting a strange error message when they tried to buy goods on Amazon. As spotted by GeekWire, the error message read: “Continued access by an unauthorized AI agent violates Amazon’s Conditions of Use, to which our customers have agreed.”</p><p>In other words, Muse isn’t welcome as a shopper — and anyone trying to buy something on Amazon through the AI agent will have to find it somewhere else.</p><p>It’s easy to see the block as a tete-a-tete between tech giants. Amazon has its own cohort of foundation models, after all, along with one of the most popular inference platforms on the internet. As long as they’re under no legal obligation to open the doors to Muse, why would they?</p><p>But there are also substantive reasons Amazon might not want to be in the agentic commerce business just yet. If Muse makes a bad order, Amazon is going to be the one to clean it up — dealing with both the angry customer and the angry vendor. Muse has one of the lower hallucination rates, as AI models go, but it’s still pretty far from zero. Even if Amazon sees an opportunity in agent-driven commerce, they may want to wait a few more release cycles before rolling anything out.</p>",
+      "url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "21 сеп 2026",
+      "published_iso": "2026-09-21T17:55:18+00:00",
+      "image": "https://picsum.photos/seed/73b1bf597a/600/340"
+    },
     {
       "id": "97ca227d5019",
       "slug": "voccis-ring-adds-a-new-form-factor-to-meeting-note-taking",
@@ -827,20 +841,6 @@
       "date": "3 сеп 2026",
       "published_iso": "2026-09-03T19:52:06+00:00",
       "image": "https://cdn.arstechnica.net/wp-content/uploads/2024/05/vpn-tunnel-1000x648.jpg"
-    },
-    {
-      "id": "2ba2a778ad4a",
-      "slug": "meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model",
-      "title": "Meta is paying to peek at how you use their latest AI model",
-      "excerpt": "For its new Muse Spark model, intended for operating coding and other agents, Meta is offering an explicit discount averaging out to about 95% for users who \"contribute\" to the development of future m",
-      "content": "<p>Most AI tools allow you to opt out of sharing your usage with the model provider to improve future versions. Meta has taken that idea and put a price tag on it.</p><p>For its new Muse Spark model, intended for operating coding and other agents, Meta is offering an explicit discount averaging out to about 95% for users who “contribute” to the development of future models by sharing their prompts and model outputs.</p><p>While 1 million input tokens under a standard agreement costs $1.25, under the contributor pricing model they cost just 10 cents. For output tokens, the standard price is $4.25 per million, but that same million costs just 20 cents under the contributor model.</p><p>Meta has had a rough time trying to obtain training data: An initiative to track the computer usage of its employees, launched earlier this year, attracted wide internal criticism and was paused in June. The company didn’t respond to a question from TechCrunch about its new pricing model.</p><p>This kind of user data is vital for making agentic tools work better. “The reason we saw a big jump in [coding agent] capabilities between April 2025 and October 2025 was that Claude Code, by default, would store all your coding agent sessions and use them for reinforcement learning training,” Mario Zechner, the developer behind the open source harness Pi, told TechCrunch last month.</p><p>But even as the imperative for model builders increasingly becomes deploying agentic tools for use outside of software engineering, their ability to evaluate and improve those tools is blocked by the complexity and lack of digital traces for many professional workflows.</p><p>Arvind Narayanan, a Princeton computer science professor, noted that there is good evidence that large companies don’t want their data to be used for model training.</p><p>“They stick with token-billed Enterprise plans even though the subscription-based consumer plans like Claude Max and ChatGPT Pro are discounted by 10x-20x or even more! (The main difference between the plans is data retention + enterprise IT governance),” he wrote on social media.</p><p>Perhaps in recognition of those dynamics, Meta is offering companies explicit compensation to obtain that information. Its pricing guide notes that the contributor tier “lowers the barrier to entry for prototyping, testing integrations, and scaling experiments where training on your data is acceptable.”</p><p>That, Narayanan suggested, could in turn incentivize large companies to be more diligent about which data is truly proprietary and which could be shared with model providers.</p><p>The framework could also play into growing price competition between the frontier labs. Anthropic’s newest Fable and Mythos models, released yesterday, came with lowered costs for processing cached tokens, while OpenAI’s latest models got major price cuts at the end of July.</p>",
-      "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-      "source": "TechCrunch",
-      "category": "AI ХАРДУЕР",
-      "tag": "tag-tech",
-      "date": "3 сеп 2026",
-      "published_iso": "2026-09-03T18:19:56+00:00",
-      "image": "https://picsum.photos/seed/89449fa7b7/600/340"
     }
   ]
 }

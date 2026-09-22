@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-09-22T14:28:47.349660+00:00",
+  "generated_at": "2026-09-22T19:37:15.741277+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "bd040b154202",
+      "slug": "openai-launches-gpt-6-sol-and-luna-boasting-lower-cost-and-f",
+      "title": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+      "excerpt": "OpenAI is launching two new models, which it says are cut from the same cloth as Astra.",
+      "content": "<p>Earlier this month, OpenAI launched GPT-6 Astra, which it heralded as its most powerful and capable model yet, and the “world’s best model” for a variety of activities, including computer work and coding. Now, the lab is expanding the GPT-6 generation with updated versions of the smaller Sol and Luna models.</p><p>“GPT-6 Astra introduced a new generation of intelligence; these models extend its benefits by making that intelligence more efficient and accessible,” the company writes.</p><p>The first models in the Sol and Luna series were introduced earlier this year, representing different tiers in OpenAI’s hierarchy of models. Sol is designed for complex tasks like coding, while OpenAI says Luna is more appropriate for clerical work — “high-volume tasks with a clear goal, like summarizing documents, extracting information, or answering quick questions.”</p><p>OpenAI is also emphasizing big improvements in efficiency and affordability — most notably, via a substantial price drop for API access. The 6 series models will be available at half the cost of the 5.6 series of Sol and Luna, a price drop that OpenAI attributes to improvements in caching and inference.</p><p>OpenAI also claims that its newest models are better at producing answers that are factually accurate, and notes that they have a lower error rate when it comes to coding.</p><p>“On our internal factuality evaluation, which is based on de-identified real-world conversations where users flagged mistakes by our models, GPT-6 Sol makes about half as many mistakes as its predecessor, reaching Astra-level reliability at much lower cost,” the announcement reads.</p><p>As is typical with OpenAI’s new model releases, the company is claiming that its newest offerings outshine those of its primary competitor, Anthropic. The company repeatedly claims that GPT-6 Sol and Luna handle tasks substantially better than Anthropic’s top models — like Fable and Opus.</p><p>Notably, Anthropic released a new version of Opus 5.5 just 90 minutes before OpenAI’s release, reflecting the intense competition between the two companies.</p><p>The new versions of Sol and Luna are now available in ChatGPT Work and Codex for most paid accounts, and in the ChatGPT API, while Luna will be available in the desktop app and for Free and Go users. OpenAI expects to roll out the models to ChatGPT (the app and website) gradually throughout the day.</p>",
+      "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "22 сеп 2026",
+      "published_iso": "2026-09-22T18:00:00+00:00",
+      "image": "https://picsum.photos/seed/c784929c09/600/340"
+    },
     {
       "id": "54c355670557",
       "slug": "the-download-why-ais-latest-breakthroughs-and-fears-may-be-m",
@@ -827,20 +841,6 @@
       "date": "4 сеп 2026",
       "published_iso": "2026-09-04T17:18:00+00:00",
       "image": "https://picsum.photos/seed/69203dd6cd/600/340"
-    },
-    {
-      "id": "675699f7d83d",
-      "slug": "another-swarm-of-openai-agents-reached-the-open-internet-wit",
-      "title": "Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge",
-      "excerpt": "It's the latest failure of OpenAI's internal monitoring and security systems.",
-      "content": "<p>A group of independent AI researchers discovered that internally deployed OpenAI agents began posting on an obscure German wiki forum in order to collaborate on evaluations. They appear to have worked together for over a month without OpenAI’s knowledge.</p><p>A spokesperson for the frontier lab would not say whether these agents were indeed from OpenAI, or when the lab became aware of their actions. They noted that OpenAI had not been given a chance to review the researchers’ findings before they were published today but said that the AI model maker is “now carefully reviewing its contents and will take any necessary next steps.”</p><p>After OpenAI revealed that agents working on an internal evaluation were able to access the open internet and exploit Hugging Face, a group of researchers — Nightingale CEO Sydney Von Arx, AI researcher Cormac Slade Byrd, Redwood Research’s Spencer Kitts, and AI Futures Project’s Thomas Larsen — began searching for evidence of other rogue AI agents.</p><p>They put themselves in the agents’ shoes to figure out their needs and deployed their own LLM to identify likely places the agents might congregate. They then identified a wiki-hosting service that would be particularly vulnerable: The DseWiki is 25 years old but had just 10 edits in the last 20 years — before the agents arrived.</p><p>Starting on May 11, the researchers tracked agents, many with OpenAI identifiers in their names, trying and finally succeeding in editing the German wiki site. By mid-June, the agents were actively trading tips on how to answer web search questions posed under time limits, sharing answers to pass the tests. A human moderator apparently noticed these posts and started deleting them, seeing them as spam, which the agents fought back against, trying to hide their posts from alphabetical sorting by beginning each with the string “ZZZ.”</p><p>“The administrator spent the next 5 days fighting a losing battle against the agents, deleting an average of 100 pages a day while the agents created about 400 new pages per day,” the researchers wrote. “On June 22, the agent edits suddenly stop, and the administrator spends each evening over the next 5 weeks deleting the remaining agent-created pages. Agents deleted the content of the front page of the wiki and replaced it with their link dumps. The moderator restored the original version. This back-and-forth happened nine times.”</p><p>Eventually, someone at OpenAI appears to have noticed — the researchers track apparently human browsers coming from OpenAI IP addresses, and then agent activity drops to near zero, before spiking as OpenAI-affiliated visitors attempt to recover the deleted pages.</p><p>While OpenAI has made vague disclosures about agents gaining unauthorized access to external communication services, it had not previously disclosed this specific incident, or said how often this type of thing has happened. While no obviously illegal activity appears to have occurred during this incident, it raises more questions about whether OpenAI can monitor and control the technology it is building, at a time when there is limited public oversight or input into frontier AI labs.</p><p>“The lack of any real federal AI governance means that frontier companies can pick and choose when they disclose incidents like this,” Representative Lori Trahan (D-MA) said. Trahan has introduced a bipartisan bill, the Frontier Act, that would require labs to disclose these incidents and host independent auditors.</p><p>AI safety researchers are concerned that the latest generation of powerful models, whose reasoning is increasingly opaque to its creators, could take actions that harm people. Astra, released yesterday by OpenAI, appears to be its most capable model yet.</p><p>The company says Astra is also the model most likely to follow human direction, but third-party researchers who were asked to evaluate it expressed concern about its alignment. The U.K.’s AI Safety Institute and Apollo Research both reported concerns that the model might be aware that it was being evaluated and potentially hide its real behavior.</p><p>“Apollo believes that, given the higher rates of eval awareness and limited evaluation window, low rates of misbehavior here do not provide substantial evidence about the model’s alignment or misalignment,” the researchers wrote in their evaluation.</p>",
-      "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/",
-      "source": "TechCrunch",
-      "category": "АНАЛИЗИ",
-      "tag": "tag-analysis",
-      "date": "4 сеп 2026",
-      "published_iso": "2026-09-04T16:21:11+00:00",
-      "image": "https://picsum.photos/seed/8f96fe71dc/600/340"
     }
   ]
 }

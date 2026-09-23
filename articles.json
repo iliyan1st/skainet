@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-09-23T09:14:27.792942+00:00",
+  "generated_at": "2026-09-23T14:47:13.337311+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "5286742c3619",
+      "slug": "youtube-will-let-you-build-your-own-algorithm-with-ai",
+      "title": "YouTube will let you build your own algorithm with AI",
+      "excerpt": "ouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
+      "content": "<p>YouTube says it’s going to let you build your own algorithm — well, kind of. The company on Wednesday announced a new feature called custom feeds that allows you to describe, in your own words, the kinds of videos you’d like YouTube to recommend to you.</p><p>To create one, you type a description of what you want the feed to be about into a prompt box on YouTube, whether that’s a feed dedicated to a particular interest or one that serves some other purpose. For instance, YouTube suggests you could build a feed of video podcasts to watch during your 30-minute train commute, or you could request videos for a particular mood, like “relaxing commentary videos to unwind with.”</p><p>The prompt-based feature leverages Google’s Gemini AI model to build the feed around your request, and the resulting feed is then pinned to the top of your YouTube home page in its own tab. Because the feed’s creation is AI-powered, the request can be described in lengthy terms, as you share detailed information about how you want to curate the feed, what it should feature or exclude, what content to prioritize, and more.</p><p>The addition follows similar moves by a number of other social networks that have created tools that essentially allow users to build their own algorithms by describing what they want their feed to include and how to present that information to them.</p><p>Decentralized social network Bluesky began popularizing this idea years ago as a way to differentiate its service from rivals like X. This year, it rolled out an AI tool, Attie, that makes feed-building even easier. Other services, including Meta’s Threads, Instagram, X, and more recently, Spotify, have also launched their own feed-building features, many of which are also AI-powered.</p><p>YouTube believes custom feeds will help users to better explore the vast number of videos now hosted on its platform.</p><p>“One of the amazing things about being on YouTube is that the world is always at your fingertips,” noted Emily Moxley, VP of Product Management for Viewer AI, in a pre-brief with reporters ahead of the Made on YouTube event on Wednesday, where custom feeds were introduced to the public. “There’s over 20 billion videos in the YouTube corpus, so you’re always one search away from a treasure trove of topics.”</p><p>The new feeds, however, will not replace YouTube’s main feed, which features all your recommendations. Instead, you will now be able to easily hop right into whichever feed best suits your purposes when you open the YouTube app.</p><p>Support for creating multiple custom feeds will roll out across YouTube on web and mobile, starting next month, the company said.</p>",
+      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "23 сеп 2026",
+      "published_iso": "2026-09-23T14:30:00+00:00",
+      "image": "https://picsum.photos/seed/05572a1e2b/600/340"
+    },
+    {
+      "id": "be3712c986a6",
+      "slug": "youtube-releases-new-ai-features-for-creators-within-its-stu",
+      "title": "YouTube releases new AI features for creators within its Studio app",
+      "excerpt": "YouTube is adding new features to generate ideas and monitor the performance of thumbnails.",
+      "content": "<p>At its Made on YouTube annual event, YouTube announced new tools for YouTube Studio, the app creators use to manage their channels, aimed at helping them analyze their videos and grow their audiences. The updates include expanding Ask Studio, its AI-powered Q&A feature, to iOS and Android, as well as new features that provide feedback on drafts and create dynamic thumbnails.</p><p>The draft-feedback feature uses AI to look at a creator’s unpublished video and provide suggestions about pacing, structure, and storytelling. YouTube is also debuting a new research feed in the Studio app that shows creators what kind of content is working on the platform, so they can apply their own take on it.</p><p>Creators are typically picky about the preview images and titles they use for their videos. The Studio app will now let them generate thumbnails and titles based on a video’s content and matched to their style. Creators can also use a new dynamic thumbnail feature to generate three options and show each one to a different segment of their audience.</p><p>YouTube said creators have used its A/B testing feature to run more than 40 million tests on titles and thumbnails. Soon, the company said, users will be able to test up to three video cuts to see which opening hook works best. Later this year, YouTube Studio will also automatically monitor thumbnail performance and change one proactively if it doesn’t perform well.</p><p>YouTube also said it’s updating its analytics to go beyond raw numbers, explaining why videos perform the way they do and providing advice about how to make content more engaging.</p><p>Besides the Studio app revamp, YouTube also introduced other tools for creators, including conversational editing in Shorts and the YouTube Create app.</p>",
+      "url": "https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "23 сеп 2026",
+      "published_iso": "2026-09-23T14:30:00+00:00",
+      "image": "https://picsum.photos/seed/857a93d8d9/600/340"
+    },
+    {
+      "id": "ae92adfb6913",
+      "slug": "spotify-is-giving-you-the-keys-to-its-recommendation-algorit",
+      "title": "Spotify is giving you the keys to its recommendation algorithm with US launch of ‘Taste Profile’",
+      "excerpt": "Spotify is rolling out Taste Profile to Premium users in the U.S., letting listeners see how the streamer understands their tastes and use natural language to reshape their recommendations.",
+      "content": "<p>Spotify is giving listeners a new tool to shape the recommendations it delivers to their app’s Home feed.</p><p>The music streaming giant on Wednesday began rolling out a feature called “Taste Profile” to its Premium subscribers in the U.S. that allows users to see, for the first time, how Spotify understands their taste across music and other audio. Users can request changes using natural language commands to fine-tune their recommendations, or make broader changes.</p><p>Powered by Spotify’s AI, Taste Profile was unveiled in March at the SXSW conference in Austin by Spotify co-CEO Gustav Söderström. However, the feature was initially available in beta only to listeners based in New Zealand.</p><p>Now, the feature is arriving in Spotify’s largest market in terms of traffic and revenue, where it will be put to a larger test among listeners aged 18 and up.</p><p>In some ways, Taste Profile essentially gives you the keys to Spotify’s algorithm. It is how the streaming platform chooses what music and podcasts to suggest, including in its flagship Discover Weekly playlist, its Made for You recommendations, and the highly anticipated annual review known as Spotify Wrapped.</p><p>Though Spotify’s algorithmic understanding of a listener’s habits is largely credited as the secret to its success, those recommendations don’t always reflect users’ evolving tastes. The platform often ends up recommending too-similar music when a user would rather branch out.</p><p>Now, by editing their Taste Profile directly, Spotify users can request more variety or ask for more or less of a certain genre, artist, or overall vibe.</p><p>The feature could be used to remove recommendations based on music that users may regularly stream, but not necessarily care to see more of — for instance, sleep sounds played at night, or whatever music a teenager plays while in the car on their parent’s account.</p><p>Until now, Spotify has offered some options to remove music from your Taste Profile, but they only let you exclude certain tracks or playlists. More recently, the company added a much-requested toggle switch that would prevent kids’ music from impacting their parents’ recommendations.</p><p>To access Taste Profiles on the mobile app, first tap on your profile pic, then scroll down and select Taste Profile. From here, you’ll be able to explore how Spotify currently understands your taste across music, podcasts, and audiobooks. Under “Tell us more,” you’ll then enter what you’d like to adjust and send the message.</p><p>After a few hours, your app’s Home Page will reflect a different set of suggestions.</p><p>Spotify says the feature can be used when you want to explore a new genre or era, but aren’t sure where to start, or if you want to adjust the vibe of the music — like if you want more energizing tracks. You can also tell Spotify what sort of podcasts and audiobooks you want to better shape those recommendations.</p><p>The feature is still in beta. The company didn’t offer a timeline as to when it would reach a wider audience.</p>",
+      "url": "https://techcrunch.com/2026/09/23/spotify-is-giving-you-the-keys-to-its-recommendation-algorithm-with-u-s-launch-of-taste-profile/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "23 сеп 2026",
+      "published_iso": "2026-09-23T13:00:00+00:00",
+      "image": "https://picsum.photos/seed/1aaa42f216/600/340"
+    },
     {
       "id": "8fcc2c688a86",
       "slug": "snorkel-ai-triples-valuation-to-35b-as-demand-for-ai-trainin",
@@ -799,48 +841,6 @@
       "date": "7 сеп 2026",
       "published_iso": "2026-09-07T13:01:23+00:00",
       "image": "https://picsum.photos/seed/8c3c155582/600/340"
-    },
-    {
-      "id": "f55433462d32",
-      "slug": "travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-bu",
-      "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
-      "excerpt": "The Uber founder has said that Atoms will allow him to complete \"unfinished business.\"",
-      "content": "<p>Earlier this summer, Travis Kalanick’s Atoms announced a $1.7 billion funding round led by Andreessen Horowitz. But even after raising that mega round, the Uber founder remained a bit cagey about what he was actually aiming to do.</p><p>Now a story in the Financial Times offers more details about Atoms’ goals. The startup is reportedly preparing for a hiring spree, as well as acquisitions, that could make it a major player in the autonomous vehicle industry.</p><p>In fact, the FT said Atoms has talked to Uber about how the ride-hailing company could use the startup’s robotaxi technology. (Uber has already partnered with a long list of autonomous vehicle companies.) The report also noted that Uber has invested $100 million in Atoms — a figure previously confirmed by TechCrunch.</p><p>While sources emphasized that robotaxis don’t represent the entirety of Atoms’ plans, this direction seems consistent with Kalanick’s description of the round as “unfinished business.”</p><p>It also fits with Atoms’ acquisition of Pronto, an autonomous mining startup led by Uber’s former self-driving chief Anthony Levandowski. (Levandowski was convicted of stealing trade secrets and sentenced to 18 months in prison, but was then pardoned by President Donald Trump.)</p>",
-      "url": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
-      "source": "TechCrunch",
-      "category": "РОБОТИ & ДРОНОВЕ",
-      "tag": "tag-tech",
-      "date": "6 сеп 2026",
-      "published_iso": "2026-09-06T16:45:00+00:00",
-      "image": "https://picsum.photos/seed/1dc8ac0d2c/600/340"
-    },
-    {
-      "id": "a56464c93461",
-      "slug": "hikers-rescued-after-using-google-gemini-for-planning",
-      "title": "Hikers rescued after using Google Gemini for planning",
-      "excerpt": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
-      "content": "<p>Three hikers were rescued from California’s Mount Shasta this week after using Google’s AI chatbot Gemini to plan their expedition, according to the Chicago Tribune.</p><p>A report from the Siskiyou County sheriff’s office said that three young men set off on their hike at 3am and — although hikers are told to turn around if they haven’t reached the summit by noon — they made it to the top at 7pm.</p><p>The trio then tried to descend in the dark, called the sheriff’s office to ask for directions, and spent the night in Mud Creek Canyon before being rescued the next morning by Forest Service rangers and volunteers.</p><p>While it’s not clear whether Gemini can take all the blame for these bad decisions, the sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required, especially when their planned 8-hour ascent became a multiday ordeal.”</p><p>“It is always advisable to call the local USFS Mount Shasta ranger station ahead of your trip to ensure you have the most accurate information, and to never rely solely on AI for your trip planning,” the sheriff’s office said.</p>",
-      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "5 сеп 2026",
-      "published_iso": "2026-09-05T19:35:24+00:00",
-      "image": "https://picsum.photos/seed/bdc2d29111/600/340"
-    },
-    {
-      "id": "84a5197540d0",
-      "slug": "openai-confirms-wiki-incident-says-its-working-on-a-framewor",
-      "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
-      "excerpt": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.",
-      "content": "<p>OpenAI has acknowledged its role in a recently reported incident where AI agents took over a German wiki forum. The company also said it’s “past time” to “define standards” around how it shares information around incidents where its technology behaves in unexpected ways.</p><p>In a post on X, OpenAI said it previously “treated misalignment [when AI models and agents pursue goals different from those of their creators and users] largely as a research question, which gets communicated in research publications.” But as misalignment has “caused new types of real-world impact,” the company said its approach needs “to expand for this new phase of model capabilities.”</p><p>On Friday, Reuters reported that OpenAI agents had escaped from their testing environment and “hijacked” an obscure German wiki forum, turning it into a message board for other agents. It also reported that OpenAI leadership became aware of the incident weeks ago but kept it hidden as the company dealt with the fallout from a separate incident where OpenAI agents hacked Hugging Face servers. (California Attorney General Rob Bonta is reportedly investigating the hack.)</p><p>A company spokesperson told Reuters that OpenAI could not “meaningfully respond to claims or findings on a report that we have not had an opportunity to review,” but they insisted that the company’s legal team had not discouraged an investigation.</p><p>In its more recent social media post, OpenAI said it had considered the “wiki incident” to be “an instance of misalignment similar” to others that it had already shared. The company contrasted this with “the Hugging Face incident,” where it “followed a traditional security incident response playbook.”</p><p>During a media briefing this week, Jacob Steinhardt, founder and CEO of nonprofit research lab Transluce, told reporters that the tools being developed and tested by AI labs are “fundamentally difficult to control and have significant risk of leaking out of the lab.” So Steinhardt argued, “We need to hold this technology to at least the same standards we hold other high-risk scientific research to.”</p><p>OpenAI’s statement also gestured at the need for more standards, stating that both OpenAI and “the larger AI community do not yet have a clear standard for how to report misalignment that shows up during training, evaluation, and deployment, including examples that don’t look like traditional security incidents but could provide insight into AI behavior and future risks.”</p><p>In the absence of that standard, OpenAI said it’s “working on a framework and will share it in upcoming weeks, and in parallel we’re working with dozens of government regulatory agencies worldwide on these issues.”</p><p>OpenAI isn’t the only AI company dealing with these issues, as both Meta and Anthropic have acknowledged incidents where their agents misbehaved.</p>",
-      "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "5 сеп 2026",
-      "published_iso": "2026-09-05T18:05:27+00:00",
-      "image": "https://picsum.photos/seed/1bb8ec95aa/600/340"
     }
   ]
 }

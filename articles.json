@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-09-24T14:42:58.024199+00:00",
+  "generated_at": "2026-09-24T19:52:55.262793+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "b1e6fb176202",
+      "slug": "prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glass",
+      "title": "PrismML пренася своите малки LLM в смарт очила, захранвани от Qualcomm",
+      "excerpt": "По-голямата цел на Prism е ИИ с отворен тип, който работи на устройства и използва по-добре изчислителната мощност, която вече имат.",
+      "content": "<p>AI Lab PrismML — основана от изследователи от Caltech и съветвана от Ion Stoica от Калифорнийския университет в Бъркли — създаде версия на своите малки езикови модели за смарт очила, работещи на чипове Snapdragon на Qualcomm.</p><p>В сряда, на срещата на върха на Snapdragon на Qualcomm, производителят на чипове представи 1-bit Bonsai LLM на PrismML, който може да се изпълнява локално на смарт очила с изкуствен интелект, изградени на платформата Snapdragon AR1 Gen 1.</p><p>Както TechCrunch съобщи по-рано, претенцията на PrismML за слава е, че намалява значително по-големите модели (в този случай с 4 пъти), като същевременно запазва почти цялата им производителност при стандартни бенчмаркове. Версията на интелигентните очила е модел с 2 милиарда параметъра, настроен за зрение и език, така че носещите могат да питат какво гледат в реално време.</p><p>По-голямата цел на Prism е AI с отворен тип, който работи на устройства и използва по-добре изчислителната мощност, която вече имат. Стартиращата компания представя това като алтернатива на зависимостта от обещанията за поверителност на патентованите лаборатории за изкуствен интелект и тяхната ненаситна нужда от повече изчисления.</p><p>Пускането на модел за чипа на Qualcomm е стъпка към тази визия. Но все още не са обявени умни очила, работещи с PrismML.</p>",
+      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "24 сеп 2026",
+      "published_iso": "2026-09-24T19:00:42+00:00",
+      "image": "https://picsum.photos/seed/432d869a0b/600/340"
+    },
+    {
+      "id": "6b7b7edfbb7f",
+      "slug": "google-photos-clueless-inspired-virtual-closet-is-now-availa",
+      "title": "Виртуалният килер, вдъхновен от Google Photos „Clueless“, вече е достъпен за Android и iOS",
+      "excerpt": "Задвижваната от изкуствен интелект функция изгражда виртуален гардероб от вашите снимки и вече е широко достъпна след първото пускане на потребителите на Android през юни.",
+      "content": "<p>Новата функция на Google, базирана на изкуствен интелект, която превръща снимките на вашите тоалети във виртуален гардероб – изглежда вдъхновен от емблематичното приложение за виртуален гардероб на Шер, представено във филма „Clueless“ – вече е достъпна за всички в САЩ, Бразилия и Индия както на iOS, така и на Android устройства.</p><p>Компанията обяви функцията по-рано тази година с планове да започне внедряването през лятото. Потребителите на Android получиха първи достъп, започвайки през юни, а сега виртуалният гардероб е достъпен за всички потребители на Android и iOS на поддържаните пазари.</p><p>Идеята за дигитален гардероб в „Clueless“ имаше за цел да подчертае привилегирования живот на Шер, където тя имаше толкова много дрехи, че се нуждаеше от дигитална система, която да й помогне да избере какво да облече и да поддържа всичко организирано. Сега не е нужно да сте богат тийнейджър от Бевърли Хилс, за да се възползвате от тази технология.</p><p>Вместо това Google използва AI технология, за да създаде копие на вашия гардероб въз основа на артикулите, които сте носили на снимките си. От приложението можете също да филтрирате артикули по категория - като горнища, долнища, бижута и други - след това да ги смесвате и съчетавате, за да създадете различни тоалети.</p><p>Google казва, че функцията е предназначена да подпомага потребителя и данните за това как се обличате или какво носите не се споделят с трети страни, като търговци на дребно.</p><p>По-широкото внедряване на функцията за виртуален гардероб пристига заедно с няколко други актуализации на Google Photos, включително начин за избиране, осветяване и споделяне на снимки с помощта на една подкана в Gemini Spark, надстроен инструмент за маркиране и повече Remix шаблони, които използват AI за трансформиране на вашите снимки. (Функцията Gemini Spark изисква абонамент за Google AI Pro или Ultra в САЩ)</p><p>С Markup ще можете да използвате писалка за редактиране, за да замъглите чувствителна информация като регистрационни номера, да имате достъп до плъзгачи за прецизна дебелина за персонализирани скици и да избирате от различни шрифтове, когато добавяте текст към снимки.</p><p>За потребителите на Android има и нови филтри за снимки, наречени „Настроения“, които ви позволяват да придадете на изображенията си различен външен вид, като 35 мм филм, цифрова камера от 2000-те и др.</p>",
+      "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "24 сеп 2026",
+      "published_iso": "2026-09-24T17:00:00+00:00",
+      "image": "https://picsum.photos/seed/1e5605908a/600/340"
+    },
     {
       "id": "4953387d2921",
       "slug": "ando-wants-to-take-on-slack-with-a-team-messaging-app-that-l",
@@ -813,34 +841,6 @@
       "date": "9 сеп 2026",
       "published_iso": "2026-09-09T20:24:48+00:00",
       "image": "https://picsum.photos/seed/dbc1f6e618/600/340"
-    },
-    {
-      "id": "ea19283bfd09",
-      "slug": "everything-apple-announced-at-its-fall-iphone-event-from-the",
-      "title": "Everything Apple announced at its fall iPhone event, from the foldable iPhone Duo to an always-listening Apple Watch",
-      "excerpt": "The main event was the tech giant's highly anticipated first foldable phone, the iPhone Duo.",
-      "content": "<p>Apple on Wednesday unveiled its latest iPhones and Apple Watches at its first fall event under newly appointed CEO John Ternus. The main event was the tech giant’s highly anticipated first foldable phone, the iPhone Duo. Apple also announced its iPhone 18 Pro lineup, along with new AirPods, and more.</p><p>We’ve compiled all of the announcements from today’s “Surprise and Sunshine” event.</p><h2>## iPhone Duo</h2><p>Apple’s first foldable, the iPhone Duo, features a 7.6-inch Retina display when unfolded, while its outer display measures 5.4 inches. The company said that the new device was “Inspired by the versatility of iPad.” The inner display features an “under-display” camera that gives users an all-screen feel.</p><p>Apple says the iPhone Duo delivers up to 31 hours of video playback on its inner display and up to 44 hours on its outer display.</p><p>The phone features a 48-megapixel fusion main camera and a 48-megapixel ultrawide camera with 2x optical zoom. As with other foldable phones, users can take rear-camera selfies and look at previews on the outer display.</p><p>The Duo’s hinge is made from Grade 5 aluminum and comprises more than 100 specially engineered components designed to ensure smooth opening and closing.</p><p>The iPhone Duo starts at $1,999 with 256GB of storage and is available in two colors. Pre-orders for Apple’s new foldable open October 16, with the device hitting stores on October 23.</p><h2>## iPhone 18 Pro and iPhone 18 Pro Max</h2><p>The new iPhone 18 Pro lineup retains the same design as its predecessors, but its biggest upgrade comes in the form of enhanced cameras.</p><p>The new Pro series camera features a 48-megapixel sensor with a variable aperture controlled by six thin blades. This system is expected to improve low-light photography while also increasing shooting speed. The camera software also introduces new Pro controls, including white balance, shutter speed, aperture, and a histogram. In addition, new “Photographic Styles” offer greater customization with texture and grain controls.</p><p>The new camera can record 4K video in Dolby HDR Vision and apply cinematic effects after shooting the footage.</p><p>The iPhone 18 Pro starts at $1,199, while the iPhone 18 Pro Max starts at $1,299, which is $100 more than last year’s models. Pre-orders will open Saturday, with both devices officially available on September 18.</p><h2>## Apple Watch Series 12 and Apple Watch Ultra 4</h2><p>A new “Sound Recognition” feature can listen for sounds such as sirens, alarms, doorbells, and a baby crying, providing helpful alerts for people who are hard of hearing. The Apple Watch Series 12 and Apple Watch Ultra 4 aren’t getting a major hardware makeover, but they are getting some significant software updates.</p><p>Apple is taking aim at the growing wave of AI-powered wearables with new “Audio Intelligence” features that can rewind moments and help users remember details from their everyday conversations.</p><p>The smartwatches are introducing a “Live Rewind” feature that shows the previous 15 seconds of a conversation as a text snippet, and a “Siri Recap” feature that’s designed to help you remember key moments from daily conversations, like takeaways from a team meeting or a parent-teacher conference.</p><p>A new “Sound Recognition” feature can listen for sounds such as sirens, alarms, doorbells, and a baby crying to provide alerts for people who are hard of hearing.</p><p>The Apple Watch Series 12 starts at $399, while the Apple Watch Ultra 4 costs $499. Pre-orders open today, with availability in stores beginning September 18.</p><h2>## AirPods 5</h2><p>The latest generation of Apple’s wireless earbuds, the AirPods 5, introduces several upgrades, including improved audio quality, stronger active noise cancellation, and expanded Siri and Apple Intelligence features.</p><p>Apple says AirPods 5 can reduce background noise by 50% more than the previous generation. They also feature volume control on the stem, which was previously only available on Apple’s more expensive AirPods Pro.</p><p>Transparency mode on AirPods 5 has also been improved to allow users to hear nearby voices and ambient sounds more naturally.</p><p>The AirPods 5 offer up to five hours of listening with active noise cancellation on a single charge. The charging case brings total listening time to up to 22 hours.</p><p>AirPods 5 start at $129, while the version with a Wireless Charging Case costs $149. Pre-orders begin today, with the earbuds set to arrive on September 18.</p><h2>## Revamped Health App</h2><p>Apple announced a redesigned Apple Health app that takes advantage of Apple Intelligence to make better sense of your health data.</p><p>The updates introduce a new Insights tab with a summary of the most timely health information, along with personalized guidance, assessments, a new “Readiness” score, and a calculation of your “Health Age.” The updates also introduce a new Longevity tab that uses metrics from your Apple Watch and iPhone to assess your overall health across factors such as sleep, movement, heart health, and more.</p><p>The revamped Health app rolls out later this year, starting in U.S. English.</p>",
-      "url": "https://techcrunch.com/2026/09/09/everything-apple-announced-at-its-fall-iphone-event-from-the-foldable-iphone-duo-to-an-always-listening-apple-watch/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "9 сеп 2026",
-      "published_iso": "2026-09-09T20:03:43+00:00",
-      "image": "https://picsum.photos/seed/23042010e6/600/340"
-    },
-    {
-      "id": "f7f22934f711",
-      "slug": "apples-revamped-health-app-will-calculate-your-health-age-an",
-      "title": "Apple’s revamped Health app will calculate your ‘health age’ and readiness score",
-      "excerpt": "The update uses Apple Intelligence to make better sense of your health data.",
-      "content": "<p>Alongside the new Apple Watch Series 12 and Ultra 4, Apple on Wednesday introduced a redesigned Apple Health app that takes advantage of Apple Intelligence to make better sense of your health data. The changes deliver a new Insights tab that includes a summary of the most timely information, plus personalized guidance, assessments, a new “readiness” score, and a computation of your “Health Age.”</p><p>The latter is a way to understand how your various health metrics compare with your actual age and uses data like your VO2 max, sleep, and more, including biomarkers from your blood.</p><p>The additions also include a new longevity tab, which uses metrics from your Apple watch and iPhone to assess your health across sleep, movement, heart health, and other factors. Your lab results can be incorporated into this guidance, and Apple announced a team-up with Quest for a 50-biomarker panel for $119, giving users quick access to data that can only come from lab tests.</p><p>With Apple Intelligence, Apple’s Health app has been improved to make sense of other health data, too, which comes into play in features like the readiness score and the Insights tab. For instance, the app could suggest that a user incorporate more intervals into their morning run to improve their cardio health. The app will also go deeper in areas like fitness and heart health as well, Apple said</p><p>The Health app also allows users to take in-depth assessments of how well their bodies are moving, which can help people who are aging or recovering from an injury. A trainer can even demonstrate certain moves for you to try as you take the assessment, which Apple claims is like having a coach right there with you.</p><p>The updated Health app rolls out later this year, starting in U.S. English.</p>",
-      "url": "https://techcrunch.com/2026/09/09/apples-revamped-health-app-will-calculate-your-health-age-and-readiness-score/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "9 сеп 2026",
-      "published_iso": "2026-09-09T18:16:29+00:00",
-      "image": "https://picsum.photos/seed/cec9ae0446/600/340"
     }
   ]
 }

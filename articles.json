@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-10-01T19:19:57.871368+00:00",
+  "generated_at": "2026-10-01T23:46:13.598043+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "15579a5057dc",
+      "slug": "musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture",
+      "title": "Musk’s AI chatbot Grok reportedly encouraged Trump to capture Venezuela’s president",
+      "excerpt": "President Trump reportedly asked for Grok's opinion before invading Venezuela and capturing Nicolás Maduro.",
+      "content": "<p>In December 2025, about a month before the U.S. invaded Venezuela and captured its president, Nicolás Maduro, President Trump had a secret meeting with Elon Musk, Time magazine reports. This was roughly seven months after Musk left his role in the Trump administration at the Department of Government Efficiency (DOGE).</p><p>During this meeting, Trump “spent hours” talking to Musk’s Grok chatbot, including asking how Venezuelans would respond to the capture of their president, a source told Time. Just a few months earlier, in September, Trump began ordering U.S. military strikes against Venezuelan boats that Trump alleged were involved in drug trafficking.</p><p>People had apparently been turning to Grok asking about the boat strikes and political climate in Venezuela, as The Atlantic reported at the time. So Grok told Trump that Maduro was a “deeply unpopular dictator and that many Venezuelans would likely celebrate his downfall,” Time reported.</p><p>When such celebrations indeed happened after the U.S. invaded on January 3, Trump apparently “came away thinking Grok was ingenious,” that source told Time.</p><p>So perhaps it should come as no surprise that in June of this year, the Pentagon’s head of AI said that the military used Gov Grok to deploy and strike targets during the Iran War.</p><p>While Grok isn’t the only AI model serving the DoD (OpenAI also has an agreement and Anthropic has been in a back-and-forth over how its models can be used for military intelligence and in modern warfare), Grok may become an even bigger favorite under this administration. Earlier this week, the Pentagon announced that Musk and Anduril’s Palmer Luckey have been tapped to co-lead a study about how advanced technology is, and can be, used in battlefields.</p>",
+      "url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "1 окт 2026",
+      "published_iso": "2026-10-01T21:08:11+00:00",
+      "image": "https://picsum.photos/seed/e0441cac91/600/340"
+    },
     {
       "id": "18d0b2b62968",
       "slug": "google-thinks-spacexs-starship-has-to-launch-1600-times-befo",
@@ -827,20 +841,6 @@
       "date": "17 сеп 2026",
       "published_iso": "2026-09-17T22:34:09+00:00",
       "image": "https://picsum.photos/seed/e6bc5e4832/600/340"
-    },
-    {
-      "id": "da3e8146e969",
-      "slug": "the-faas-plan-to-fix-air-traffic-875m-worth-of-ai",
-      "title": "The FAA’s plan to fix air traffic? $875M worth of AI",
-      "excerpt": "A new AI-based software program is being launched to help air traffic controllers better navigate their jobs as the crossing guards of America's skies.",
-      "content": "<p>The Federal Aviation Administration has been struggling to manage an air traffic control shortage throughout the country. The reasons for the shortage are diverse, but the government has made it known that it’s on the lookout for innovative solutions to the problem.</p><p>One of those solutions appears to be an $875 million AI software program that is expected to help air traffic controllers manage their workflows and more safely navigate flight routes.</p><p>The Wall Street Journal reports that the FAA will soon launch SMART, which stands for Strategic Management of Airspace, Routes, and Trajectories — an automated software program designed to help streamline air traffic operations.</p><p>A one-page readout on the program describes SMART as “a cloud-based platform system that enhances existing FAA air traffic management systems.” It adds that the program uses AI to assess “airline schedules, weather, airport capacity, airspace conditions, and operational constraints to predict traffic flows and identify potential conflicts before they occur.”</p><p>SMART, the product of a firm called Air Space Intelligence, will cost the government that amount over a 12-year period, the outlet writes. The software will roll out in the Washington, D.C., metropolitan area first before expanding to other regions, it says.</p><p>Earlier this year, the FAA also announced a “bold, new” hiring plan that the agency said would “erase the longstanding staffing shortage,” and the government is separately engaged in a broad effort to modernize the nation’s aging air traffic systems.</p>",
-      "url": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "17 сеп 2026",
-      "published_iso": "2026-09-17T22:14:59+00:00",
-      "image": "https://picsum.photos/seed/197d2a4763/600/340"
     }
   ]
 }

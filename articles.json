@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-10-02T12:07:28.668832+00:00",
+  "generated_at": "2026-10-02T19:03:06.811451+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "25dc19e6926f",
+      "slug": "apple-says-its-tightening-macos-full-disk-access-controls-du",
+      "title": "Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents",
+      "excerpt": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history risk",
+      "content": "<p>Days after a journalist claimed that Meta’s Muse app on Mac read their private messages — a claim that Meta disputed — Apple announced that it’s introducing additional controls around a setting called “Full Disk Access” on macOS. The feature was designed to allow backups to function properly, but AI agents have now increased “the risks associated with this level of access,” Apple said.</p><p>Apple’s statement comes shortly after Inc. columnist Jason Aten reported that Muse knew the content of his private messages — even though he claimed to have not given the AI agent permission. The report raised questions about the level of security and trust users have in desktop-based AI, which can control things on their systems and read their files and messages.</p><p>The decision to limit the Mac feature also comes after a Wired report cited that a flaw in ChatGPT’s Mac app could have allowed hackers to access sensitive data.</p><p>AI agents that run on the desktop allow users to provide their respective apps with greater access to the files, messages, and other personal content on their computers by adjusting macOS settings.</p><p>In Muse’s case, the AI optionally allows users to enable Full Disk Access. This setting, Apple explains, gives an app permission to access files, mail, messages, and even browsing history.</p><p>“Some developers are using Full Disk Access in ways that could put users at risk, exposing everything on their systems…without users’ full knowledge and understanding,” Apple said in a new blog post aimed at developers.</p><p>The company says that, going forward, it will introduce new controls aimed at ensuring that users who “genuinely wish to grant an app this extraordinary level of access” can do so only with “very explicit user action.”</p><p>“Addressing this is critical. As AI agents become increasingly capable and autonomous, the risks associated with this level of access will grow substantially. We are committed to ensuring users clearly understand these risks before granting such access, so they can make informed decisions about their own data and privacy,” Apple wrote.</p><p>Apple did not respond to TechCrunch’s inquiry about the feature change.</p>",
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "2 окт 2026",
+      "published_iso": "2026-10-02T18:11:27+00:00",
+      "image": "https://picsum.photos/seed/91661490b4/600/340"
+    },
     {
       "id": "44bc3ce4e112",
       "slug": "autosynthdata-generating-training-data-for-enterprise-agents",
@@ -827,20 +841,6 @@
       "date": "18 сеп 2026",
       "published_iso": "2026-09-18T09:15:15+00:00",
       "image": "https://picsum.photos/seed/77f1d04782/600/340"
-    },
-    {
-      "id": "04da7df296e9",
-      "slug": "google-deepmind-launches-institute-to-widen-the-agi-debate",
-      "title": "Google DeepMind launches institute to widen the AGI debate",
-      "excerpt": "Google DeepMind just launched an institute to hash out the big AGI questions in public",
-      "content": "<p>Google and Google DeepMind researchers launched the DeepMind Institute on Wednesday to advance the conversation around artificial general intelligence. The institute lists DeepMind co-founder Shane Legg, Google executive James Manyika, and Google DeepMind chair Demis Hassabis as directors, with Legg serving as managing editor.</p><p>The new institute aims to surface differing views between Google, Google DeepMind, and the broader global research community around AGI. “They will not always agree, and they will likely change their minds, as more data and information comes to light at the fast-moving frontier,” the announcement read.</p><p>The inaugural collection of four essays covers a range of topics: economic policies for managing potential AGI disruption, preserving human-readable model reasoning, principles for human flourishing, and a framework for evaluating frontier AI models.</p><p>One essay, by DeepMind safety researchers Rohin Shah and Anca Dragan, argues that AI’s shrinking window of transparency—the ability to see and check a model’s step-by-step reasoning — is not inevitable. As new architectures make the most powerful models harder to monitor, the authors say developers and regulators should confront the safety trade-offs directly. That could mean limiting “opaque serial depth”—the amount of sequential computation a model can perform without producing a readable reasoning trace—or requiring developers to demonstrate that less transparent systems remain just as monitorable.</p><p>In another essay, Hassabis proposes a U.S.-led frontier AI standards body to evaluate the most advanced AI models. Under his framework, developers would initially submit models voluntarily for review up to 30 days before release. Once the evaluation system has proved effective, passing its tests could become a requirement for deploying frontier models in the United States.</p><p>The body would at first design assessments in consultation with AI companies, but would eventually develop independent, undisclosed evaluations — what the essay calls “held-out” tests —to prevent labs from tailoring their models to known evaluations. Hassabis said the framework could be “ratcheted up if the seriousness of the situation demands,” potentially including a coordinated slowdown among frontier AI developers.</p><p>The essays arrive as the industry’s safety debate shifts from broad statements of concern toward concrete proposals for disclosure, outside scrutiny and, if safeguards fall behind, coordinated slowdowns. That shift accelerated this week as industry leaders endorsed elements of Anthropic CEO Dario Amodei’s call to “pace” frontier AI development.</p>",
-      "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "17 сеп 2026",
-      "published_iso": "2026-09-17T23:21:17+00:00",
-      "image": "https://picsum.photos/seed/43d15eeea4/600/340"
     }
   ]
 }

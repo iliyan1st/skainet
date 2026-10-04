@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/google-froze-its-open-source-bug-bounty-program-due-to-a-sig</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/trump-unveils-his-new-super-intelligence-force</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -356,12 +362,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/open-or-closed-ai-nvidias-nader-khalil-and-sydney-sykes-take</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-comp</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

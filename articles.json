@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-10-06T08:43:56.248556+00:00",
+  "generated_at": "2026-10-06T16:34:19.759661+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "ae1f8a6d1c81",
+      "slug": "anthropic-is-giving-startups-a-free-year-of-claude-team-and",
+      "title": "Anthropic is giving startups a free year of Claude Team and $1,000 in credits",
+      "excerpt": "\"We created this program because we believe the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone.\"",
+      "content": "<p>On Tuesday, Anthropic announced an expansion of its Claude for Startups program, offering subsidized access to its AI models and a variety of other benefits to qualifying companies.</p><p>The new version of the program, which launched as part of Anthropic’s SF Tech Week event, provides a free year of Claude Team, Anthropic’s paid plan for groups, with up to five premium seats, as well as $1,000 in API credits for building with Claude. Companies will also get access to Claude Marketplace, which lets them build plug-ins for the service. Companies can also book virtual office hours with Anthropic’s Applied AI team.</p><p>“We created this program because we believe the benefits of AI will reach most people through the companies that build on top of models, rather than through the models alone,” Anthropic said in an announcement. “That makes partnering closely with founders and developers central to our mission.”</p><p>Companies are eligible if they were founded in the last five years or received funding in the last two years. Interested companies can apply through the Claude for Startups program page.</p>",
+      "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "6 окт 2026",
+      "published_iso": "2026-10-06T16:00:00+00:00",
+      "image": "https://picsum.photos/seed/0f56d83480/600/340"
+    },
+    {
+      "id": "ed00516a22e4",
+      "slug": "libreoffice-says-no-ai-is-now-a-software-feature",
+      "title": "LibreOffice says ‘no AI’ is now a software feature",
+      "excerpt": "The maker of the open source document editor says it has no plans to add AI to its software's default configuration, citing user privacy.",
+      "content": "<p>If you’re looking for a document editor that <em>doesn’t</em> use artificial intelligence, LibreOffice may be just the software for you.</p><p>The Document Foundation, the nonprofit software maker behind the open source document editor LibreOffice, said in a blog post this week that while it does not reject AI out of hand, it “will not add” AI to its software for the foreseeable future.</p><p>The blog post comes weeks after the release of the latest version of LibreOffice in late August, in which the nonprofit reiterated that the software “contains no generative AI features.”</p><p>LibreOffice said at the time that this was a “deliberate design position” to ensure that users’ documents are not uploaded to a server for processing and that no part of the software requires a network connection to function. The nonprofit added that its software is used by tens of millions of people and organizations, and that users should retain control over their data.</p><p>“Any organisation handling confidential, legally privileged or personal data needs to know where that data goes, and the only assurance that survives an audit is that it does not leave the machine,” the organization said.</p><p>LibreOffice says users can still choose to use AI tools by installing software extensions that connect the document editor to local AI models.</p><p>The decision to eschew including AI features bucks the trend of many software makers today that try to pack in as much AI as possible, even to the detriment of the user experience. The so-called “enshittification” of modern software by packing in unnecessary and bloated features, like chatbots and AI assistants, prompted some developers to create or include features that block or remove AI features altogether.</p><p>AI tools often require the users’ data to be uploaded and processed on a remote server, which the user has no control over how the data is stored or for how long.</p><p>LibreOffice said that there is currently “no integration” that meets all of its requirements, such as ensuring that the users’ data stays on their device and that there is no reliance on a single AI provider, among other considerations. The organization’s criteria for including AI into its software is not a “definitive rejection,” but the decision was an assessment of the technology today, rather than a “judgement on the value of the sector.”</p><p>“Until then, there will be no AI of any kind in the default installation; extensions will be available for those who wish to integrate AI features, and we will closely monitor where the technology is actually heading,” said LibreOffice’s blog post.</p><p>LibreOffice is one of the many kinds of open source and alternative software used to escape the clutches of Silicon Valley tech giants.</p>",
+      "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
+      "source": "TechCrunch",
+      "category": "ЗА РАЗРАБОТЧИЦИ",
+      "tag": "tag-tools",
+      "date": "6 окт 2026",
+      "published_iso": "2026-10-06T15:25:00+00:00",
+      "image": "https://picsum.photos/seed/eb260ee822/600/340"
+    },
+    {
+      "id": "af1873600497",
+      "slug": "mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rival",
+      "title": "Mistral’s new 1T model aims to leapfrog closed and open rivals",
+      "excerpt": "French AI lab Mistral AI has released Mistral Large 4, a new large multimodal model aiming to leapfrog both American and Chinese rivals.",
+      "content": "<p>The race between open and closed AI is on, and Europe is still in the mix. On Tuesday, French AI lab Mistral AI released Mistral Large 4 (ML4), a new large multimodal model aiming to leapfrog both American and Chinese rivals — following what French president Macron described as “a third way in AI.”</p><p>Amid a growing divide between closed models that can be unplugged and open models that are often made in China, Mistral is positioning ML4 as an alternative to both. Nicknamed Le Chonk in reference to its 1 trillion parameters, ML4 is definitely not small; but is not an open-weight model yet. For the time being, it can only be accessed via a public guardrail endpoint, but Mistral plans to make its weights available in just three weeks, after safety testing is complete.</p><p>“In the meantime, we’ll work with trusted partners and governments to make sure that the open source weights can be used to defend, but not to \\[perform\\] malicious attacks,” Mistral VP Science Pierre Stock told TechCrunch.</p><p>Security concerns have been mounting in recent months, particularly among Mistral’s core audience — enterprises and institutions. At the same time, an open-weight model is easier to audit, Stock said.</p><p>Another important behind-the-scenes aspect is that ML4 was trained entirely on Mistral’s compute; using only 4,000 Nvidia GPUs “which is two to three times less than our Chinese competitors, and significantly less than the closed source competitors,” Stock said.</p><p>With benchmark results still pending, Mistral hopes ML4 will be best in class among open-weight models, especially outside of China, but not only, Stock said. Thanks to focused training, it could also outperform closed models in specific areas that are key to its customers, and where multimodal capabilities can add value.</p><p>According to Stock, ML4’s optimized use cases include cybersecurity and finance, but also chip design, which is core to two of Mistral’s main backers — Dutch giant ASML, which led its Series C, and Samsung, which led its Series D last month at a €21 billion valuation (about $24.39 billion).</p><p>At the time, the company tried to convey that its decision to host Chinese models wasn’t a pivot into becoming a mere inference provider. With Le Chonk in its corner, the company believes it should still be considered a frontier lab as well.</p>",
+      "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "6 окт 2026",
+      "published_iso": "2026-10-06T14:33:16+00:00",
+      "image": "https://picsum.photos/seed/0fb0fb2315/600/340"
+    },
     {
       "id": "04dab2cc9f7c",
       "slug": "falcon-emirati-when-an-llm-learns-the-dialect-the-culture-an",
@@ -799,48 +841,6 @@
       "date": "21 сеп 2026",
       "published_iso": "2026-09-21T22:24:38+00:00",
       "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ai-agent-hacking-1152x648.jpg"
-    },
-    {
-      "id": "9a7b1c9716b0",
-      "slug": "metas-ai-agent-has-been-blocked-from-using-amazoncom",
-      "title": "Meta’s AI agent has been blocked from using Amazon.com",
-      "excerpt": "Muse isn't welcome as a shopper anymore.",
-      "content": "<p>Sunday night, users of Meta’s AI assistant Muse started getting a strange error message when they tried to buy goods on Amazon. As spotted by GeekWire, the error message read: “Continued access by an unauthorized AI agent violates Amazon’s Conditions of Use, to which our customers have agreed.”</p><p>In other words, Muse isn’t welcome as a shopper — and anyone trying to buy something on Amazon through the AI agent will have to find it somewhere else.</p><p>It’s easy to see the block as a tete-a-tete between tech giants. Amazon has its own cohort of foundation models, after all, along with one of the most popular inference platforms on the internet. As long as they’re under no legal obligation to open the doors to Muse, why would they?</p><p>But there are also substantive reasons Amazon might not want to be in the agentic commerce business just yet. If Muse makes a bad order, Amazon is going to be the one to clean it up — dealing with both the angry customer and the angry vendor. Muse has one of the lower hallucination rates, as AI models go, but it’s still pretty far from zero. Even if Amazon sees an opportunity in agent-driven commerce, they may want to wait a few more release cycles before rolling anything out.</p>",
-      "url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "21 сеп 2026",
-      "published_iso": "2026-09-21T17:55:18+00:00",
-      "image": "https://picsum.photos/seed/73b1bf597a/600/340"
-    },
-    {
-      "id": "97ca227d5019",
-      "slug": "voccis-ring-adds-a-new-form-factor-to-meeting-note-taking",
-      "title": "Пръстенът на Vocci добавя нов форм фактор към воденето на бележки за срещи",
-      "excerpt": "Лекият пръстен на Vocci струва $249 и може да постави някои въпроси относно поверителността",
-      "content": "<p>Няма недостиг на различни форми на хардуер за водене на бележки за срещи, включително висулки, игли и устройства, оформени като кредитни карти. Това не попречи на Vocci да пусне ново устройство за същия случай на употреба във форм-фактор на пръстена, което е удобно, но може да създаде някои проблеми с поверителността.</p><p>Формата на пръстена е една от най-лесните за всеки, който иска просто да натисне бутон и устройството да започне да записва. Новият пръстен Index 01 на Pebble, който тествам в момента, ви позволява да задържите бутона и да си направите бележка или напомняне. Stream Ring, произведен от Sandbar, работи по подобен начин с контролен панел в горната част. Пръстенът на Vocci поема по различен път, като воденето на бележки е централна функция.</p><p>Пръстенът има бутон, който можете да докоснете два пъти, за да започнете да записвате и да докоснете отново два пъти, за да спрете. Можете да докоснете и задържите бутона, за да зададете въпроси на Vocci AI, но това работи само когато приложението е отворено. Има светлинен индикатор и хаптичен мотор за запис на обратна връзка. Пръстенът е лек с под 6 грама и използва титанов материал върху вътрешната и външната повърхност - вероятно покритие.</p><p>Компанията твърди, че пръстенът Vocci може да записва бележки в продължение на 8 часа с едно зареждане. Устройството се предлага с масивна пластмасова кутия, която може да зарежда пръстена до три пъти.</p><p>Устройството улавя много добре срещи. Имах разговори, продължаващи повече от час в шумни кафенета, и пръстенът успя да преобразува повечето от чата в точни преписи. Този метод за водене на бележки обаче не е чудесен, ако искате да си водите кратки бележки.</p><p>Софтуерът е разочароващата част от пръстена на Vocci. Самото приложение е малко объркващо. Всеки път, когато водех по-кратки бележки, виждах генерирани от AI прозрения, които бяха по-дълги от самите бележки. Всеки запис има Чат, който е основният препис; Акценти, които са кратки фрагменти, които можете да заснемете, като натиснете бутона, докато записвате разговор; и Бележки, което е обобщение и вникване в целия разговор.</p><p>В приложението има раздел, наречен Base, където можете да намерите преписи, записи и всичко, което генерирате от тях, и го намерих за излишно. Не намерих начин директно да започна чат с AI за преписи на сесии.</p><p>Позвъняванията с активиран глас са чудесен форм фактор за водене на кратки бележки или напомняния. Приложението няма директна интеграция с приложения за напомняне, което е лошо. Внедряването на функциите за неговия софтуер също е бавно. Компанията ме информира, че потребителите могат да използват моделния контекстен протокол на Vocci (MCP), за да се свързват с други асистенти, но опцията за това не се появи до преди няколко седмици в приложението. Други записващи бележки за срещи изграждат своите платформи, за да позволят на потребителите да автоматизират прозрения и работни процеси чрез AI, а в момента платформата на Vocci не е напълно изградена за това.</p><p>Има някои проблеми с поверителността на това устройство поради форм-фактора му. Пръстенът на Vocci изглежда като обикновено бижу, докато някой не забележи копчето върху него. Пръстенът има индикатор за запис, но е обърнат към потребителя. Най-добрата практика е да уведомите някого, че записвате разговор, и това също се изисква от закона в някои държави и региони. Но с този вид устройство някои микери могат лесно да изберат да не разкриват тази информация и да запишат разговора, без никой да забележи. Компанията каза, че насърчава хората да разкриват, че записват, но това може да не е достатъчно.</p><p>При цена от $249 пръстенът е скъп в сравнение с други устройства за записване на бележки като Plaud или Pocket и това се дължи на олекотения форм фактор на устройството. Пръстенът е за някой, който не иска да залепи джаджа на гърба на телефона си, да носи китка или висулка. На хардуерния слой много от тези устройства са комбинации от някои микрофони, батерия и връзка с телефона. Вероятно ще видим повече разнообразие в хардуерните устройства за водене на бележки за срещи през следващите години, докато потребителите изберат конкретните формати, които работят за тях.</p>",
-      "url": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "20 сеп 2026",
-      "published_iso": "2026-09-20T18:32:52+00:00",
-      "image": "https://picsum.photos/seed/f8d107e053/600/340"
-    },
-    {
-      "id": "066ee3a7f6eb",
-      "slug": "googles-gemini-is-the-latest-ai-model-to-hack-other-companie",
-      "title": "Google’s Gemini is the latest AI model to hack other companies",
-      "excerpt": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
-      "content": "<p>Google’s Gemini accessed the protected systems of three other companies in what The Wall Street Journal reports were the AI model’s first autonomous hacks.</p><p>Similar to OpenAI’s breach of Hugging Face, the Gemini hacks were less noteworthy for being particularly sophisticated and more for the fact that they were conducted by an AI model. These breaches took place during cybersecurity testing by a company called Irregular. In one case, Gemini simply guessed passwords until it gained access; in the other two, it found credentials in a public repository.</p><p>Irregular reportedly notified Google about the hacks in late July, but the companies did not confirm them publicly until Friday, after the WSJ reached out. Google said it hadn’t previously revealed the hacks because Gemini had “acted appropriately” by ending each breach as soon as it determined it had hacked a real company.</p><p>However, Jack Cable, the CEO of AI security company Corridor, told the WSJ that Google was “trying to hide behind the norms that have been created for vulnerability disclosure,” rather than acknowledging that “models are going outside the bounds of what they should be doing, and doing actual cyberattacks.”</p>",
-      "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "source": "TechCrunch",
-      "category": "АНАЛИЗИ",
-      "tag": "tag-analysis",
-      "date": "19 сеп 2026",
-      "published_iso": "2026-09-19T17:30:00+00:00",
-      "image": "https://picsum.photos/seed/412d984b61/600/340"
     }
   ]
 }

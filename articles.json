@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-10-13T15:41:32.670859+00:00",
+  "generated_at": "2026-10-13T21:03:01.575486+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "f79d4db97889",
+      "slug": "facebook-is-giving-users-more-control-over-their-algorithm",
+      "title": "Facebook дава на потребителите повече контрол върху техния алгоритъм",
+      "excerpt": "Meta обяви пускането на новата си функция, задвижвана от AI, „Вашият алгоритъм“, функция, която за първи път стартира в Instagram.",
+      "content": "<p>Facebook е най-новата платформа за социални медии, която дава на потребителите по-голям контрол върху алгоритъма, който определя какво се появява в техните емисии.</p><p>Във вторник Meta обяви пускането на новата си функция, базирана на AI, „Вашият алгоритъм“, функция, която за първи път стартира в Instagram. Новият инструмент позволява на потребителите на Facebook да влияят върху съдържанието, което виждат във Feed и Reels, като описват предпочитанията си със собствени думи, използвайки естествен език. Вместо да разчитат изцяло на автоматизирани препоръки, потребителите вече могат да комуникират директно с платформата относно темите и съдържанието, които искат да виждат повече или по-рядко.</p><p>Според Meta функцията е предназначена да направи препоръките за съдържание по-подходящи. Потребителите могат да коригират своите предпочитания и да взаимодействат с алгоритмите, отговорни за класирането и препоръчването на публикации, като промените се отразяват в техните препоръки в реално време.</p><p>Компанията също така актуализира менюто с три точки на Facebook, което улеснява потребителите да управляват своите предпочитания за съдържание директно от отделни публикации. Като отворят менюто, потребителите могат да получат достъп до „Вашият алгоритъм“ или да изберат опциите „Проявявам интерес“ и „Не се интересувам“, за да посочат дали определено съдържание съответства на техните предпочитания.</p><p>Meta казва, че платформата може да задава последващи въпроси, за да разбере по-добре какво харесват или не харесват потребителите, което им позволява да предоставят по-подробна обратна връзка. Потребителите могат да обяснят какво искат да видят повече или по-малко, помагайки на Facebook да прецизира своите препоръки въз основа на техните отговори.</p><p>Въвеждането на „Вашият алгоритъм“ отразява по-широкото усилие на Meta да даде на хората повече влияние върху изживяването им в социалните медии, тъй като AI все повече оформя откриването на съдържание. Този ход сигнализира за отдалечаване от традиционните системи за препоръки, които са оформяли изживяването в социалните медии от години, доближавайки платформата до стрийминг услуги, които позволяват на потребителите да персонализират препоръки въз основа на техните интереси и предпочитания.</p><p>Стартирането се основава и на съществуващите усилия на Meta за персонализиране в другите платформи. Instagram представи вашия алгоритъм през юни, като разшири опциите за персонализиране във Feed и Explore след първото стартиране на функцията за Reels през декември 2025 г.</p><p>Threads също представи своя собствена свързана функция, наречена „Dear Algo“, която позволява на потребителите да влияят на препоръчаното им съдържание.</p>",
+      "url": "https://techcrunch.com/2026/10/13/facebook-is-giving-users-more-control-over-their-algorithm/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "13 окт 2026",
+      "published_iso": "2026-10-13T18:05:24+00:00",
+      "image": "https://picsum.photos/seed/2461b1bba0/600/340"
+    },
     {
       "id": "8edde32931d8",
       "slug": "spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscrip",
@@ -827,20 +841,6 @@
       "date": "25 сеп 2026",
       "published_iso": "2026-09-25T18:22:47+00:00",
       "image": "https://picsum.photos/seed/1584bd1342/600/340"
-    },
-    {
-      "id": "6c3aee0c242c",
-      "slug": "meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-o",
-      "title": "Meta is putting its muscle behind Muse as the AI app takes off",
-      "excerpt": "Muse is topping the app store charts and adding users at a rapid clip, while Meta ramps up the personal AI agents's promotion across its own apps and beyond.",
-      "content": "<p>Muse’s traction is surging, fueled by Meta’s promotion of the AI app at its annual developer conference this week and strong early reviews that praised its polished design and highly capable AI model under the hood.</p><p>At the start of the week, Muse had surpassed 2.5 million downloads since its September 8 launch. Now, the app has amassed more than 3.4 million downloads, according to the most recent estimates from market intelligence firm Sensor Tower.</p><p>The install numbers are only current as of the firm’s Thursday estimates, which can lag behind real-world adoption.</p><p>That means they don’t even capture the full impact of the big push Muse received at this week’s Meta Connect conference, where the social network company announced a range of upcoming features for the new AI app, including video chat with the Muse avatar, support for computer use on the Mac, a dedicated email address, more partners and connectors, and plans for smart glasses integrations.</p><p>Estimates from other market intelligence firms show Muse with similarly strong traction, though their numbers vary quite a bit. Apptopia, for example, puts Muse’s total number of downloads to date at 4.3 million. (Muse is currently only available in the U.S. and Canada). It estimates that 2.6 million of those were on iOS alone.</p><p>Meanwhile, another firm, Appfigures, says it sees Muse installs at roughly 2.3 million as of Thursday, almost evenly split between iOS and Android.</p><p>Sensor Tower also has visibility into daily active users for the Muse app following the Meta Connect conference. It found that figure climbed 27% on Wednesday after the event wrapped.</p><p>Before the conference, Muse was already off to a strong start. Sensor Tower said the app reached an estimated 2.8 million downloads in its first two weeks on the app stores. During that time (September 8 to September 17), the Muse app averaged 55% day-over-day growth in downloads. For comparison, ChatGPT averaged 24% day-over-day download growth in its first 10 days after launch. Download growth for Claude and Grok, meanwhile, declined during their respective launches.</p><p>On Friday, September 18, Muse climbed to the top of the U.S. App Store and has retained its ranking ever since. It also reached the top spot on the Google Play Store on September 19, and remains there today.</p><p>While much of Muse’s traction so far is organic, the app is also benefiting from the same cross-platform promotion that helped one of Meta’s latest social apps, Instagram Threads, top 500 million monthly active users. That is, Meta is marketing the app to existing Facebook and Instagram users.</p><p>However, as Meta’s Head of Threads, Connor Hayes, recently told Business Insider, Meta’s approach to marketing Muse differs from its approach with Threads. While Threads also deals in user-generated content that Meta can match to users’ interests when running its cross-promotions, the trick with Muse is to build promotional units that can showcase something the AI agent can do for the user, based on Meta’s understanding of what would be useful or helpful to them specifically.</p><p>Sensor Tower’s data indicates that Meta rolled out house ads promoting Muse on September 9, a day after its launch. Within 10 days, Muse received the majority of house advertising promotions across Meta’s properties, ahead of promotions for Facebook, Instagram, and WhatsApp. Meta has also begun advertising Muse on mobile ad networks and other social networks, including Reddit, TikTok, and YouTube.</p><p>By Tuesday, September 22, Muse ranked among the top 10 brands by advertising spend, Sensor Tower said.</p><p>Still, Muse’s growth can’t be chalked up to Meta’s marketing efforts alone, as ads promoting the app only account for 6% of the ad impressions from launch through September 19.</p>",
-      "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/",
-      "source": "TechCrunch",
-      "category": "ЗА РАЗРАБОТЧИЦИ",
-      "tag": "tag-tools",
-      "date": "25 сеп 2026",
-      "published_iso": "2026-09-25T16:16:52+00:00",
-      "image": "https://picsum.photos/seed/f5ca4e5ff8/600/340"
     }
   ]
 }

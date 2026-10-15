@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-10-15T14:44:50.173279+00:00",
+  "generated_at": "2026-10-15T19:45:11.935777+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "eda82699cd5b",
+      "slug": "anthropic-is-letting-metr-researchers-look-under-the-hood-wi",
+      "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+      "excerpt": "METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.",
+      "content": "<p>Anthropic is giving employee-level access to six researchers from METR, a nonprofit that tests frontier AI models, to independently assess Anthropic’s models, safety practices, and risk management, the company said in a blog post on Thursday.</p><p>The arrangement comes at a time where incidents of AI agents acting outside their instructions have been disclosed every week or two since late August. The incidents have sharpened calls for independent checks on AI companies.</p><p>“We want to be publicly accountable for the decisions we’re making,” Anthropic said in the blog post. “We aim to close the gap between what evaluators understand about a frontier AI company’s systems and what the company itself understands.”</p><p>Under the new arrangement, the METR team has Anthropic-issued company laptops, office space, and access to internal tools roughly on par with what Anthropic’s own risk assessment teams use. “Anthropic employees are encouraged to share information with them just as they would with a fellow employee working on alignment risk” the company said.</p><p>Anthropic compared the arrangement to banking, similar to how regulators place resident examiners inside the largest banks.</p><p>METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the company has given up the right to block them.</p><p>“Anthropic can’t veto publication, but we can require them to redact information if it falls into narrow, pre-defined categories,” the company said, such as customer data, anything attorney-client privileged, or relating to information about its model architectures. “METR is free to characterize our redactions publicly, and say whether it believes the redactions were justified, as long as it does so without revealing the redacted information” Anthropic added.</p><p>METR is the only evaluator so far at the top of a three-tier system Anthropic is building. Evaluators in the bottom tier, like biosecurity nonprofit SecureBio, run narrow reviews and require Anthropic’s approval to publish. The middle tier gets more information and can publish without approval, while the top tier adds METR’s employee-level access.</p><p>Thursday’s announcement makes good on a promise Anthropic CEO Dario Amodei made in a September essay, where he proposed embedding outside evaluators inside AI labs as a first step toward slowing the technology’s development. OpenAI quickly pledged the same, and both companies, along with Google, Meta, Nvidia, and xAI, have since signed a White House accord committing to independent review.</p>",
+      "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "15 окт 2026",
+      "published_iso": "2026-10-15T19:14:26+00:00",
+      "image": "https://picsum.photos/seed/d40b5f4d98/600/340"
+    },
     {
       "id": "256fc6ba88d8",
       "slug": "googles-universal-cart-shopping-tool-launches-in-the-us",
@@ -827,20 +841,6 @@
       "date": "28 сеп 2026",
       "published_iso": "2026-09-28T18:00:00+00:00",
       "image": "https://picsum.photos/seed/6957bf2f51/600/340"
-    },
-    {
-      "id": "038a0ec0492f",
-      "slug": "google-is-killing-off-geminis-gems-in-favor-of-skills",
-      "title": "Google is killing off Gemini’s Gems in favor of ‘skills’",
-      "excerpt": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature which built task-specific agents.",
-      "content": "<p>As all-in-one AI agents like Meta’s Muse and Instinct take off, Google announced it’s shutting down the Gemini feature known as “Gems,” which had allowed users to build custom AI assistants for specific tasks. However, the work users invested in creating the Gems won’t be destroyed. Gems will be automatically migrated to “skills” that can be used across different AI tasks.</p><p>Details about the change are being shared in the Gemini app, where a message warns users that Gems will become skills starting on November 17, 2026. The company said it will migrate the Gems to the new format, so users won’t have to do anything to make the transition. The Gems themselves will remain usable until then.</p><p>Launched in 2024, Gems were meant to help users teach their AI to perform certain tasks without having to repeat the instructions. For instance, some of Google’s pre-made Gems had included a learning coach, a brainstorming assistant, a career guide, a coding partner, and an editor. Users could also make Gems for their own needs, like a running coach, nutritionist, or vacation planner. These custom assistants could also be shared with others, which Google had hoped would help make its Gemini AI app more popular.</p><p>The news of Gems’ shutdown is another example of why Google shouldn’t be so quick to give every new AI feature its own brand name, icon, and prominent placement in its app’s navigation — especially if it’s going to shuffle things around over time, merging one feature into another. (To be clear, this has been a failing point of Google’s strategy long before the AI era. At one point, for instance, the company was operating multiple different messaging and communication apps at the same time.)</p><p>Yet, even as skills, the former Gems still aren’t as consumer-friendly as just typing in text to a chatbot like Meta’s Muse. Instead, Google notes you’ll have to enter a forward slash “/” in a task thread to select the skill you want to use — a user interface that engineers, not regular folks, tend to prefer.</p><p>Gems’ wind-down was first reported over the weekend by 9to5Google.</p>",
-      "url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "28 сеп 2026",
-      "published_iso": "2026-09-28T17:29:50+00:00",
-      "image": "https://picsum.photos/seed/e8a81e92a2/600/340"
     }
   ]
 }

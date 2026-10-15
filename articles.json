@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-10-15T19:45:11.935777+00:00",
+  "generated_at": "2026-10-15T22:56:39.264742+00:00",
   "count": 60,
   "articles": [
+    {
+      "id": "b8bd339266da",
+      "slug": "meta-launches-an-open-weight-ai-model-that-runs-on-macs",
+      "title": "Meta launches an open-weight AI model that runs on Macs",
+      "excerpt": "Meta and Apple have teamed up for the launch of the social media giant's newest model, Muse Spark Open, which will run locally on Apple silicon.",
+      "content": "<p>Meta has launched what it calls the “most capable” open-weight model in the United States. Dubbed Muse Spark Open, the model also has the distinction of having been designed to work with Macs.</p><p>The new model, which leverages 816 billion parameters and a 1 million token context window, claims to offer superior performance to other popular open-weight models, according to evaluation results released by Meta on Thursday.</p><p>Muse Spark Open is natively multimodal and built for complex coding tasks and agentic labor. It has also been designed to run locally on Apple’s computers. However, you will still need a lot of power to run the model locally, with a requirement of at least 1 terabyte of RAM, per Engadget. The model will run best via the Mac Studio that comes equipped with the M5 Ultra chip.</p><p>Still, if you can muster the memory, Muse Spark Open may prove a significant work horse for coding and other desktop tasks. Meta says that it paired the model with Muse Code, its AI coding terminal, and deployed it to various agentic workflows, including coding fixes for a Mastodon client that included “bug fixes, new features, \\[and\\] full build.”</p><p>The company says it also deployed it in the service of running DaVinci Resolve, the high-end video editing software, revealing that the model was capable of reviewing and cropping footage.</p><p>Open-weight models provide a number of distinct industry advantages that aren’t afforded by closed and proprietary models. Open-weight models can be significantly more cost-efficient and can also offer transparency and flexibility that closed source models don’t allow.</p><p>Meta is making the new model available now through a number of different API platforms.</p>",
+      "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+      "source": "TechCrunch",
+      "category": "AI НОВИНИ",
+      "tag": "tag-ai",
+      "date": "15 окт 2026",
+      "published_iso": "2026-10-15T20:04:53+00:00",
+      "image": "https://picsum.photos/seed/a85aa2654e/600/340"
+    },
     {
       "id": "eda82699cd5b",
       "slug": "anthropic-is-letting-metr-researchers-look-under-the-hood-wi",
@@ -827,20 +841,6 @@
       "date": "28 сеп 2026",
       "published_iso": "2026-09-28T18:31:23+00:00",
       "image": "https://picsum.photos/seed/b73ff56e8c/600/340"
-    },
-    {
-      "id": "82172bbdec1a",
-      "slug": "anthropic-releases-sonnet-55-which-it-calls-a-significantly",
-      "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
-      "excerpt": "Anthropic has released the newest version of its mid-range model, boasting faster response times and less token burn.",
-      "content": "<p>As the AI model wars continue, Anthropic has released the newest version of Sonnet, the company’s mid-tier model, which it says will work much faster (and for significantly less) than its predecessor.</p><p>The lab describes Sonnet 5.5 as an ideal assistant for everyday tasks — including coding and creating office documents.</p><p>5.5’s predecessor, Sonnet 5, was announced about three months ago. At the time, the model’s selling point was efficient agentic deployment — the ability to run agents at a lower cost than competitors.</p><p>The big selling point with 5.5, meanwhile, is speed. Anthropic claims that Sonnet 5.5 is 30 percent faster than its predecessor, and that its rate of token burn is significantly slower.</p><p>In the Anthropic hierarchy of models, Sonnet is less powerful than the Opus model, but can be more useful in certain circumstances because its agility. In particular, Anthropic’s benchmarks show Sonnet 5.5 performing better than Opus 5.5 on agentic coding, likely because of its ability to spawn multiple agents without exceeding cost limits.</p><p>Sonnet 5.5 is also said to have significant cyber capabilities, with the company claiming that it has “comparable” cyber capabilities to Opus 5. As a result, Anthropic says that 5.5 is the first Sonnet model that will be subject the same cyber safeguards that apply to Fable and Opus.</p><p>The company also plans to release a new version of Haiku — its smallest model — in the coming weeks, although it didn’t give a firm date as to when that would happen.</p><p>The last year has seen a flurry of new model releases from the major AI labs. Just last week, OpenAI released a number of new models — including enhanced versions of Sol and Luna, its mid-tier and budget-friendly models. Meta also announced a new model, which it said would power an upcoming feature associated with its smart glasses.</p>",
-      "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
-      "source": "TechCrunch",
-      "category": "AI НОВИНИ",
-      "tag": "tag-ai",
-      "date": "28 сеп 2026",
-      "published_iso": "2026-09-28T18:00:00+00:00",
-      "image": "https://picsum.photos/seed/6957bf2f51/600/340"
     }
   ]
 }

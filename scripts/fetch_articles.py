@@ -100,9 +100,17 @@ CATEGORY_RULES = [
 
 # ── GOOGLE TRANSLATE (free, no API key) ──────────────────────────────────────
 GTRANS_URL = "https://translate.googleapis.com/translate_a/single"
+RETRY_DELAYS = (2, 5, 15, 30)  # seconds to wait before each retry (429s from GitHub runner IPs)
+
+class TranslationError(Exception):
+    """Google Translate kept failing after all retries."""
 
 def google_translate(texts: list[str]) -> list[str]:
-    """Translate a list of short texts to Bulgarian."""
+    """Translate a list of short texts to Bulgarian.
+
+    Raises TranslationError instead of returning the English original,
+    so untranslated text never ends up in articles.json.
+    """
     if not texts:
         return []
     results = []
@@ -110,20 +118,25 @@ def google_translate(texts: list[str]) -> list[str]:
         if not text or not text.strip():
             results.append(text)
             continue
-        try:
-            resp = requests.get(
-                GTRANS_URL,
-                params={"client": "gtx", "sl": "en", "tl": "bg", "dt": "t", "q": text},
-                timeout=15,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            translated = "".join(part[0] for part in data[0] if part[0])
-            results.append(translated)
-            time.sleep(0.25)
-        except Exception as e:
-            print(f"  Translate error: {e}")
-            results.append(text)
+        last_err = None
+        for delay in (0, *RETRY_DELAYS):
+            time.sleep(delay)
+            try:
+                resp = requests.get(
+                    GTRANS_URL,
+                    params={"client": "gtx", "sl": "en", "tl": "bg", "dt": "t", "q": text},
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                data = resp.json()
+                results.append("".join(part[0] for part in data[0] if part[0]))
+                break
+            except Exception as e:
+                last_err = e
+                print(f"  Translate error: {str(e)[:100]}")
+        else:
+            raise TranslationError(last_err)
+        time.sleep(0.25)
     return results
 
 
@@ -196,6 +209,9 @@ def translate_and_format(text: str) -> str:
     return "".join(html_parts)
 
 # ── HELPERS ──────────────────────────────────────────────────────────────────
+def has_cyrillic(text: str) -> bool:
+    return bool(re.search(r"[Ѐ-ӿ]", text or ""))
+
 def clean_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text or "")
     return re.sub(r"\s+", " ", text).strip()
@@ -288,6 +304,9 @@ def fetch_full_content(url: str) -> str | None:
         return None
 
 # ── MAIN ─────────────────────────────────────────────────────────────────────
+PENDING_PATH = os.path.join(os.path.dirname(__file__), "pending_articles.json")
+MAX_PENDING_DAYS = 7  # give up on an article that still can't be translated after this long
+
 def main():
     # Load existing articles first so we can skip already-seen ones
     out_path = os.path.join(os.path.dirname(__file__), "..", "articles.json")
@@ -299,7 +318,23 @@ def main():
         except Exception:
             pass
     from datetime import timedelta
-    existing_ids = {a["id"] for a in existing}
+
+    # Articles whose translation failed in an earlier run — retried every run
+    pending = []
+    if os.path.exists(PENDING_PATH):
+        with open(PENDING_PATH, encoding="utf-8") as f:
+            pending = json.load(f)
+    pending_cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_PENDING_DAYS)).isoformat()
+    pending = [a for a in pending if a["published_iso"] >= pending_cutoff]
+
+    # Older runs saved the English original when Google failed — send those back to the queue
+    for a in [a for a in existing if not has_cyrillic(a["title"] + a["excerpt"] + a["content"])]:
+        existing.remove(a)
+        pending.append({**a, "title_en": a["title"], "excerpt_en": a["excerpt"], "content_en": None})
+    if pending:
+        print(f"{len(pending)} articles waiting for translation\n")
+
+    existing_ids = {a["id"] for a in existing + pending}
     cutoff = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=3)
 
     collected = []
@@ -363,11 +398,13 @@ def main():
         time.sleep(0.5)
 
     collected.sort(key=lambda a: a["published_iso"], reverse=True)
-    collected = collected[:30]
+    collected = pending + collected[:30]
 
-    # ── FETCH FULL CONTENT (only for newly fetched articles) ──
+    # ── FETCH FULL CONTENT (new articles + queued ones that don't have it yet) ──
     print(f"\nFetching full article content …")
     for i, art in enumerate(collected):
+        if art["content_en"] is not None:
+            continue
         print(f"  [{i+1}/{len(collected)}] {art['source']}: {art['title_en'][:60]}")
         full = fetch_full_content(art["url"])
         if full and len(full) > 200:
@@ -376,31 +413,33 @@ def main():
             art["content_en"] = art["excerpt_en"]
         time.sleep(0.5)
 
-    # ── TRANSLATE ──
+    # ── TRANSLATE (one article at a time — a failure queues it instead of publishing English) ──
     print(f"\nTranslating {len(collected)} articles …")
-    titles   = [a["title_en"]          for a in collected]
-    excerpts = [a["excerpt_en"][:200]  for a in collected]
-
-    translated_titles   = google_translate(titles)
-    translated_excerpts = google_translate(excerpts)
-
+    translated, still_pending = [], []
     for i, art in enumerate(collected):
-        art["title"]   = translated_titles[i]
-        art["excerpt"] = translated_excerpts[i]
-        print(f"  Translating content [{i+1}/{len(collected)}] …")
-        art["content"] = translate_and_format(art["content_en"])
+        if still_pending:  # Google already gave up on us this run — don't hammer it
+            still_pending.append(art)
+            continue
+        print(f"  [{i+1}/{len(collected)}] {art['title_en'][:60]}")
+        try:
+            art["title"], art["excerpt"] = google_translate([art["title_en"], art["excerpt_en"][:200]])
+            art["content"] = translate_and_format(art["content_en"])
+        except TranslationError as e:
+            print(f"  ✗ Translation failed, queueing remaining articles for the next run: {str(e)[:100]}")
+            still_pending.append(art)
+            continue
+        for key in ("title_en", "excerpt_en", "content_en"):
+            del art[key]
+        translated.append(art)
 
-    print("Translation done.")
+    print(f"Translation done: {len(translated)} translated, {len(still_pending)} queued.")
 
-    # ── CLEAN UP internal fields ──
-    for art in collected:
-        del art["title_en"]
-        del art["excerpt_en"]
-        del art["content_en"]
+    with open(PENDING_PATH, "w", encoding="utf-8") as f:
+        json.dump(still_pending, f, ensure_ascii=False, indent=2)
 
-    # ── MERGE with existing articles.json (after cleanup) ──
+    # ── MERGE with existing articles.json ──
     merged = {a["id"]: a for a in existing}
-    for a in collected:
+    for a in translated:
         merged[a["id"]] = a  # new wins on same id
 
     all_articles = sorted(merged.values(), key=lambda a: a["published_iso"], reverse=True)[:60]

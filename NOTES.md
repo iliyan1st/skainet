@@ -1,7 +1,17 @@
 # SKAINET – Project Notes
 
 ## What it is
-Automated Bulgarian AI news portal. Fetches articles from 8 RSS sources, filters by AI/robotics keywords, translates to Bulgarian via Google Translate (free, no API key), outputs `articles.json`, and serves a static site on Vercel.
+Automated Bulgarian AI news portal. Fetches articles from 21 sources (labs, AI outlets, investment news, Bulgarian sites), filters to AI stories on SKAINET's topics, translates English ones to Bulgarian via Google Translate (free, no API key), ranks them by importance, outputs `articles.json`, and serves a static site on Vercel.
+
+## Sources & filtering (`scripts/fetch_articles.py`, verified live 2026-10-16)
+- **Labs:** OpenAI, Google DeepMind, NVIDIA, Google AI (RSS); Anthropic via `sitemap.xml` (no RSS) — `official` → +3 importance. Meta/Mistral/xAI have no usable feed or sitemap.
+- **News:** Techmeme (curated top stories, links to the original; publisher becomes the source, +3 importance), TechCrunch AI, The Decoder, The Verge, SiliconANGLE, Wired, CNBC, Ars Technica, HuggingFace
+- **Investments:** Crunchbase News, TechCrunch Venture, Tech.eu, EU-Startups
+- **Bulgaria:** Novinite (English, all Bulgaria), Kaldata + TechNews.bg (Bulgarian → no translation)
+- **Dropped:** VentureBeat (429), AI News (dead redirect), MIT Tech Review (no AI items, text not extractable)
+- Filter = AI gate (general feeds need a core AI term in the *title*) + topic keyword + negative list (lawsuits, layoffs, politics, stock market, NSFW). Any AI story about Bulgaria skips the topic check.
+- Categories are regexes (EN + BG) on the title, first match wins, recomputed for every article on every run. Homepage sections: МОДЕЛИ, ИНВЕСТИЦИИ, AI В БЪЛГАРИЯ (each keeps ≥4 articles even if older).
+- Window: 48h (168h for Bulgaria stories), max 6 new per source, 30 translated per run (most important first), 100 stored.
 
 ## URLs
 - Live: https://skainet-vert.vercel.app/
@@ -30,6 +40,7 @@ Automated Bulgarian AI news portal. Fetches articles from 8 RSS sources, filters
 - Sitemap / canonical: `https://skainet-vert.vercel.app/article/{slug}`
 - Vercel rewrite maps `/article/slug` → `?id=slug`
 - `load()` in article.html finds by `a.id === id || a.slug === id` (handles both)
+- A Vercel *rewrite* keeps `/article/slug` in the address bar, so `load()` reads the id from the path when `?id=` is missing, and `<base href="/">` keeps relative links working under `/article/`
 
 ## SEO state (as of 2026-05-13)
 | Item | Status |

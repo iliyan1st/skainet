@@ -10,6 +10,7 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="SKAINET">
   <link rel="canonical" href="https://skainet-vert.vercel.app/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d1e'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='900' text-anchor='middle' fill='%233b82f6'%3EAI%3C/text%3E%3C/svg%3E">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SKAINET">
   <meta property="og:title" content="SKAINET – AI Технологии и Бъдещето">
@@ -229,6 +230,9 @@
     .tag-bg       { background: var(--cat-bg-color); color: #fff; }
     .tag-learn    { background: var(--cat-learn);    color: #fff; }
     .tag-research { background: #7c3aed;             color: #fff; }
+    .tag-models   { background: #db2777;             color: #fff; }
+    .tag-invest   { background: #15803d;             color: #fff; }
+    .tag-med      { background: #e11d48;             color: #fff; }
 
     /* ───── HERO ───── */
     .hero-section { padding: 28px 0 0; }
@@ -543,7 +547,7 @@
 <div class="ticker">
   <div class="ticker-badge">&#x1F525; AI НОВИНА НА ДЕНЯ</div>
   <div class="ticker-scroll">
-    <div class="ticker-track">
+    <div class="ticker-track" id="tickerTrack">
       <div class="ticker-item"><span class="ticker-dot"></span>OpenAI представи новия модел GPT-4o с мултимодални възможности</div>
       <div class="ticker-item"><span class="ticker-dot"></span>NVIDIA разкри нов AI чип – Blackwell B200 задвижва следващото поколение AI</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Tesla пусна роботакси без шофьор в Тексас и Калифорния</div>
@@ -638,14 +642,28 @@
           </div>
         </div>
         <div class="widget">
-          <div class="widget-head" style="color:var(--accent-blue);">НАЙ-ЧЕТЕНИ</div>
-          <div class="most-read-list">
-            <a href="article.html?id=chatgpt-guide" class="most-read-item"><span class="mr-num">1</span><div><div class="mr-title">Как да използваш ChatGPT ефективно</div><div class="mr-views">&#x1F441; 12.4к</div></div></a>
-            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item"><span class="mr-num">2</span><div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър?</div><div class="mr-views">&#x1F441; 9.8к</div></div></a>
-            <a href="article.html?id=top10-ai-sites" class="most-read-item"><span class="mr-num">3</span><div><div class="mr-title">Топ 10 AI сайта за продуктивност</div><div class="mr-views">&#x1F441; 8.1к</div></div></a>
+          <div class="widget-head" style="color:var(--accent-blue);">ВАЖНО ДНЕС</div>
+          <div class="most-read-list" id="importantList">
+            <a href="article.html?id=chatgpt-guide" class="most-read-item"><span class="mr-num">1</span><div><div class="mr-title">Как да използваш ChatGPT ефективно</div></div></a>
+            <a href="article.html?id=midjourney-vs-dalle" class="most-read-item"><span class="mr-num">2</span><div><div class="mr-title">Midjourney vs DALL-E 3 – кой е по-добър?</div></div></a>
+            <a href="article.html?id=top10-ai-sites" class="most-read-item"><span class="mr-num">3</span><div><div class="mr-title">Топ 10 AI сайта за продуктивност</div></div></a>
           </div>
         </div>
       </aside>
+    </div>
+
+    <!-- Live category sections – filled from articles.json, hidden while empty -->
+    <div class="section" id="modelsSection" hidden>
+      <div class="section-header"><h2 class="section-title">Нови модели</h2></div>
+      <div class="articles-grid" id="modelsGrid"></div>
+    </div>
+    <div class="section" id="investSection" hidden>
+      <div class="section-header"><h2 class="section-title">Инвестиции</h2></div>
+      <div class="articles-grid" id="investGrid"></div>
+    </div>
+    <div class="section" id="bgSection" hidden>
+      <div class="section-header"><h2 class="section-title">AI в България</h2></div>
+      <div class="articles-grid" id="bgGrid"></div>
     </div>
 
     <div class="section">
@@ -725,54 +743,54 @@
     <div class="section">
       <div class="section-header"><h2 class="section-title">Разгледай по Категории</h2></div>
       <div class="categories-grid">
-        <a href="article.html?id=gpt4o" class="cat-card">
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#1e3a8a,#1d4ed8);">&#x1F916;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-ai);">AI</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=gpt4o">AI Новини</a></li><li><a href="article.html?id=claude3">AI Обяснено</a></li><li><a href="article.html?id=devs-2030">AI в индустрията</a></li></ul>
             <a href="article.html?id=gpt4o" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
-        <a href="article.html?id=robots" class="cat-card">
+        </div>
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#3b0764,#6d28d9);">&#x1F681;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-tech);">ТЕХНОЛОГИИ</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=drones">Дронове</a></li><li><a href="article.html?id=robots">Роботи</a></li><li><a href="article.html?id=nvidia">Чипове</a></li><li><a href="article.html?id=google-veo">Видео AI</a></li></ul>
             <a href="article.html?id=robots" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
-        <a href="article.html?id=aitools" class="cat-card">
+        </div>
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#064e3b,#065f46);">&#x1F9F0;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-tools);">ИНСТРУМЕНТИ</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=aitools">Продуктивност</a></li><li><a href="article.html?id=top10-ai-sites">Топ AI сайта</a></li><li><a href="article.html?id=midjourney-vs-dalle">Творчество</a></li></ul>
             <a href="article.html?id=aitools" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
-        <a href="article.html?id=compare" class="cat-card">
+        </div>
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#78350f,#b45309);">&#x1F4CA;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-analysis);">АНАЛИЗИ</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=compare">Сравнения</a></li><li><a href="article.html?id=ai-jobs">Прогнози</a></li><li><a href="article.html?id=devs-2030">Тенденции</a></li></ul>
             <a href="article.html?id=compare" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
-        <a href="article.html?id=startup" class="cat-card">
+        </div>
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#0c4a6e,#0369a1);">&#x1F1E7;&#x1F1EC;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-bg-color);">AI В БЪЛГАРИЯ</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=startup">Стартъпи</a></li><li><a href="article.html?id=eu-ai-act">Регулации</a></li></ul>
             <a href="article.html?id=startup" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
-        <a href="article.html?id=chatgpt-guide" class="cat-card">
+        </div>
+        <div class="cat-card">
           <div class="cat-icon-area" style="background:linear-gradient(135deg,#082f49,#0284c7);">&#x1F393;</div>
           <div class="cat-card-body">
             <div class="cat-card-name" style="color:var(--cat-learn);">НАУЧИ СЕ</div>
             <ul class="cat-sublinks"><li><a href="article.html?id=chatgpt-guide">Ръководства</a></li><li><a href="article.html?id=prompt-guide">Prompt-ове</a></li><li><a href="article.html?id=top10-ai-sites">Курсове</a></li></ul>
             <a href="article.html?id=chatgpt-guide" class="cat-see-all">ВИЖ ВСИЧКИ →</a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -826,7 +844,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2025 SKAINET. Всички права запазени.</span>
+      <span class="footer-copy">© <span class="js-year">2026</span> SKAINET. Всички права запазени.</span>
       <div class="footer-bottom-links">
         <a href="index.html">Поверителност</a>
         <a href="index.html">Условия</a>
@@ -904,14 +922,14 @@ searchInput.addEventListener('input', function () {
   );
 
   if (!matches.length) {
-    resultsEl.innerHTML = '<div class="search-no-results">Няма намерени резултати за „' + this.value + '"</div>';
+    resultsEl.innerHTML = '<div class="search-no-results">Няма намерени резултати за „' + esc(this.value) + '"</div>';
     return;
   }
 
-  resultsEl.innerHTML = matches.map(a => `
-    <a href="article.html?id=${a.id}" class="search-result-item" onclick="closeSearch()">
-      <span class="tag ${a.tag}" style="flex-shrink:0;">${a.cat}</span>
-      <span class="search-result-title">${a.title}</span>
+  resultsEl.innerHTML = matches.slice(0, 20).map(a => `
+    <a href="article.html?id=${encodeURIComponent(a.id)}" class="search-result-item" onclick="closeSearch()">
+      <span class="tag ${esc(a.tag)}" style="flex-shrink:0;">${esc(a.cat)}</span>
+      <span class="search-result-title">${esc(a.title)}</span>
     </a>
   `).join('');
 });
@@ -935,103 +953,120 @@ toggle.addEventListener('click', () => {
 });
 
 /* ── LIVE NEWS from articles.json ── */
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
 (async function loadLiveNews() {
   try {
-    const res = await fetch('articles.json');
+    const res = await fetch('/articles.json');
     if (!res.ok) return;
     const data = await res.json();
     const arts = data.articles || [];
     if (!arts.length) return;
 
-    function heroCard(a) {
-      return `
-        <a href="article.html?id=${a.id}" class="hero-card">
-          <img src="${a.image}" alt="${a.title}" onerror="this.src='https://picsum.photos/seed/${a.id}/900/560'" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;">
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <span class="tag ${a.tag}">${a.category}</span>
-            <div class="hero-date">&#x23F1; ${a.date} &nbsp;·&nbsp; ${a.source}</div>
-            <h1 class="hero-title">${a.title}</h1>
-            <p class="hero-excerpt">${a.excerpt}</p>
-            <span class="btn-outline">ПРОЧЕТИ ПОВЕЧЕ →</span>
-          </div>
-        </a>`;
-    }
+    const link = a => `article.html?id=${encodeURIComponent(a.id)}`;
+    const fallbackImg = (a, w, h) => `this.onerror=null;this.src='https://picsum.photos/seed/${esc(a.id)}/${w}/${h}'`;
 
     function sideCard(a) {
       return `
-        <a href="article.html?id=${a.id}" class="side-card">
-          <img src="${a.image}" alt="" onerror="this.src='https://picsum.photos/seed/${a.id}/300/200'" style="width:100px;height:82px;object-fit:cover;">
+        <a href="${link(a)}" class="side-card">
+          <img src="${esc(a.image)}" alt="" loading="lazy" onerror="${fallbackImg(a, 300, 200)}" style="width:100px;height:82px;object-fit:cover;">
           <div class="side-card-body">
-            <span class="tag ${a.tag}">${a.category}</span>
-            <div class="side-card-date">${a.date}</div>
-            <div class="side-card-title">${a.title}</div>
+            <span class="tag ${esc(a.tag)}">${esc(a.category)}</span>
+            <div class="side-card-date">${esc(a.date)}</div>
+            <div class="side-card-title">${esc(a.title)}</div>
           </div>
         </a>`;
     }
 
     function articleCard(a) {
       return `
-        <a href="article.html?id=${a.id}" class="article-card">
-          <img class="article-img" src="${a.image}" alt="" onerror="this.src='https://picsum.photos/seed/${a.id}/600/340'">
+        <a href="${link(a)}" class="article-card">
+          <img class="article-img" src="${esc(a.image)}" alt="" loading="lazy" onerror="${fallbackImg(a, 600, 340)}">
           <div class="article-body">
             <div class="article-meta">
-              <span class="tag ${a.tag}">${a.category}</span>
-              <span class="article-date">${a.date}</span>
-              <span class="article-date" style="color:var(--text-muted);font-size:10px;">${a.source}</span>
+              <span class="tag ${esc(a.tag)}">${esc(a.category)}</span>
+              <span class="article-date">${esc(a.date)}</span>
+              <span class="article-date" style="color:var(--text-muted);font-size:10px;">${esc(a.source)}</span>
             </div>
-            <h3 class="article-title">${a.title}</h3>
+            <h3 class="article-title">${esc(a.title)}</h3>
           </div>
         </a>`;
     }
 
-    // ── Hero: article 0 = main card, 1-3 = side cards ──
+    // ── Most important recent stories lead: last 36h first, widen if the news is quiet ──
+    const ageH = a => (Date.now() - new Date(a.published_iso)) / 3.6e6;
+    const byImportance = (x, y) => (y.importance || 0) - (x.importance || 0) || (x.published_iso < y.published_iso ? 1 : -1);
+    let pool = arts.filter(a => ageH(a) <= 36);
+    if (pool.length < 8) pool = arts.filter(a => ageH(a) <= 96);
+    if (pool.length < 8) pool = arts;
+    const important = [...pool].sort(byImportance);
+
+    const used = new Set();
+    const take = (list, n) => {
+      const picked = list.filter(a => !used.has(a.id)).slice(0, n);
+      picked.forEach(a => used.add(a.id));
+      return picked;
+    };
+
+    // ── Hero: most important = main card, next 3 = side cards ──
+    const [top] = take(important, 1);
     const heroMain = document.getElementById('heroMainCard');
-    const heroSide = document.getElementById('heroSideCards');
-
-    if (heroMain && arts[0]) {
-      const a = arts[0];
-      heroMain.href = `article.html?id=${a.id}`;
+    if (heroMain && top) {
+      heroMain.href = link(top);
       const img = heroMain.querySelector('img');
-      if (img) { img.src = a.image; img.alt = a.title; }
+      if (img) { img.src = top.image; img.alt = top.title; img.onerror = () => { img.onerror = null; img.src = `https://picsum.photos/seed/${top.id}/900/560`; }; }
       const tag = heroMain.querySelector('.tag');
-      if (tag) { tag.className = `tag ${a.tag}`; tag.textContent = a.category; }
+      if (tag) { tag.className = `tag ${top.tag}`; tag.textContent = top.category; }
       const dateEl = heroMain.querySelector('.hero-date');
-      if (dateEl) dateEl.innerHTML = `&#x23F1; ${a.date} &nbsp;·&nbsp; ${a.source}`;
+      if (dateEl) dateEl.textContent = `⏱ ${top.date}  ·  ${top.source}`;
       const titleEl = heroMain.querySelector('.hero-title');
-      if (titleEl) titleEl.textContent = a.title;
+      if (titleEl) titleEl.textContent = top.title;
       const excerptEl = heroMain.querySelector('.hero-excerpt');
-      if (excerptEl) excerptEl.textContent = a.excerpt;
+      if (excerptEl) excerptEl.textContent = top.excerpt;
+    }
+    const heroSide = document.getElementById('heroSideCards');
+    const sides = take(important, 3);
+    if (heroSide && sides.length) heroSide.innerHTML = sides.map(sideCard).join('');
+
+    // ── Ticker + "Важно днес": the top headlines ──
+    const headlines = important.slice(0, 8);
+    const ticker = document.getElementById('tickerTrack');
+    if (ticker) {
+      const items = headlines.map(a => `<a href="${link(a)}" class="ticker-item"><span class="ticker-dot"></span>${esc(a.title)}</a>`).join('');
+      ticker.innerHTML = items + items; // doubled for the seamless scroll loop
+    }
+    const importantList = document.getElementById('importantList');
+    if (importantList) {
+      importantList.innerHTML = important.slice(4, 9).map((a, i) => `
+        <a href="${link(a)}" class="most-read-item"><span class="mr-num">${i + 1}</span>
+          <div><div class="mr-title">${esc(a.title)}</div><div class="mr-views">${esc(a.date)} · ${esc(a.source)}</div></div>
+        </a>`).join('');
     }
 
-    if (heroSide) {
-      const sides = arts.slice(1, 4);
-      if (sides.length) heroSide.innerHTML = sides.map(sideCard).join('');
-    }
-
-    // ── Grids: filled from articles after hero ──
-    // Slice adaptively so there's never an empty gap
-    const liveGrid   = document.getElementById('liveNewsGrid');
-    const missedGrid = document.getElementById('missedNewsGrid');
-
-    const liveArts   = arts.slice(4, 8);
-    const missedArts = arts.slice(8, 12);
-
-    function fillGrid(grid, articles) {
+    // ── Sections: categories first, then whatever is newest ──
+    function fillGrid(id, articles) {
+      const grid = document.getElementById(id);
       if (!grid) return;
-      if (articles.length) {
-        grid.innerHTML = articles.map(articleCard).join('');
-        if (articles.length < 4)
-          grid.style.gridTemplateColumns = `repeat(${articles.length}, 1fr)`;
-      } else {
-        grid.closest('.section').style.display = 'none';
-      }
+      const section = grid.closest('.section');
+      if (!articles.length) { section.hidden = true; return; }
+      grid.innerHTML = articles.map(articleCard).join(''); // keep the 4-column grid – one story must not become a giant card
+      section.hidden = false;
     }
+    const inCategory = cat => arts.filter(a => a.category === cat);
+    fillGrid('modelsGrid',     take(inCategory('МОДЕЛИ'), 4));
+    fillGrid('investGrid',     take(inCategory('ИНВЕСТИЦИИ'), 4));
+    fillGrid('bgGrid',         take(inCategory('AI В БЪЛГАРИЯ'), 4));
+    fillGrid('liveNewsGrid',   take(arts, 4));
+    fillGrid('missedNewsGrid', take(important, 4));
 
-    fillGrid(liveGrid,   liveArts);
-    fillGrid(missedGrid, missedArts);
+    // ── Search covers live articles too ──
+    SEARCH_ARTICLES.unshift(...arts.map(a => ({ id: a.id, title: a.title, cat: a.category, tag: a.tag })));
   } catch (_) { /* keep static fallback */ }
 })();
+
+document.querySelectorAll('.js-year').forEach(el => { el.textContent = new Date().getFullYear(); });
 
 /* ── NEWSLETTER ── */
 function subscribeNewsletter(e) {

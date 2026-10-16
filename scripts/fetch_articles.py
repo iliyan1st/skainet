@@ -429,9 +429,10 @@ def read_rss(cfg: dict) -> list[dict]:
 
 PUBLISHER_RE = re.compile(r'/\s*<a href="[^"]+">([^<]+)</a>:')
 BYLINE_RE = re.compile(r"\s*\([^()]*/[^()]*\)\s*$")  # Techmeme headline suffix "(Author/Publisher)"
+TECHMEME_SUFFIX_RE = re.compile(r"\s*\([^()]*\)\s*$")  # Techmeme always ends with "(Publisher)" or "(Author/Publisher)"
 
-def strip_byline(title: str) -> str:
-    return BYLINE_RE.sub("", title).strip()
+def strip_byline(title: str, techmeme: bool = False) -> str:
+    return (TECHMEME_SUFFIX_RE if techmeme else BYLINE_RE).sub("", title).strip()
 
 def read_techmeme(cfg: dict) -> list[dict]:
     """Techmeme items point to the original story; the publisher becomes the source."""
@@ -441,8 +442,8 @@ def read_techmeme(cfg: dict) -> list[dict]:
         links = [h for h in re.findall(r'href="([^"]+)"', summary) if "techmeme.com" not in h]
         publisher = PUBLISHER_RE.search(summary)
         items.append({
-            "title":     strip_byline(clean_html(e.get("title", ""))),
-            "summary":   strip_byline(clean_html(e.get("title", ""))),
+            "title":     strip_byline(clean_html(e.get("title", "")), techmeme=True),
+            "summary":   strip_byline(clean_html(e.get("title", "")), techmeme=True),
             "link":      links[0] if links else e.get("link", ""),
             "published": entry_datetime(e),
             "image":     None,
@@ -635,7 +636,7 @@ def main():
     for a in merged.values():
         if norm_url(a["url"]) in techmeme_urls:
             a["techmeme"] = True
-        a["title"] = strip_byline(a["title"])
+        a["title"] = strip_byline(a["title"], techmeme=a.get("techmeme", False))
         a["category"], a["tag"] = detect_category(a)
         a["importance"] = importance(a)
 

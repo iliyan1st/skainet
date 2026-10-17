@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/meta-removes-language-that-raised-scraping-and-ai-training-c</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/replit-makes-openai-its-default-over-anthropic-ceo-says</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/ai-modelite-na-google-sa-na-praga-na-neshto-golyamo-skoro-te</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -590,18 +602,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/scaling-indic-pretraining-28-trillion-tokens-and-an-open-dat</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/8-insights-from-logicmonitors-elevate-event-ai-driven-observ</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/opsin-which-helps-companies-show-where-ai-agents-are-active</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

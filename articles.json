@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T22:44:39.518865+00:00",
+  "generated_at": "2026-10-17T03:37:46.283062+00:00",
   "count": 101,
   "articles": [
     {
@@ -39,8 +39,8 @@
       "title_en": "Replit is no longer working with Anthropic, CEO says",
       "category": "AI НОВИНИ",
       "tag": "tag-ai",
-      "techmeme": false,
-      "importance": 1
+      "techmeme": true,
+      "importance": 4
     },
     {
       "id": "91924a87e6a2",

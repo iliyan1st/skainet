@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/rumanski-f-16-svaliha-dva-drona-nad-cherno-more-samo-za-chet</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/websites-are-closing-their-doors-to-ai-agents</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -596,12 +602,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/ai-hacks-leave-a-mess-that-ai-companies-arent-paying-for</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/anthropic-taps-nonprofits-metr-and-securebio-to-help-assess</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

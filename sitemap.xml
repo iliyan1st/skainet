@@ -2,9 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skainet-vert.vercel.app/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/hyperbolic-which-lets-companies-rent-ai-compute-across-30-ne</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/saudi-aramco-acquires-a-49-stake-in-ai-startup-humain-contri</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-might-rebrand-its-data-centers-as-ai-compute-campuses</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-plans-a-post-midterms-policy-and-pr-blitz-pushing-man</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/pametta-se-prevarna-v-zlatna-mina-samsung-sk-hynix-i-micron</loc>
@@ -578,30 +602,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/making-it-easier-for-websites-to-express-ai-training-prefere</loc>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/community-safety-report-and-new-protections-for-teens</loc>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/sources-spotify-aims-to-launch-an-ai-product-in-q1-2027-that</loc>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/londons-easol-secures-2678-million-series-a-extension-as-it</loc>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/foxconn-hopes-to-own-50-of-the-global-ai-server-market-withi</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

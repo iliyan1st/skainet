@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skainet-vert.vercel.app/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -73,6 +73,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/balgaro-britanskata-kompaniya-lab-thread-otvori-ofis-v-bosta</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/tsmc-plans-to-invest-up-to-500m-in-anthropic-at-its-ipo-pric</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -133,7 +139,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/choveshkiyat-mozak-razbira-smisala-na-izrecheniyata-po-dobre</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/amazons-ring-unveils-flying-drone-and-robot-to-patrol-homes</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/boston-dynamics-smeni-stapalata-na-atlas-s-kolela-ot-elektri</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -584,24 +602,6 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/nvidia-announces-new-planned-investments-in-korean-startups</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/coderabbit-scales-agentic-software-development-and-ships-20x</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/ai-riskovete-sa-upravlyaemi-no-mozhe-da-ima-predpazni-merki</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-es</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

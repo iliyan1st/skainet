@@ -2,9 +2,165 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://skainet-vert.vercel.app/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/noeri-raises-110m-to-help-companies-build-living-ai-systems</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-inks-agreements-with-four-independent-evaluators-to-b</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/alibaba-launches-qwen4-max-with-training-attention-optimizat</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/brad-gerstner-says-altimeter-is-aiming-to-invest-5b-in-anthr</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/three-insights-you-might-have-missed-from-thecubes-coverage</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/fbr-ai-instrumentat-artex-pozvolyava-pronikvane-v-mrezhi-za</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/royters-riskat-ot-yadrena-avariya-v-ukrayna-se-uvelichava-ta</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/how-the-worlds-most-advanced-ai-infrastructure-supply-chain</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/google-warns-that-fully-automated-cyberattacks-have-arrived</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/nova-konspiratsiya-obeshtava-globalen-sriv-na-internet-i-ban</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/apple-is-testing-daily-usage-limits-for-more-complex-siri-ai</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-wants-to-stop-deepfakes-from-overwhelming-child-abuse</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openais-gpt-6-astra-tackles-the-standard-models-toughest-mat</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-allege</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/donald-tramp-ne-e-protiv-zavrashtaneto-na-dzhensan-huang-v-n</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-ben</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/nvidias-board-is-reportedly-not-considering-hiring-jensen-hu</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-announces-new-tools-to-combat-csam-including-an-image</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/hakeri-izpolzvat-aktivno-v-ataki-otkrita-ai-platforma-za-izp</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/openai-will-embed-safety-researchers-to-investigate-ai-subve</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/broadening-access-to-ai-for-scientists</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/alibabas-qwen4-max-takes-on-opus-55-gpt-6-and-kimi-k31-pro-a</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/noeri-which-is-developing-ai-software-to-review-and-suggest</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/claude-now-builds-interactive-websites-inside-canvas-graphic</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/lambda-boosts-ai-factory-resiliency-and-efficiency-with-nvid</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-fo</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/us-tightens-ai-chip-export-controls-to-deter-chinese-compani</loc>
@@ -37,6 +193,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skainet-vert.vercel.app/article/google-maps-can-now-create-trip-itineraries-for-you</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skainet-vert.vercel.app/article/the-jensen-huang-saga-is-driven-by-elite-factional-conflicts</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -56,6 +218,12 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/in-the-ai-era-keep-hiring-new-college-grads-and-make-them-ma</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/science-at-the-frontier-how-scientists-use-chatgpt</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -98,6 +266,12 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/lvmhs-media-division-announces-strategic-partnership-with-op</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/our-first-phase-of-embedded-assessments</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -158,6 +332,12 @@
   </url>
   <url>
     <loc>https://skainet-vert.vercel.app/article/the-kings-trust-and-openai-launch-1m-partnership</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skainet-vert.vercel.app/article/hugging-face-and-openrouter-join-forces-to-make-open-weight</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -423,186 +603,6 @@
   <url>
     <loc>https://skainet-vert.vercel.app/article/anthropic-can-already-retrain-mythos-with-a-fraction-of-the</loc>
     <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/obir-ot-badeshteto-hakeri-otkradnaha-100-mln-evro-ot-frenska</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/youtube-nyama-palen-bloker-za-ii-klipovete-no-etiketite-i-sh</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/runways-open-source-praxis-1-turns-video-ai-into-a-robot-con</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/vremennata-shefka-na-nvidia-kolet-kres-e-bila-v-konflikt-s-d</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/izkustveniyat-intelekt-veche-e-nachelo-v-opaseniyata-za-amer</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/operand-which-offers-ai-powered-due-diligence-tools-for-pe-f</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/whitematter-which-builds-guardian-ai-agents-to-oversee-file</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/charta-health-which-offers-ai-powered-tools-to-automate-medi</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/kitayski-ai-sledi-kitaytsite-po-tseliya-svyat-i-podbira-pote</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/luminal-which-provides-an-inference-cloud-and-develops-infer</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/analysis-sam-bankman-frieds-500m-anthropic-investment-in-202</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/ais-impact-on-math-is-a-preview-of-what-ai-will-do-to-ai-res</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/nices-next-generation-cognigy-bets-the-hard-part-of-ai-agent</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/asi-developer-of-ai-tool-smart-says-the-faa-outage-is-not-ba</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/jensen-huangs-departure-blasts-big-hole-in-ai-startup-fundin</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/the-faa-announced-on-november-10-that-it-has-expanded-the-us</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/sources-moonshot-ai-is-deactivating-its-cayman-holding-compa</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/mirendil-raises-1b-in-funding-to-speed-up-ai-model-developme</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/microsoft-apologizes-for-the-outage-calling-it-a-technical-i</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/spryagat-shefa-na-arm-za-naslednik-na-dzhensan-huang-v-nvidi</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/moshtna-kiberataka-krade-danni-ot-github-za-dostap-do-oblach</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/ai-agent-startup-langchain-hits-3b-valuation</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/the-weeks-10-biggest-funding-rounds-agentic-ai-and-infrastru</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/microsoft-365-crawls-back-to-life-after-a-24-hour-outage</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/openai-rebuilt-ai-shopping-from-scratch-with-chatgpt-wallet</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/vibe-335</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/export-banned-nvidia-chips-are-behind-chinas-most-powerful-a</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/banks-bar-chinese-and-hong-kong-investors-from-anthropic-ipo</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/build-a-robot-pick-and-place-simulation-with-simready-assets</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skainet-vert.vercel.app/article/varnete-shefa-sluzhitelite-na-nvidia-nastoyavat-za-vrashtane</loc>
-    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
